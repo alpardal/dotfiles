@@ -1,0 +1,9 @@
+function formattedGitBranch {
+    _branch="$(git branch 2>/dev/null | sed -e "/^\s/d" -e "s/^\*\s//")"
+    test -n "$_branch" && echo -e "[git $_branch]"
+}
+
+#export PS1="\u@\h:\w$(formattedGitBranch) \$ "
+export PS1="\[\e[4;34m\]\u@\h:\[\e[0m\] \w\$ "
+# mesma coisa sem cor:
+#export PS1="\u@\h: \w\$ "
