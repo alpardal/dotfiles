@@ -1,17 +1,29 @@
 set nocompatible " not vi compatible
 
+" Reload config files when they are edited:
+autocmd! bufwritepost settings.vim source ~/dotfiles/vim/settings.vim
+autocmd! bufwritepost mappings.vim source ~/dotfiles/vim/mappings.vim
+
 " disable modelines:
 set nomodeline
 set modelines=0
 
 " enconding & UI:
 set encoding=utf-8
-set guifont=Monaco\ 10
-colorscheme wombat
 set ruler
 set showcmd
-set lines=50 columns=100
+set lines=45 columns=100
 set number " line numbers
+set nolazyredraw "Don't redraw while executing macros
+set guifont=Monaco\ 10
+if has('win32')
+	set guifont=Consolas:h12
+endif
+if has('gui_running')
+	colorscheme wombat
+else
+	colorscheme slate
+endif
 
 set scrolloff=3 " scroll offset
 

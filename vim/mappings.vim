@@ -1,5 +1,7 @@
 
 inoremap kj <ESC>
+inoremap <C-v> <C-r>*
+vnoremap <C-c> "+y
 let mapleader = " "
 nmap <leader>w :w<cr>
 nmap <leader>x :x<cr>
@@ -8,8 +10,9 @@ nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>qq :q!<cr>
-nnoremap <leader>r :CommandTFlush<cr>
+nnoremap <leader>r :%s/
 nnoremap <f2> :Rename 
+nnoremap <leader>tr :CommandTFlush<cr>
 " Buffer mappings:
 nnoremap <leader>b :ls<cr>:buffer<Space>
 nnoremap <leader>l :b#<cr>
