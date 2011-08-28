@@ -10,6 +10,7 @@ alias rmdir='rm -rf'
 alias cpi='cp -i'
 alias mvi='mv -i'
 alias ack="ack-grep"
+alias fname="find . -print | ack " # find file name
 alias ~='cd ~'
 alias ..='cd ..'
 alias -- -='cd -'
