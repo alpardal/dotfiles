@@ -72,9 +72,9 @@ if [[ -n "$PS1" ]]; then
         . /etc/bash_completion
     fi
 
-    . ~/dotfiles/bash/aliases
-    . ~/dotfiles/bash/env
-    . ~/dotfiles/bash/functions
+    . ~/dotfiles/bash/aliases.sh
+	. ~/dotfiles/bash/functions.sh
+    . ~/dotfiles/bash/env.sh
 
 fi # fim do if da linha 6 (se não for interativo)
 
