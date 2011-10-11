@@ -44,9 +44,12 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-" rails.vim:
-nnoremap <leader>c :Rcontroller<cr>
-nnoremap <leader>v :Rview<cr>
-nnoremap <leader>m :Rmodel<cr>
-nnoremap <leader>u :Runittest<cr>
-nnoremap <leader>f :Rfunctionaltest<cr>
+" rails stuff:
+nmap <leader>gc :CommandTFlush<cr>:CommandT app/controllers/<cr>
+nmap <leader>gv :CommandTFlush<cr>:CommandT app/views/<cr>
+nmap <leader>gm :CommandTFlush<cr>:CommandT app/models/<cr>
+nmap <leader>gs :CommandTFlush<cr>:CommandT spec/<cr>
+nmap <leader>gl :CommandTFlush<cr>:CommandT lib/<cr>
+nmap <leader>gr :topleft :split config/routes.rb<cr>
+" from rails.vim:
+nmap <leader>ga :A<cr>

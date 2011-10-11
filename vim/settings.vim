@@ -21,9 +21,11 @@ if has('win32')
 	set guifont=Consolas:h12
 endif
 if has('gui_running')
-	set guioptions-=T
-	set guioptions-=L
-	set guioptions-=r
+	"set guioptions-=T
+	"set guioptions-=L
+	"set guioptions-=R
+	set guioptions=ac
+	set cursorline
 	set lines=45 columns=100
 	colorscheme wombat
 else
@@ -38,8 +40,6 @@ set wildmode=list:longest
 
 set history=1000
 
-set iskeyword+=_
-
 filetype plugin indent on
 syntax enable
 set noautochdir
@@ -49,6 +49,8 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+
+set iskeyword-=_
 
 set nobackup
 set nowb
