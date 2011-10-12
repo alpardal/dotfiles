@@ -27,10 +27,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Moving line/selection:
-nnoremap <A-j> :m+<CR>==
-nnoremap <A-k> :m-2<CR>==
-vnoremap <A-j> :m'>+<CR>gv=gv
-vnoremap <A-k> :m-2<CR>gv=gv
+nnoremap <silent> <A-j> :m+<CR>==
+nnoremap <silent> <A-k> :m-2<CR>==
+vnoremap <silent> <A-j> :m'>+<CR>gv=gv
+vnoremap <silent> <A-k> :m-2<CR>gv=gv
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>

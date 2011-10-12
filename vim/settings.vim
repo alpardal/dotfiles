@@ -29,7 +29,7 @@ if has('gui_running')
 	set lines=45 columns=100
 	colorscheme wombat
 else
-	colorscheme solarized
+	colorscheme grb256
 	set background=dark
 endif
 
