@@ -24,7 +24,7 @@ if has('gui_running')
 	"set guioptions-=T
 	"set guioptions-=L
 	"set guioptions-=R
-	set guioptions=ac
+	set guioptions=aci
 	set cursorline
 	set lines=45 columns=100
 	colorscheme wombat
@@ -49,8 +49,6 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-
-set iskeyword-=_
 
 set nobackup
 set nowb
