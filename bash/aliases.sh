@@ -13,7 +13,7 @@ alias ack="ack-grep"
 alias fname="find . -print | ack " # find file name
 alias ..='cd ..'
 alias -- -='cd -'
-alias vim='gvim'
+alias vim='vim -g'
 alias re.=". ~/.bashrc"
 # ruby
 alias ri="ri -Tf ansi"
