@@ -1,4 +1,6 @@
 set nocompatible
+filetype plugin indent on
+syntax enable
 
 " Reload config files when they are edited:
 autocmd! bufwritepost settings.vim source ~/dotfiles/vim/settings.vim
@@ -6,7 +8,6 @@ autocmd! bufwritepost mappings.vim source ~/dotfiles/vim/mappings.vim
 
 call pathogen#infect()
 
-" disable modelines:
 set nomodeline
 set modelines=0
 
@@ -17,31 +18,27 @@ set showcmd
 set number " line numbers
 set nolazyredraw "Don't redraw while executing macros
 set guifont=Monaco\ 10
+set cursorline
 if has('win32')
 	set guifont=Consolas:h12
 endif
 if has('gui_running')
-	"set guioptions-=T
-	"set guioptions-=L
-	"set guioptions-=R
 	set guioptions=aci
-	set cursorline
 	set lines=45 columns=100
 	colorscheme wombat
 else
-	colorscheme grb256
-	set background=dark
+	colorscheme herald
 endif
 
-set scrolloff=3 " scroll offset
+set scrolloff=3
+set winheight=10
+set winminheight=10
 
 set wildmenu
 set wildmode=list:longest
 
 set history=1000
 
-filetype plugin indent on
-syntax enable
 set noautochdir
 set autoread
 
@@ -57,19 +54,19 @@ set noswapfile
 set wrap
 set linebreak
 set backspace=indent,eol,start
-set noexpandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
 set smarttab
 
-set timeoutlen=250
+set timeoutlen=500
 set magic
 set showmatch
 
 " folding settings:
-set foldmethod=syntax
+set foldmethod=manual
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1

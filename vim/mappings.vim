@@ -1,36 +1,29 @@
 
-" editing vim files:
 command! Mappings e ~/dotfiles/vim/mappings.vim
 command! Settings e ~/dotfiles/vim/settings.vim
 
-inoremap <C-v> <C-r>*
-vnoremap <C-c> "+y
 let mapleader = " "
 nmap <leader>w :w<cr>
 nmap <leader>x :x<cr>
 
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
+nnoremap 0 ^
+nnoremap ^ 0
 nnoremap <leader>q :q<cr>
-nnoremap <leader>qq :q!<cr>
 nnoremap <leader>r :%s/
-nnoremap <f2> :Rename 
 nnoremap <silent> <leader>o :CommandTFlush<cr>:CommandT<cr>
-:noremap <leader>h :set hlsearch! hlsearch?<cr>
+noremap <silent> <leader>h :set hlsearch! hlsearch?<cr>
 
 inoremap <C-l> <delete>
-" Buffer mappings:
-nnoremap <leader>l :b#<cr>
+inoremap <tab> <c-n>
+" go to last buffer:
+nnoremap <silent> <leader><leader> <c-^>
 " window mappings
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" Moving line/selection:
-nnoremap <silent> <A-j> :m+<CR>==
-nnoremap <silent> <A-k> :m-2<CR>==
-vnoremap <silent> <A-j> :m'>+<CR>gv=gv
-vnoremap <silent> <A-k> :m-2<CR>gv=gv
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -50,6 +43,18 @@ nmap <leader>gv :CommandTFlush<cr>:CommandT app/views/<cr>
 nmap <leader>gm :CommandTFlush<cr>:CommandT app/models/<cr>
 nmap <leader>gs :CommandTFlush<cr>:CommandT spec/<cr>
 nmap <leader>gl :CommandTFlush<cr>:CommandT lib/<cr>
+nmap <leader>gg :e Gemfile<cr>
 nmap <leader>gr :topleft :split config/routes.rb<cr>
 " from rails.vim:
 nmap <leader>ga :A<cr>
+
+function! ShowRoutes()
+    :topleft 100 :split __Routes__
+    :set buftype=nofile
+    :normal 1GdG
+    :0r! rake -s routes
+    :exec ":normal " . line("$") . "^W_ "
+    :normal 1GG
+    :normal dd
+endfunction
+map <leader>gR :call ShowRoutes()<cr><cr>
