@@ -7,7 +7,7 @@ set -o ignoreeof
 
 export EDITOR="vi"
 export TERM=xterm-256color
-export HISTIGNORE="&:ls:[bf]g:history"
+export HISTIGNORE="&:ls:[bf]g*:history:quit:exit"
 
 export JAVA_HOME=~/.jdk1.7.0
 export PATH=$JAVA_HOME/bin:$PATH
