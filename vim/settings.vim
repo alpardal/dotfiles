@@ -36,6 +36,7 @@ set winminheight=10
 
 set wildmenu
 set wildmode=list:longest
+set completeopt=longest,menuone
 
 set history=1000
 
