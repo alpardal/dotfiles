@@ -26,6 +26,7 @@ if has('gui_running')
 	set guioptions=aci
 	set lines=45 columns=100
 	colorscheme wombat
+    set bg=dark
 else
 	colorscheme herald
 endif
@@ -81,3 +82,5 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 endif
+
+set secure
