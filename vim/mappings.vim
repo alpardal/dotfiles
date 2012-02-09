@@ -13,7 +13,11 @@ nnoremap ^ 0
 nnoremap <leader>q :q<cr>
 nnoremap <leader>r :%s/
 nnoremap <silent> <leader>o :CommandTFlush<cr>:CommandT<cr>
-noremap <silent> <leader>h :set hlsearch! hlsearch?<cr>
+nnoremap <CR> :nohlsearch<cr>
+" Git mappings:
+nmap <leader>is :!git status<cr>
+nmap <leader>id :Gdiff<cr>
+nmap <leader>il :!git log<cr>
 
 inoremap <C-l> <delete>
 inoremap <tab> <c-n>
@@ -36,6 +40,9 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+" run ruby files:
+map <leader>r :w\|!ruby %<cr>
+map <leader>t :w\|!rspec spec/<cr>
 
 " rails stuff:
 nmap <leader>gc :CommandTFlush<cr>:CommandT app/controllers/<cr>

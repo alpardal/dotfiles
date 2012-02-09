@@ -4,7 +4,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
 fi
 alias quit="exit"
-alias ll='ls -lh'
+alias ll='ls -oh'
 alias la='ls -A'
 alias rmi='rm -i'
 alias cpi='cp -i'
@@ -18,13 +18,14 @@ alias re.=". ~/.bashrc"
 # ruby
 alias ri="ri -Tf ansi"
 alias rspec="rspec -c"
+alias gemset="rvm gemset"
 # git
 alias gs="git status"
+alias gss="git status --short"
 alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"
-alias gl="git log --oneline --decorate --graph"
-alias glb="gl --branches=*"
+alias gl="git log --oneline --decorate --graph --branches='*'"
 alias go="git checkout"
 alias gi="git commit"
 alias gd="git diff --ignore-all-space"
