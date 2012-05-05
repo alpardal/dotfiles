@@ -3,19 +3,25 @@ filetype plugin indent on
 syntax enable
 
 " Reload config files when they are edited:
-autocmd! bufwritepost settings.vim source ~/dotfiles/vim/settings.vim
-autocmd! bufwritepost mappings.vim source ~/dotfiles/vim/mappings.vim
+augroup reload_config
+	autocmd!
+	autocmd bufwritepost settings.vim source  $MYVIMRC
+	autocmd bufwritepost mappings.vim source  $MYVIMRC
+	autocmd bufwritepost functions.vim source $MYVIMRC
+augroup END
 
 call pathogen#infect()
 
 set nomodeline
 set modelines=0
+set secure
+set exrc
 
 " enconding & UI:
 set encoding=utf-8
 set ruler
 set showcmd
-set number " line numbers
+set number
 set nolazyredraw "Don't redraw while executing macros
 set guifont=Monaco\ 10
 set cursorline
@@ -31,6 +37,11 @@ else
 	colorscheme herald
 endif
 
+set laststatus=2
+set statusline=%f\ %y%m
+set statusline+=%=
+set statusline+=%l/%L\ [%v]
+
 set scrolloff=3
 set winheight=10
 set winminheight=10
@@ -41,7 +52,6 @@ set completeopt=longest,menuone
 
 set history=1000
 
-set noautochdir
 set autoread
 
 set ignorecase
@@ -67,7 +77,6 @@ set timeoutlen=500
 set magic
 set showmatch
 
-" folding settings:
 set foldmethod=manual
 set foldnestmax=10
 set nofoldenable
@@ -83,4 +92,4 @@ if has("autocmd")
     \ endif
 endif
 
-set secure
+runtime ftplugin/man.vim

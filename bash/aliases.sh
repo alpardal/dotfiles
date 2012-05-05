@@ -4,20 +4,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
 fi
 alias quit="exit"
+alias sa="sudo apt-get"
 alias ll='ls -oh'
 alias la='ls -A'
-alias rmi='rm -i'
-alias cpi='cp -i'
-alias mvi='mv -i'
+alias l1="ls -F -1 --group-directories-first"
 alias ack="ack-grep"
 alias fname="find . -print | ack " # find file name
-#alias ..='cd ..'
 alias -- -='cd -'
-alias vim='vim -g'
 alias re.=". ~/.bashrc"
 # ruby
+alias ru="ruby -w"
 alias ri="ri -Tf ansi"
-alias rspec="rspec -c"
 alias gemset="rvm gemset"
 # git
 alias gs="git status"

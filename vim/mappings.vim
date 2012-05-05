@@ -1,6 +1,7 @@
 
 command! Mappings e ~/dotfiles/vim/mappings.vim
 command! Settings e ~/dotfiles/vim/settings.vim
+command! Functions e ~/dotfiles/vim/functions.vim
 
 let mapleader = " "
 nmap <leader>w :w<cr>
@@ -11,16 +12,12 @@ nnoremap <C-y> 2<C-y>
 nnoremap 0 ^
 nnoremap ^ 0
 nnoremap <leader>q :q<cr>
-nnoremap <leader>r :%s/
 nnoremap <silent> <leader>o :CommandTFlush<cr>:CommandT<cr>
-nnoremap <CR> :nohlsearch<cr>
-" Git mappings:
-nmap <leader>is :!git status<cr>
-nmap <leader>id :Gdiff<cr>
-nmap <leader>il :!git log<cr>
+nnoremap <cr> :nohlsearch<cr>
 
 inoremap <C-l> <delete>
 inoremap <tab> <c-n>
+inoremap <C-c> <esc>gUiwea
 " go to last buffer:
 nnoremap <silent> <leader><leader> <c-^>
 " window mappings
@@ -40,28 +37,18 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
-" run ruby files:
-map <leader>r :w\|!ruby %<cr>
-map <leader>t :w\|!rspec spec/<cr>
 
 " rails stuff:
 nmap <leader>gc :CommandTFlush<cr>:CommandT app/controllers/<cr>
 nmap <leader>gv :CommandTFlush<cr>:CommandT app/views/<cr>
 nmap <leader>gm :CommandTFlush<cr>:CommandT app/models/<cr>
+nmap <leader>ga :CommandTFlush<cr>:CommandT app/assets/<cr>
 nmap <leader>gs :CommandTFlush<cr>:CommandT spec/<cr>
 nmap <leader>gl :CommandTFlush<cr>:CommandT lib/<cr>
 nmap <leader>gg :e Gemfile<cr>
 nmap <leader>gr :topleft :split config/routes.rb<cr>
 " from rails.vim:
-nmap <leader>ga :A<cr>
+nmap <leader>a :A<cr>
 
-function! ShowRoutes()
-    :topleft 100 :split __Routes__
-    :set buftype=nofile
-    :normal 1GdG
-    :0r! rake -s routes
-    :exec ":normal " . line("$") . "^W_ "
-    :normal 1GG
-    :normal dd
-endfunction
 map <leader>gR :call ShowRoutes()<cr><cr>
+map <leader>n :call RenameFile()<cr>
