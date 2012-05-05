@@ -3,11 +3,16 @@ filetype plugin indent on
 syntax enable
 
 " Reload config files when they are edited:
-augroup reload_config
+augroup commands
 	autocmd!
 	autocmd bufwritepost settings.vim source  $MYVIMRC
 	autocmd bufwritepost mappings.vim source  $MYVIMRC
 	autocmd bufwritepost functions.vim source $MYVIMRC
+	" Restore cursor position
+	autocmd BufReadPost *
+		\ if line("'\"") > 1 && line("'\"") <= line("$") |
+		\   exe "normal! g`\"" |
+		\ endif
 augroup END
 
 call pathogen#infect()
@@ -83,13 +88,5 @@ set nofoldenable
 set foldlevel=1
 
 hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
-
-if has("autocmd")
-  " Restore cursor position
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-endif
 
 runtime ftplugin/man.vim
