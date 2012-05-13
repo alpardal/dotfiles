@@ -71,7 +71,7 @@ set noswapfile
 set wrap
 set linebreak
 set backspace=indent,eol,start
-set noexpandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
