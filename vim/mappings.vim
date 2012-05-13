@@ -49,6 +49,9 @@ nmap <leader>gg :e Gemfile<cr>
 nmap <leader>gr :topleft :split config/routes.rb<cr>
 " from rails.vim:
 nmap <leader>a :A<cr>
+" tcomment:
+nmap <leader>c gcc
+vmap <leader>c gc
 
 map <leader>gR :call ShowRoutes()<cr><cr>
 map <leader>n :call RenameFile()<cr>
