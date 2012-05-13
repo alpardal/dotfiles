@@ -24,10 +24,8 @@ set exrc
 
 " enconding & UI:
 set encoding=utf-8
-set ruler
 set showcmd
 set number
-set nolazyredraw "Don't redraw while executing macros
 set guifont=Monaco\ 10
 set cursorline
 if has('win32')
