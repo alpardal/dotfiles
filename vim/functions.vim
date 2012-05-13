@@ -44,6 +44,12 @@ function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
   exec ':e ' . new_file
 endfunction
+function! OpenTestAlternateInSplit()
+  let new_file = AlternateForCurrentFile()
+  exec ':only'
+  exec ':vs ' . new_file
+  exec ':wincmd r'
+endfunction
 function! AlternateForCurrentFile()
   let current_file = expand("%")
   let new_file = current_file
