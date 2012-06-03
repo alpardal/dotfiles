@@ -50,7 +50,7 @@ set winheight=10
 set winminheight=10
 
 set wildmenu
-set wildmode=list:longest
+set wildmode=longest:full
 set completeopt=longest,menuone
 
 set history=1000
@@ -88,3 +88,4 @@ set foldlevel=1
 hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 
 runtime ftplugin/man.vim
+let g:CommandTCancelMap=['<C-c>', '<Esc>']

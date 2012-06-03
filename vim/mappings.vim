@@ -25,6 +25,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <C-p> <C-w>p
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>

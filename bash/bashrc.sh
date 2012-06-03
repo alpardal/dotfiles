@@ -72,11 +72,11 @@ if [[ -n "$PS1" ]]; then
         . /etc/bash_completion
     fi
 
-    . ~/dotfiles/bash/aliases.sh
-	. ~/dotfiles/bash/functions.sh
-    . ~/dotfiles/bash/env.sh
-
 fi # fim do if da linha 6 (se não for interativo)
+
+. ~/dotfiles/bash/aliases.sh
+. ~/dotfiles/bash/functions.sh
+. ~/dotfiles/bash/env.sh
 
 # This loads RVM into a shell session:
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
