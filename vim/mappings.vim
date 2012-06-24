@@ -49,7 +49,7 @@ nmap <leader>ga :CommandTFlush<cr>:CommandT app/assets/<cr>
 nmap <leader>gs :CommandTFlush<cr>:CommandT spec/<cr>
 nmap <leader>gl :CommandTFlush<cr>:CommandT lib/<cr>
 nmap <leader>gg :e Gemfile<cr>
-nmap <leader>gr :topleft :split config/routes.rb<cr>
+nmap <leader>gr :e config/routes.rb<cr>
 " from rails.vim:
 nmap <leader>a :A<cr>
 " tcomment:
