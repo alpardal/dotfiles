@@ -12,8 +12,10 @@ nnoremap <C-y> 2<C-y>
 nnoremap 0 ^
 nnoremap ^ 0
 nnoremap <leader>q :q<cr>
-nnoremap <silent> <leader>o :CommandTFlush<cr>:CommandT<cr>
-nnoremap <leader>e :e <c-r>=expand('%:h').'/'<cr>
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+nnoremap <silent> <leader>o :CommandTFlush<cr>\|:CommandT<cr>
+nmap <silent> <leader>O :CommandTFlush<cr>\|:CommandT %%<cr>
+nmap <leader>e :e %%
 nnoremap <cr> :nohlsearch<cr>
 
 inoremap <C-l> <delete>
