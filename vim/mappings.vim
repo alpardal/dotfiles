@@ -13,6 +13,7 @@ nnoremap 0 ^
 nnoremap ^ 0
 nnoremap <leader>q :q<cr>
 nnoremap <silent> <leader>o :CommandTFlush<cr>:CommandT<cr>
+nnoremap <leader>e :e <c-r>=expand('%:h').'/'<cr>
 nnoremap <cr> :nohlsearch<cr>
 
 inoremap <C-l> <delete>
@@ -55,4 +56,5 @@ nmap <leader>c gcc
 vmap <leader>c gc
 
 map <leader>gR :call ShowRoutes()<cr><cr>
+map <leader>gt :call OpenTestAlternateInSplit()<cr>
 map <leader>n :call RenameFile()<cr>

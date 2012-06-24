@@ -9,7 +9,6 @@ alias ll='ls -oh'
 alias la='ls -A'
 alias l1="ls -F -1 --group-directories-first"
 alias ack="ack-grep"
-alias fname="find . -print | ack " # find file name
 alias -- -='cd -'
 alias re.=". ~/.bashrc"
 # ruby

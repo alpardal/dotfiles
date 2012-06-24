@@ -47,8 +47,7 @@ endfunction
 function! OpenTestAlternateInSplit()
   let new_file = AlternateForCurrentFile()
   exec ':only'
-  exec ':vs ' . new_file
-  exec ':wincmd r'
+  exec ':rightb vs ' . new_file
 endfunction
 function! AlternateForCurrentFile()
   let current_file = expand("%")

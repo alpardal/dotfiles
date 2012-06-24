@@ -5,3 +5,6 @@ function formattedGitBranch {
 function md () {
     mkdir -p $1 && cd $1
 }
+function fname {
+    find . -iname "*$1*"
+}
