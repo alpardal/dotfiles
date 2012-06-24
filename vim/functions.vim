@@ -33,7 +33,7 @@ function! InsertTabWrapper()
 	if !col || getline('.')[col - 1] !~ '\k'
 		return "\<tab>"
 	else
-		return "\<c-p>"
+		return "\<c-n>"
 	endif
 endfunction
 
@@ -122,13 +122,3 @@ function! RunNearestTest()
     let spec_line_number = line('.')
     call RunTestFile(":" . spec_line_number . " -b")
 endfunction
-
-"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"inoremap <s-tab> <c-n>
-nnoremap <leader>. :call OpenTestAlternate()<cr>
-
-map <leader>e :call RunTestFile()<cr>
-"map <leader>e :call RunNearestTest()<cr>
-map <leader>t :call RunTests('')<cr>
-"map <leader>c :w\|:!script/features<cr>
-"map <leader>w :w\|:!script/features --profile wip<cr>

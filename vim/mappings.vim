@@ -17,7 +17,8 @@ nnoremap <leader>e :e <c-r>=expand('%:h').'/'<cr>
 nnoremap <cr> :nohlsearch<cr>
 
 inoremap <C-l> <delete>
-inoremap <tab> <c-n>
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-p>
 inoremap <C-c> <esc>gUiwea
 " go to last buffer:
 nnoremap <silent> <leader><leader> <c-^>
