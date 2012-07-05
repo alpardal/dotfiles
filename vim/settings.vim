@@ -2,17 +2,21 @@ set nocompatible
 filetype plugin indent on
 syntax enable
 
+set list listchars=tab:»·,trail:· ",eol:↲
+" set list listchars=tab:»·,trail:·,eol:¬
+
 " Reload config files when they are edited:
 augroup commands
-	autocmd!
-	autocmd bufwritepost settings.vim source  $MYVIMRC
-	autocmd bufwritepost mappings.vim source  $MYVIMRC
-	autocmd bufwritepost functions.vim source $MYVIMRC
-	" Restore cursor position
-	autocmd BufReadPost *
-		\ if line("'\"") > 1 && line("'\"") <= line("$") |
-		\   exe "normal! g`\"" |
-		\ endif
+    autocmd!
+    autocmd BufWritePre * :%s/\s\+$//e
+    autocmd bufwritepost settings.vim source  $MYVIMRC
+    autocmd bufwritepost mappings.vim source  $MYVIMRC
+    autocmd bufwritepost functions.vim source $MYVIMRC
+    " Restore cursor position
+    autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
 augroup END
 
 call pathogen#infect()
@@ -29,15 +33,15 @@ set number
 set guifont=Monaco\ 10
 set cursorline
 if has('win32')
-	set guifont=Consolas:h12
+    set guifont=Consolas:h12
 endif
 if has('gui_running')
-	set guioptions=aci
-	set lines=45 columns=100
-	colorscheme wombat
+    set guioptions=aci
+    set lines=45 columns=100
+    colorscheme wombat
     set bg=dark
 else
-	colorscheme herald
+    colorscheme herald
 endif
 
 set laststatus=2
