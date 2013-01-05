@@ -12,7 +12,8 @@ fi
 
 export EDITOR="vim"
 export TERM=xterm-256color
-export HISTIGNORE="&:ls:[bf]g*:history:quit:exit:vi"
+export HISTIGNORE="&:ls:[bf]g*:history:quit:exit:vi:g[sdl]:gaa"
+export HISTSIZE=10000
 
 export JAVA_HOME=~/.jdk1.7.0
 export JAVA_OPTS="-client"
