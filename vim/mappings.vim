@@ -11,16 +11,21 @@ nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap 0 ^
 nnoremap ^ 0
+nnoremap ' `
+nnoremap ` '
 nnoremap <leader>q :q<cr>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 nnoremap <silent> <leader>o :CommandTFlush<cr>\|:CommandT<cr>
 nmap <silent> <leader>O :CommandTFlush<cr>\|:CommandT %%<cr>
 nmap <leader>e :e %%
-nnoremap <cr> :nohlsearch<cr>
+nnoremap <silent> <cr> :nohlsearch<cr>
+nnoremap j gj
+nnoremap k gk
 
 inoremap <C-l> <delete>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
+" upcase prev word
 inoremap <C-c> <esc>gUiwea
 " go to last buffer:
 nnoremap <silent> <leader><leader> <c-^>
@@ -43,15 +48,23 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
+nnoremap <leader>s :w\|!git status<cr>
+
 " rails stuff:
 nmap <leader>gc :CommandTFlush<cr>:CommandT app/controllers/<cr>
 nmap <leader>gv :CommandTFlush<cr>:CommandT app/views/<cr>
 nmap <leader>gm :CommandTFlush<cr>:CommandT app/models/<cr>
+nmap <leader>gh :CommandTFlush<cr>:CommandT app/helpers/<cr>
 nmap <leader>ga :CommandTFlush<cr>:CommandT app/assets/<cr>
+nmap <leader>gas :CommandTFlush<cr>:CommandT app/assets/stylesheets<cr>
+nmap <leader>gaj :CommandTFlush<cr>:CommandT app/assets/javascripts<cr>
 nmap <leader>gs :CommandTFlush<cr>:CommandT spec/<cr>
 nmap <leader>gl :CommandTFlush<cr>:CommandT lib/<cr>
 nmap <leader>gg :e Gemfile<cr>
 nmap <leader>gr :e config/routes.rb<cr>
+nmap <leader>ic :Rcontroller<cr>
+nmap <leader>iv :Rview<cr>
+nmap <leader>im :Rmodel<cr>
 " from rails.vim:
 nmap <leader>a :A<cr>
 " tcomment:
