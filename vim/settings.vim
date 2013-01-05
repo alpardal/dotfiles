@@ -60,6 +60,8 @@ set completeopt=longest,menuone
 set history=1000
 
 set autoread
+set splitbelow
+set splitright
 
 set ignorecase
 set smartcase
@@ -93,3 +95,4 @@ hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=un
 
 runtime ftplugin/man.vim
 let g:CommandTCancelMap=['<C-c>', '<Esc>']
+let g:netrw_liststyle=3
