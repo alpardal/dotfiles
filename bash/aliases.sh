@@ -1,14 +1,14 @@
 # general
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
-    alias ls='ls --color=auto'
+    alias ls='ls -xX --color=auto'
 fi
 alias quit="exit"
 alias sa="sudo apt-get"
 alias ll='ls -oh'
 alias la='ls -A'
 alias l1="ls -F -1 --group-directories-first"
-alias ack="ack-grep"
+alias ack="ack-grep -a"
 alias -- -='cd -'
 alias re.=". ~/.bashrc"
 # ruby
