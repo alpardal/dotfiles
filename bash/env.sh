@@ -21,4 +21,5 @@ export POSTGRES_PATH="/usr/local/pgsql/bin"
 export PGDATA="/usr/local/pgsql/data"
 export USER_BIN=~/.bin
 export SCALA_HOME=~/Downloads/scala-2.9.2
+export NODE_PATH=/usr/local/lib/node_modules
 export PATH=$POSTGRES_PATH:$JAVA_HOME/bin:$PATH:$SCALA_HOME/bin:$USER_BIN
