@@ -23,6 +23,7 @@ call pathogen#infect()
 
 set nomodeline
 set modelines=0
+set lazyredraw
 set secure
 set exrc
 
