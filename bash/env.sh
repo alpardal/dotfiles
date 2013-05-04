@@ -12,6 +12,7 @@ fi
 
 export EDITOR="vim"
 export TERM=xterm-256color
+# export TERM="screen-256color"
 export HISTIGNORE="&:ls:[bf]g*:history:quit:exit:vi:g[sdl]:gaa"
 export HISTSIZE=10000
 

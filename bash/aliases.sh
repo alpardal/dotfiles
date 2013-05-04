@@ -9,6 +9,7 @@ alias ll='ls -oh'
 alias la='ls -A'
 alias l1="ls -F -1 --group-directories-first"
 alias ack="ack-grep -a"
+alias a="ack-grep"
 alias -- -='cd -'
 alias re.=". ~/.bashrc"
 # ruby
@@ -24,6 +25,7 @@ alias gl="git log --oneline --decorate --graph --branches='*'"
 alias go="git checkout"
 alias gi="git commit"
 alias gd="git diff"
+alias gdp="git diff --patience"
 alias gds="git diff --staged"
 alias gm="git merge"
 alias gt="git tag"

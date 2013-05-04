@@ -21,6 +21,8 @@ nmap <leader>e :e %%
 nnoremap <silent> <cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
+noremap <leader>[ :cprev<cr>
+noremap <leader>] :cnext<cr>
 
 inoremap <C-l> <delete>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
@@ -48,8 +50,6 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-nnoremap <leader>s :w\|!git status<cr>
-
 " rails stuff:
 nmap <leader>gc :CommandTFlush<cr>:CommandT app/controllers/<cr>
 nmap <leader>gv :CommandTFlush<cr>:CommandT app/views/<cr>
@@ -58,7 +58,28 @@ nmap <leader>gh :CommandTFlush<cr>:CommandT app/helpers/<cr>
 nmap <leader>ga :CommandTFlush<cr>:CommandT app/assets/<cr>
 nmap <leader>gas :CommandTFlush<cr>:CommandT app/assets/stylesheets<cr>
 nmap <leader>gaj :CommandTFlush<cr>:CommandT app/assets/javascripts<cr>
+
 nmap <leader>gs :CommandTFlush<cr>:CommandT spec/<cr>
+nmap <leader>gsc :CommandTFlush<cr>:CommandT spec/controllers/<cr>
+nmap <leader>gsv :CommandTFlush<cr>:CommandT spec/views/<cr>
+nmap <leader>gsm :CommandTFlush<cr>:CommandT spec/models/<cr>
+nmap <leader>gsh :CommandTFlush<cr>:CommandT spec/helpers/<cr>
+nmap <leader>gsj :CommandTFlush<cr>:CommandT spec/javascripts/<cr>
+
+" Arpeggio nmap gc :CommandTFlush<cr>:CommandT app/controllers/<cr>
+" Arpeggio nmap gv :CommandTFlush<cr>:CommandT app/views/<cr>
+" Arpeggio nmap gm :CommandTFlush<cr>:CommandT app/models/<cr>
+" Arpeggio nmap gh :CommandTFlush<cr>:CommandT app/helpers/<cr>
+" Arpeggio nmap ac :CommandTFlush<cr>:CommandT app/assets/stylesheets<cr>
+" Arpeggio nmap aj :CommandTFlush<cr>:CommandT app/assets/javascripts<cr>
+" 
+" Arpeggio nmap gs :CommandTFlush<cr>:CommandT spec/<cr>
+" Arpeggio nmap sc :CommandTFlush<cr>:CommandT spec/controllers/<cr>
+" Arpeggio nmap sv :CommandTFlush<cr>:CommandT spec/views/<cr>
+" Arpeggio nmap sm :CommandTFlush<cr>:CommandT spec/models/<cr>
+" Arpeggio nmap sh :CommandTFlush<cr>:CommandT spec/helpers/<cr>
+" Arpeggio nmap sj :CommandTFlush<cr>:CommandT spec/javascripts/<cr>
+
 nmap <leader>gl :CommandTFlush<cr>:CommandT lib/<cr>
 nmap <leader>gg :e Gemfile<cr>
 nmap <leader>gr :e config/routes.rb<cr>
@@ -74,3 +95,12 @@ vmap <leader>c gc
 map <leader>gR :call ShowRoutes()<cr><cr>
 map <leader>gt :call OpenTestAlternateInSplit()<cr>
 map <leader>n :call RenameFile()<cr>
+
+map <silent><F4> :call BufferList()<cr>
+
+" hard mode:
+" nnoremap j <nop>
+" nnoremap k <nop>
+" nnoremap l <nop>
+" nnoremap h <nop>
+" 

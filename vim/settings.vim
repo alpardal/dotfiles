@@ -2,13 +2,13 @@ set nocompatible
 filetype plugin indent on
 syntax enable
 
-set list listchars=tab:»·,trail:· ",eol:↲
+" set list listchars=tab:»·,trail:· ",eol:↲
 " set list listchars=tab:»·,trail:·,eol:¬
 
 " Reload config files when they are edited:
 augroup commands
     autocmd!
-    autocmd BufWritePre * :%s/\s\+$//e
+    " autocmd BufWritePre * :%s/\s\+$//e
     autocmd bufwritepost settings.vim source  $MYVIMRC
     autocmd bufwritepost mappings.vim source  $MYVIMRC
     autocmd bufwritepost functions.vim source $MYVIMRC
@@ -20,6 +20,7 @@ augroup commands
 augroup END
 
 call pathogen#infect()
+call pathogen#helptags()
 
 set nomodeline
 set modelines=0
@@ -97,3 +98,4 @@ hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=un
 runtime ftplugin/man.vim
 let g:CommandTCancelMap=['<C-c>', '<Esc>']
 let g:netrw_liststyle=3
+let g:slime_target = "tmux"
