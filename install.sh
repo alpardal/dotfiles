@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm ~/.{irbrc,gemrc,tmux.conf,bashrc,vimrc,zshrc}
+rm -f ~/.{irbrc,gemrc,tmux.conf,bashrc,vimrc,zshrc}
 
 ln -s irbrc ~/.irbrc
 ln -s zshrc ~/.zshrc
