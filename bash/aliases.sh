@@ -31,7 +31,7 @@ alias gm="git merge"
 alias gt="git tag"
 alias stash="git stash -u"
 alias stashp="git stash pop"
-alias stashl="git stash list"
+alias stashl="git stash list --oneline --decorate"
 #tmux
 alias tm="tmux"
 alias ts="tmux list-sessions"
