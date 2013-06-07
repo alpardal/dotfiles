@@ -2,13 +2,13 @@ set nocompatible
 filetype plugin indent on
 syntax enable
 
-" set list listchars=tab:»·,trail:· ",eol:↲
+set list listchars=tab:»·,trail:· ",eol:↲
 " set list listchars=tab:»·,trail:·,eol:¬
 
 " Reload config files when they are edited:
 augroup commands
     autocmd!
-    " autocmd BufWritePre * :%s/\s\+$//e
+    autocmd BufWritePre * :%s/\s\+$//e
     autocmd bufwritepost settings.vim source  $MYVIMRC
     autocmd bufwritepost mappings.vim source  $MYVIMRC
     autocmd bufwritepost functions.vim source $MYVIMRC
