@@ -25,6 +25,7 @@ alias gl="git log --oneline --decorate --graph --branches='*'"
 alias go="git checkout"
 alias gi="git commit"
 alias gd="git diff"
+alias gdc="git diff --word-diff-regex=." # char diff
 alias gdp="git diff --patience"
 alias gds="git diff --staged"
 alias gm="git merge"
