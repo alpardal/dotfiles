@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-rm -f ~/.{irbrc,gemrc,tmux.conf,bashrc,vimrc,zshrc}
+for file in .irbrc .gemrc .tmux.conf .bashrc .vimrc .zshrc; do
+    if [ -f $file ]; then
+        mv $HOME/$file $HOME/${file}_old
+    fi
+done
 
-ln -s irbrc ~/.irbrc
-ln -s zshrc ~/.zshrc
-ln -s gemrc ~/.gemrc
-ln -s tmux.con ~/.tmux.conf
-ln -s bash/bashrc.sh ~/.bashrc
-ln -s vim/vimrc.vim ~/.vimrc
+PWD="`pwd`"
+
+ln -fs $PWD/irbrc          $HOME/.irbrc
+ln -fs $PWD/zshrc          $HOME/.zshrc
+ln -fs $PWD/gemrc          $HOME/.gemrc
+ln -fs $PWD/tmux.con       $HOME/.tmux.conf
+ln -fs $PWD/bash/bashrc.sh $HOME/.bashrc
+ln -fs $PWD/vim/vimrc.vim  $HOME/.vimrc
