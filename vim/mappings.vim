@@ -15,7 +15,7 @@ nnoremap ' `
 nnoremap ` '
 nnoremap <leader>q :q<cr>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-nnoremap <silent> <leader>o :CtrlP<cr>
+nnoremap <silent> <leader>o :CtrlP .<cr>
 nmap <silent> <leader>O :CtrlP %%<cr>
 nmap <leader>e :e %%
 nnoremap <silent> <cr> :nohlsearch<cr>
