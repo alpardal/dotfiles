@@ -99,3 +99,5 @@ runtime ftplugin/man.vim
 let g:CommandTCancelMap=['<C-c>', '<Esc>']
 let g:netrw_liststyle=3
 let g:slime_target = "tmux"
+" test:
+set shell=bash\ -l
