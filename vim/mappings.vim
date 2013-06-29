@@ -79,7 +79,6 @@ nmap <leader>a :A<cr>
 nmap <leader>c gcc
 vmap <leader>c gc
 
-map <leader>gR :call ShowRoutes()<cr><cr>
 map <leader>gt :call OpenTestAlternateInSplit()<cr>
 map <leader>n :call RenameFile()<cr>
 

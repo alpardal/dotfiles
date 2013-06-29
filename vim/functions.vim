@@ -1,13 +1,3 @@
-function! ShowRoutes()
-    :topleft 100 :split __Routes__
-    :set buftype=nofile
-    :normal 1GdG
-    :0r! rake -s routes
-    :exec ":normal " . line("$") . "^W_ "
-    :normal 1GG
-    :normal dd
-endfunction
-
 " Rename current file
 function! RenameFile()
 	let old_name = expand('%')
