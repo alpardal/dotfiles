@@ -20,6 +20,7 @@ export JAVA_HOME=~/.jdk1.7.0
 export JAVA_OPTS="-client"
 export POSTGRES_PATH="/usr/local/pgsql/bin"
 export PGDATA="/usr/local/pgsql/data"
+export RBXOPT='-X19'
 export USER_BIN=~/.bin
 export SCALA_HOME=$USER_BIN/scala
 export NODE_PATH=/usr/local/lib/node_modules
