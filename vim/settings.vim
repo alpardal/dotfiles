@@ -111,3 +111,12 @@ let g:netrw_liststyle=3
 let g:slime_target = "tmux"
 " test:
 set shell=bash\ -l
+
+augroup filetypes
+    au!
+    au Filetype css,scss setlocal foldmethod=marker foldmarker={,}
+    au Filetype css,scss setlocal iskeyword+=-
+
+    au Filetype c,java,javascript setlocal foldmethod=marker foldmarker={,}
+augroup END
+
