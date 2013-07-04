@@ -18,6 +18,9 @@ augroup commands
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
         \   exe "normal! g`\"" |
         \ endif
+    au BufLeave * if !&diff | let b:winview = winsaveview() | endif
+    au BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | endif
+    au VimResized * :wincmd =
 augroup END
 
 call pathogen#infect()
