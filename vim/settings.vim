@@ -64,8 +64,10 @@ set winheight=10
 set winminheight=10
 
 set wildmenu
-set wildmode=longest:full
-set completeopt=longest,menuone
+set wildmode=longest:list
+set completeopt=longest,menuone,preview
+set formatoptions=tcrn1
+set virtualedit+=block
 
 set history=1000
 
