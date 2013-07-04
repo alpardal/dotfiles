@@ -3,6 +3,7 @@ filetype plugin indent on
 syntax enable
 
 set list listchars=tab:»·,trail:· ",eol:↲
+set showbreak=↪
 " set list listchars=tab:»·,trail:·,eol:¬
 
 " Reload config files when they are edited:
