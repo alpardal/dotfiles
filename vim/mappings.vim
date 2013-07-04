@@ -6,6 +6,8 @@ command! Functions e ~/dotfiles/vim/functions.vim
 let mapleader = " "
 nmap <leader>w :w<cr>
 nmap <leader>x :x<cr>
+nnoremap <leader>v <C-w>v
+nnoremap <leader>s <C-w>s
 
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
