@@ -32,6 +32,10 @@ set lazyredraw
 set secure
 set exrc
 
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+
 " enconding & UI:
 set encoding=utf-8
 set showcmd
