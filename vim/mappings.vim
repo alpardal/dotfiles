@@ -40,6 +40,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-p> <C-w>p
+" split line
+nnoremap S i<cr><esc>k$
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
