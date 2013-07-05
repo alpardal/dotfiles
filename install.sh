@@ -12,6 +12,6 @@ ln -fs $PWD/irbrc          $HOME/.irbrc
 ln -fs $PWD/zshrc          $HOME/.zshrc
 ln -fs $PWD/gemrc          $HOME/.gemrc
 ln -fs $PWD/railsrc        $HOME/.railsrc
-ln -fs $PWD/tmux.con       $HOME/.tmux.conf
+ln -fs $PWD/tmux.conf      $HOME/.tmux.conf
 ln -fs $PWD/bash/bashrc.sh $HOME/.bashrc
 ln -fs $PWD/vim/vimrc.vim  $HOME/.vimrc
