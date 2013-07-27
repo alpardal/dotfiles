@@ -8,6 +8,8 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/dotfiles/bash/aliases.sh
 source ~/dotfiles/bash/env.sh
+
+unalias md
 source ~/dotfiles/bash/functions.sh
 
 setopt hist_ignore_dups
