@@ -20,4 +20,3 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export LD_LIBRARY_PATH="/home/andre/.rvm/rubies/ruby-1.9.3-p327/lib/"
