@@ -24,6 +24,10 @@ nmap <leader>e :e %%
 nnoremap <silent> <cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
+nnoremap 0 g^
+nnoremap g0 ^
+nnoremap $ g$
+nnoremap g$ $
 noremap <leader>[ :cprev<cr>
 noremap <leader>] :cnext<cr>
 
