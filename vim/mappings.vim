@@ -69,7 +69,7 @@ nmap <leader>ga :CtrlP app/assets/<cr>
 nmap <leader>gas :CtrlP app/assets/stylesheets<cr>
 nmap <leader>gaj :CtrlP app/assets/javascripts<cr>
 
-map <leader>gs :CtrlP spec/<cr>
+map <leader>gsp :CtrlP spec/<cr>
 nmap <leader>gsc :CtrlP spec/controllers/<cr>
 nmap <leader>gsv :CtrlP spec/views/<cr>
 nmap <leader>gsm :CtrlP spec/models/<cr>
