@@ -16,7 +16,7 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 setopt hist_ignore_space
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

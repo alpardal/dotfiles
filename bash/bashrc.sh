@@ -82,3 +82,5 @@ fi # fim do if da linha 6 (se não for interativo)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 # RVM shell completion:
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
