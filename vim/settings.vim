@@ -117,7 +117,5 @@ augroup filetypes
     au!
     au Filetype css,scss setlocal foldmethod=marker foldmarker={,}
     au Filetype css,scss setlocal iskeyword+=-
-
-    au Filetype c,java,javascript setlocal foldmethod=marker foldmarker={,}
 augroup END
 
