@@ -74,6 +74,7 @@ set history=1000
 set autoread
 set splitbelow
 set splitright
+set winwidth=80
 
 set ignorecase
 set smartcase
