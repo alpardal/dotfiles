@@ -15,6 +15,7 @@ alias re.=". ~/.bashrc"
 # ruby
 alias ri="ri -Tf ansi"
 alias gemset="rvm gemset"
+alias serve="ruby -run -e httpd . -p 3000"
 # git
 alias gs="git status"
 alias gss="git status --short"
