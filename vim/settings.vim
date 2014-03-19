@@ -70,6 +70,8 @@ set formatoptions=tcrn1
 set virtualedit+=block
 
 set history=1000
+set undofile
+set undodir=~/.vim_undo
 
 set autoread
 set splitbelow
