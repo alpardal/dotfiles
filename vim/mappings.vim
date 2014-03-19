@@ -28,6 +28,7 @@ nnoremap 0 g^
 nnoremap g0 ^
 nnoremap $ g$
 nnoremap g$ $
+nnoremap Q :normal n.<cr>
 noremap <leader>[ :cprev<cr>
 noremap <leader>] :cnext<cr>
 
