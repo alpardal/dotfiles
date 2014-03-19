@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for file in .irbrc .gemrc .tmux.conf .bashrc .vimrc .zshrc .railsrc .ackrc; do
+for file in .irbrc .gemrc .tmux.conf .bashrc .vimrc .zshrc .railsrc .ackrc .gitconfig; do
     if [ -f $HOME/$file ]; then
         mv $HOME/$file $HOME/${file}_old
 fi
@@ -16,3 +16,4 @@ ln -fs $PWD/tmux.conf      $HOME/.tmux.conf
 ln -fs $PWD/bash/bashrc.sh $HOME/.bashrc
 ln -fs $PWD/vim/vimrc.vim  $HOME/.vimrc
 ln -fs $PWD/ackrc          $HOME/.ackrc
+ln -fs $PWD/gitconfig      $HOME/.gitconfig

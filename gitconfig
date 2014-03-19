@@ -1,0 +1,27 @@
+[user]
+    name = André Luiz Pardal
+    email = alpardal@gmail.com
+[credential]
+    helper = cache
+[push]
+    default = simple
+[color]
+    ui = auto
+    diff = auto
+[core]
+    editor = vim -f
+[alias]
+    # log with list of modified files in each commit:
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --oneline
+    # file history, with diffs:
+    fl = log -u
+    # files modified in last commit:
+    dl = "!git ll -1"
+    # find a file path in codebase:
+    f = "!git ls-files | grep -i"
+    # search codebase for a string:
+    gr = grep -Ii
+    # list all aliases:
+    aliases = "!git config -l | grep alias | cut -c 7-"
+    # update upstream branches and fast-forward
+    up = "!git remote update -p; git merge --ff-only @{u}"
