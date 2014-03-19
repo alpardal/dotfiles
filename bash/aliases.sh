@@ -8,7 +8,7 @@ alias sa="sudo apt-get"
 alias ll='ls -oh'
 alias la='ls -A'
 alias l1="ls -F -1 --group-directories-first"
-alias ack="ack-grep -a"
+alias ack="ack-grep"
 alias a="ack-grep"
 alias -- -='cd -'
 alias re.=". ~/.bashrc"
@@ -16,6 +16,7 @@ alias re.=". ~/.bashrc"
 alias ri="ri -Tf ansi"
 alias gemset="rvm gemset"
 alias serve="ruby -run -e httpd . -p 3000"
+alias migrate="rake db:migrate db:test:prepare"
 # git
 alias gs="git status"
 alias gss="git status --short"
@@ -39,7 +40,5 @@ alias stashl="git stash list --oneline --decorate"
 alias tm="tmux"
 alias ts="tmux list-sessions"
 alias ta="tmux attach"
-# rails
-alias migrate="rake db:migrate db:test:prepare"
-# ctags
+# other
 alias ctags="ctags-exuberant --extra=+f -R"
