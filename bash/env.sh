@@ -21,7 +21,6 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1.25
 export RUBY_GC_HEAP_INIT_SLOTS=800000
 export RUBY_GC_HEAP_FREE_SLOTS=600000
-export LD_PRELOAD=/usr/lib/libtcmalloc_minimal.so.4
 
 export JAVA_HOME=~/.jdk1.7.0
 export JAVA_OPTS="-client"
@@ -30,5 +29,6 @@ export PGDATA="/usr/local/pgsql/data"
 export RBXOPT='-X19'
 export USER_BIN=~/.bin
 export SCALA_HOME=$USER_BIN/scala
+export GO_HOME=/usr/local/go
 export NODE_PATH=/usr/local/lib/node_modules
-export PATH=$POSTGRES_PATH:$JAVA_HOME/bin:$PATH:$SCALA_HOME/bin:$USER_BIN
+export PATH=$POSTGRES_PATH:$JAVA_HOME/bin:$PATH:$SCALA_HOME/bin:$USER_BIN:$GO_HOME/bin
