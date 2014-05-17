@@ -16,6 +16,18 @@ function! SourceAllVimrcs()
     endfor
 endfunction
 
+function! CurrentFileType()
+    return &filetype
+endfunction
+
+function! CurrentFileNotesDir()
+    return '~/Programming/notes/' . CurrentFileType()
+endfunction
+
+function! SearchNotes()
+    exec ':CtrlP ' . CurrentFileNotesDir()
+endfunction
+
 " Rename current file
 function! RenameFile()
     let old_name = expand('%')
