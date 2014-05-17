@@ -14,6 +14,7 @@ set showbreak=↪
 " Reload config files when they are edited:
 augroup commands
     autocmd!
+    autocmd VimEnter * :call SourceAllVimrcs()
     autocmd BufWritePre * :%s/\s\+$//e
     autocmd bufwritepost settings.vim source  $MYVIMRC
     autocmd bufwritepost mappings.vim source  $MYVIMRC
@@ -35,7 +36,6 @@ set nomodeline
 set modelines=0
 set lazyredraw
 set secure
-set exrc
 
 set notimeout
 set ttimeout

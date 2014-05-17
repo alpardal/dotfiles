@@ -1,3 +1,21 @@
+function! AbsolutePath(file)
+    return fnamemodify(a:file, ':p')
+endfunction
+
+function! FindVimrcs()
+    let files = findfile('.vimrc', getcwd() . ';~', -1)
+    let absolute_paths = map(files, 'AbsolutePath(v:val)')
+    let new_vimrcs = filter(absolute_paths, 'v:val != $MYVIMRC')
+    return reverse(new_vimrcs)
+endfunction
+
+function! SourceAllVimrcs()
+    for vimrc in FindVimrcs()
+        echom 'Sourcing ' . vimrc
+        exec ':source ' . vimrc
+    endfor
+endfunction
+
 " Rename current file
 function! RenameFile()
 	let old_name = expand('%')
