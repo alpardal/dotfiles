@@ -1,4 +1,9 @@
 set nocompatible
+
+" Go stuff:
+set rtp+=/usr/local/go/misc/vim
+let g:gofmt_command="gofmt -tabs=false -tabwidth=2"
+
 filetype plugin indent on
 syntax enable
 
