@@ -12,6 +12,10 @@ alias ack="ack-grep"
 alias a="ack-grep"
 alias -- -='cd -'
 alias re.=". ~/.bashrc"
+
+# go is `git checkout`
+alias golang='/usr/local/go/bin/go'
+
 # ruby
 alias ri="ri -Tf ansi"
 alias gemset="rvm gemset"
@@ -31,6 +35,7 @@ alias gd="git diff"
 alias gdc="git diff --word-diff-regex=." # char diff
 alias gdp="git diff --patience"
 alias gds="git diff --staged"
+alias gdw="git diff --ignore-all-space"
 alias gm="git merge"
 alias gt="git tag"
 alias stash="git stash -u"
@@ -42,3 +47,4 @@ alias ts="tmux list-sessions"
 alias ta="tmux attach"
 # other
 alias ctags="ctags-exuberant --extra=+f -R"
+alias node="node --harmony"
