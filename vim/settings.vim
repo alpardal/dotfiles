@@ -154,7 +154,6 @@ Plugin 'slim-template/vim-slim'
 
 call vundle#end()
 
-"tcomment_vim
 "vim-coffee-script
 "vim-javascript
 
