@@ -1,5 +1,7 @@
 set nocompatible
 
+set rtp+=~/.vim/bundle/Vundle.vim
+
 " Go stuff:
 set rtp+=/usr/local/go/misc/vim
 let g:gofmt_command="gofmt -tabs=false -tabwidth=2"
@@ -28,9 +30,6 @@ augroup commands
     au BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | endif
     au VimResized * :wincmd =
 augroup END
-
-call pathogen#infect()
-call pathogen#helptags()
 
 set nomodeline
 set modelines=0
@@ -117,6 +116,8 @@ runtime ftplugin/man.vim
 let g:CommandTCancelMap=['<C-c>', '<Esc>']
 let g:netrw_liststyle=3
 let g:slime_target = "tmux"
+let g:airline_powerline_fonts=1
+let g:airline_theme="bubblegum"
 " test:
 set shell=bash\ -l
 
@@ -126,3 +127,37 @@ augroup filetypes
     au Filetype css,scss setlocal iskeyword+=-
 augroup END
 
+" plugins managed by Vundle:
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-endwise'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tomtom/tcomment_vim'
+
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+
+Plugin 'guns/vim-clojure-static'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'marijnh/tern_for_vim'
+
+Plugin 'othree/html5.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'slim-template/vim-slim'
+
+call vundle#end()
+
+"tcomment_vim
+"vim-coffee-script
+"vim-javascript
+
+"sparkup
+"vim-ragtag
+"vim-bufferlist
+"vim-fugitive
+"vim-slime
