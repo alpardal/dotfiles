@@ -46,8 +46,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-p> <C-w>p
+
+nnoremap <silent> <leader>j :call MoveCurrentLineDown()<cr>
+nnoremap <silent> <leader>k :call MoveCurrentLineUp()<cr>
+
 " split line
 nnoremap S i<cr><esc>k$
+
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -95,8 +100,6 @@ vmap <leader>c gc
 
 map <leader>gt :call OpenTestAlternateInSplit()<cr>
 map <leader>n :call RenameFile()<cr>
-
-map <silent><F4> :call BufferList()<cr>
 
 " hard mode:
 " nnoremap j <nop>
