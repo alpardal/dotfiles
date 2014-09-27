@@ -2,7 +2,7 @@
 " files in dotfiles/vim to be loaded
 let s:files = ['settings', 'variables', 'commands', 'functions', 'mappings', 'plugins']
 
-let s:vimrc = substitute(resolve($MYVIMRC), '\n\r', '', 'g')
+let s:vimrc = resolve($MYVIMRC)
 let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
 
 for s:file in s:files
