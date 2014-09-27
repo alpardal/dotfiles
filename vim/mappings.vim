@@ -1,9 +1,6 @@
 
-command! Mappings e ~/dotfiles/vim/mappings.vim
-command! Settings e ~/dotfiles/vim/settings.vim
-command! Functions e ~/dotfiles/vim/functions.vim
-
 let mapleader = " "
+
 nnoremap <leader>w :w<cr>
 nnoremap <leader>x :x<cr>
 nnoremap <leader>v <C-w>v

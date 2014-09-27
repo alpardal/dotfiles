@@ -1,4 +1,3 @@
-
 function! MoveCurrentLineUp()
     let current_line = line('.')
 

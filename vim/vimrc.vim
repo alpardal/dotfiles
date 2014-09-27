@@ -1,19 +1,29 @@
-
-" files in dotfiles/vim to be loaded
-let s:files = ['settings', 'variables', 'commands', 'functions', 'mappings', 'plugins']
+" files in same directory as $MYVIMRC to be loaded
+let s:vimfiles = ['settings', 'variables', 'commands',
+                 \'functions', 'mappings', 'plugins']
 
 let s:vimrc = resolve($MYVIMRC)
 let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
 
-for s:file in s:files
+
+augroup reload_files
+autocmd!
+
+for s:file in s:vimfiles
+    " expand path and source s:file
     let s:path = s:vimrc_dir . '/' . s:file . '.vim'
     execute 'source ' . s:path
+
+    " create commands to edit sourced files, e.g. :Settings to edit settings.vim
+    let s:capitalized_filename = substitute(s:file, '^\(.\)', '\u\1', '')
+    execute 'command! ' . s:capitalized_filename . ' e ' . s:path
+
+    " Reload config files when they are edited:
+    execute 'autocmd reload_files bufwritepost ' . s:path . ' source $MYVIMRC'
 endfor
 
-" Reload config files when they are edited:
-augroup reaload_files
-    autocmd!
-    for s:file in s:files
-        execute 'autocmd bufwritepost ' . s:file . '.vim source $MYVIMRC'
-    endfor
-augroup END
+" same for $MYVIMRC
+execute 'command! Vimrc ' . ' e ' . s:vimrc
+execute 'autocmd reload_files bufwritepost ' .s:vimrc . ' source $MYVIMRC'
+
+augroup end

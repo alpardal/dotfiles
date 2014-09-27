@@ -2,6 +2,7 @@
 augroup commands
     autocmd!
     autocmd VimEnter * :call SourceAllVimrcs()
+    " Remove trailing whitespace before saving
     autocmd BufWritePre * :%s/\s\+$//e
     " Restore cursor position
     autocmd BufReadPost *
@@ -12,6 +13,7 @@ augroup commands
     au BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | endif
     au VimResized * :wincmd =
 augroup END
+
 augroup filetypes
 
     au!
