@@ -1,7 +1,7 @@
 
 augroup commands
     autocmd!
-    autocmd VimEnter * :call SourceAllVimrcs()|call TestForRails()
+    autocmd VimEnter * :call SourceAllVimrcs()
     autocmd BufWritePre * :%s/\s\+$//e
     " Restore cursor position
     autocmd BufReadPost *

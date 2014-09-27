@@ -1,20 +1,4 @@
 
-function! InRailsProject()
-    if findfile('Gemfile', getcwd()) != ''
-        return match(readfile('Gemfile'), '\<rails\>') != -1
-    endif
-
-    return 0
-endfunction
-
-function! TestForRails()
-    if InRailsProject()
-        echo 'rails project'
-    else
-        echo 'not rails project'
-    endif
-endfunction
-
 function! MoveCurrentLineUp()
     let current_line = line('.')
 

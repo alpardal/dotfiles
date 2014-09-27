@@ -4,8 +4,8 @@ command! Settings e ~/dotfiles/vim/settings.vim
 command! Functions e ~/dotfiles/vim/functions.vim
 
 let mapleader = " "
-nmap <leader>w :w<cr>
-nmap <leader>x :x<cr>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>x :x<cr>
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 
@@ -53,7 +53,6 @@ nnoremap <silent> <leader>k :call MoveCurrentLineUp()<cr>
 " split line
 nnoremap S i<cr><esc>k$
 
-
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
@@ -66,44 +65,21 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-nmap <leader>h :call SearchNotes()<cr>
-nmap <leader>H :CtrlP ~/Programming/notes<cr>
+nnoremap <leader>h :call SearchNotes()<cr>
+nnoremap <leader>H :CtrlP ~/Programming/notes<cr>
+nnoremap <leader>n :call RenameFile()<cr>
 
-" rails stuff:
-nmap <leader>gc :CtrlP app/controllers/<cr>
-nmap <leader>gv :CtrlP app/views/<cr>
-nmap <leader>gm :CtrlP app/models/<cr>
-nmap <leader>gh :CtrlP app/helpers/<cr>
-nmap <leader>gl :CtrlP lib/<cr>
-nmap <leader>ga :CtrlP app/assets/<cr>
-nmap <leader>gas :CtrlP app/assets/stylesheets<cr>
-nmap <leader>gaj :CtrlP app/assets/javascripts<cr>
-
-nmap <leader>gsp :CtrlP spec/<cr>
-nmap <leader>gsc :CtrlP spec/controllers/<cr>
-nmap <leader>gsv :CtrlP spec/views/<cr>
-nmap <leader>gsm :CtrlP spec/models/<cr>
-nmap <leader>gsh :CtrlP spec/helpers/<cr>
-nmap <leader>gsl :CtrlP spec/lib/<cr>
-nmap <leader>gsj :CtrlP spec/javascripts/<cr>
-
-nmap <leader>gg :e Gemfile<cr>
-nmap <leader>gr :e config/routes.rb<cr>
-nmap <leader>ic :Rcontroller<cr>
-nmap <leader>iv :Rview<cr>
-nmap <leader>im :Rmodel<cr>
+nnoremap <leader>gl :CtrlP lib/<cr>
+nnoremap <leader>gs :CtrlP spec/<cr>
+nnoremap <leader>gg :e Gemfile<cr>
 " from rails.vim:
-nmap <leader>a :A<cr>
+nnoremap <leader>a :A<cr>
 " tcomment:
 nmap <leader>c gcc
 vmap <leader>c gc
-
-map <leader>gt :call OpenTestAlternateInSplit()<cr>
-map <leader>n :call RenameFile()<cr>
 
 " hard mode:
 " nnoremap j <nop>
 " nnoremap k <nop>
 " nnoremap l <nop>
 " nnoremap h <nop>
-"
