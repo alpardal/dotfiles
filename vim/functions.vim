@@ -69,15 +69,6 @@ function! RenameFile()
     endif
 endfunction
 
-" toggle relative and absolute line numbers
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set number
-    else
-        set relativenumber
-    endif
-endfunction
-
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
