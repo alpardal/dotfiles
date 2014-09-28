@@ -10,7 +10,7 @@ function! s:RailsProject()
 endfunction
 
 function! InRailsProject()
-    if findfile('Gemfile', getcwd()) != ''
+    if !empty(findfile('Gemfile', getcwd()))
         return match(readfile('Gemfile'), '\<rails\>') != -1
     endif
 

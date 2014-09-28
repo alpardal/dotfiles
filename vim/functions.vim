@@ -1,3 +1,9 @@
+function! MapUnlessAlreadyMapped(keys, action)
+    if empty(maparg(a:keys))
+        execute 'map ' . a:keys . ' ' . a:action
+    endif
+endfunction
+
 function! MoveCurrentLineUp()
     let current_line = line('.')
 
