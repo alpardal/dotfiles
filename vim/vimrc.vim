@@ -1,4 +1,4 @@
-" files in same directory as $MYVIMRC to be loaded
+" files in same directory as $MYVIMRC link target to be loaded
 let s:vimfiles = ['settings', 'variables', 'commands',
                  \'functions', 'mappings', 'plugins']
 
