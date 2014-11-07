@@ -23,7 +23,14 @@ alias golang='/usr/local/go/bin/go'
 alias ri="ri -Tf ansi"
 alias gemset="rvm gemset"
 alias serve="ruby -run -e httpd . -p 3000"
-alias migrate="rake db:migrate db:test:prepare"
+# rails
+alias r='bin/rails'
+alias rs='bin/rails s'
+alias rc='bin/rails c'
+alias rcs='bin/rails c --sandbox'
+alias rdc='bin/rails dbconsole'
+alias rk='bin/rake'
+
 # git
 alias gs="git status"
 alias gss="git status --short"
