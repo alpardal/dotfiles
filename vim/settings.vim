@@ -30,17 +30,9 @@ set guifont=Monaco\ 10
 set cursorline
 
 set background=dark
-if has('win32')
-    set guifont=Consolas:h12
-endif
-if has('gui_running')
-    set guioptions=aci
-    set lines=45 columns=100
-    colorscheme wombat
-else
-    " colorscheme herald
-    colorscheme jellybeans
-endif
+
+" colorscheme herald
+colorscheme jellybeans
 
 set laststatus=2
 set statusline=%f\ %y%m
