@@ -3,7 +3,7 @@ if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
     alias ls='ls -xX --color=auto'
 fi
-alias quit="exit"
+alias quit=" exit"
 alias sa="sudo apt-get"
 alias ll='ls -oh'
 alias la='ls -A'
@@ -12,6 +12,9 @@ alias ack="ack-grep"
 alias a="ack-grep"
 alias -- -='cd -'
 alias re.=". ~/.bashrc"
+alias fg=' fg'
+
+alias vi=' vi'
 
 # go is `git checkout`
 alias golang='/usr/local/go/bin/go'
