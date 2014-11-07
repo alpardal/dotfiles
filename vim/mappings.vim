@@ -35,6 +35,11 @@ nnoremap Q :normal n.<cr>
 noremap <leader>[ :cprev<cr>
 noremap <leader>] :cnext<cr>
 
+cnoremap <C-a> <Home>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Delete>
+
 inoremap <C-l> <delete>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
@@ -48,6 +53,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-p> <C-w>p
+" tabs
+nnoremap <leader>bn :tabnext<cr>
+nnoremap <leader>bp :tabprev<cr>
+nnoremap <leader>bb :tabnew<cr>
+nnoremap <leader>bc :tabclose<cr>
 
 nnoremap <silent> <leader>j :call MoveCurrentLineDown()<cr>
 nnoremap <silent> <leader>k :call MoveCurrentLineUp()<cr>
