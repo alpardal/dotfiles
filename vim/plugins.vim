@@ -9,6 +9,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'scrooloose/nerdtree'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -29,8 +30,9 @@ Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'guns/vim-clojure-static'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'Shirk/vim-gas'
 
+" Plugin 'Shirk/vim-gas'
+" Plugin 'ap/vim-css-color'
 " Plugin 'vim-scripts/VIM-Color-Picker'
 
 call vundle#end()
