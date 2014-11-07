@@ -2,8 +2,10 @@
 augroup commands
     autocmd!
     autocmd VimEnter * :call SourceAllVimrcs()
+
     " Remove trailing whitespace before saving
     autocmd BufWritePre * :%s/\s\+$//e
+
     " Restore cursor position
     autocmd BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") |
@@ -15,7 +17,6 @@ augroup commands
 augroup END
 
 augroup filetypes
-
     au!
     au Filetype css,scss setlocal foldmethod=marker foldmarker={,}
     au Filetype css,scss setlocal iskeyword+=-
