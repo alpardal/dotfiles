@@ -86,6 +86,8 @@ nnoremap <leader>gs :CtrlP spec/<cr>
 nnoremap <leader>gg :e Gemfile<cr>
 " from rails.vim:
 nnoremap <leader>a :A<cr>
+nnoremap <C-w>a :vsp<cr> :A<cr>
+nnoremap <C-w><C-a> :vsp<cr> :A<cr>
 " tcomment:
 nmap <leader>c gcc
 vmap <leader>c gc
