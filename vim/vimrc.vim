@@ -5,7 +5,6 @@ let s:vimfiles = ['settings', 'variables', 'commands',
 let s:vimrc = resolve($MYVIMRC)
 let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
 
-
 augroup reload_files
 autocmd!
 
@@ -27,3 +26,7 @@ execute 'command! Vimrc ' . ' e ' . s:vimrc
 execute 'autocmd reload_files bufwritepost ' .s:vimrc . ' source $MYVIMRC'
 
 augroup end
+
+if filereadable($HOME . '/.vimrc.local')
+    source ~/.vimrc.local
+endif
