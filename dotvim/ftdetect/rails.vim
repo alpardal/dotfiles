@@ -4,6 +4,8 @@ augroup test_for_rails
 augroup END
 
 function! s:RailsProject()
+    let g:ruby_run_spec_command='bin/rspec'
+
     if InRailsProject()
         call s:RailsMappings()
     endif
@@ -18,7 +20,9 @@ function! InRailsProject()
 endfunction
 
 function! s:RailsMappings()
+    nnoremap <leader>gr :e config/routes.rb<cr>
     nnoremap <leader>gc :CtrlP app/controllers/<cr>
+
     nnoremap <leader>gv :CtrlP app/views/<cr>
     nnoremap <leader>gm :CtrlP app/models/<cr>
     nnoremap <leader>gh :CtrlP app/helpers/<cr>
@@ -31,9 +35,4 @@ function! s:RailsMappings()
     nnoremap <leader>gsv :CtrlP spec/views/<cr>
     nnoremap <leader>gsm :CtrlP spec/models/<cr>
     nnoremap <leader>gsh :CtrlP spec/helpers/<cr>
-
-    nnoremap <leader>gr :e config/routes.rb<cr>
-    nnoremap <leader>ic :Rcontroller<cr>
-    nnoremap <leader>iv :Rview<cr>
-    nnoremap <leader>im :Rmodel<cr>
 endfunction
