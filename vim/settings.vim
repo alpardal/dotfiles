@@ -67,8 +67,13 @@ set nobackup
 set nowb
 set noswapfile
 
-set wrap
 set linebreak
+set nolist
+set breakat=\ |,.;
+set wrap
+set textwidth=80
+set colorcolumn=+1
+
 set backspace=indent,eol,start
 set expandtab
 set tabstop=4
