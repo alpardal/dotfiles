@@ -41,3 +41,11 @@ call vundle#end()
 "vim-fugitive
 "vim-slime
 "marijnh/tern_for_vim'
+
+augroup plugin_mappings
+    au!
+
+    au BufEnter plugins.vim execute 'map <buffer> <leader>pi :w\|PluginInstall<cr>'
+    au BufEnter plugins.vim execute 'map <buffer> <leader>pc :w\|PluginClean<cr>'
+    au BufEnter plugins.vim execute 'map <buffer> <leader>pu :w\|PluginUpdate<cr>'
+augroup END
