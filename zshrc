@@ -10,6 +10,10 @@ source ~/dotfiles/bash/env.sh
 unalias md
 source ~/dotfiles/bash/functions.sh
 
+if [[ -r "$HOME/.zshrc.local" ]]; then
+    source ~/.zshrc.local
+fi
+
 setopt HIST_IGNORE_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_SPACE
