@@ -64,7 +64,7 @@ if [[ -n "$PS1" ]]; then
     *)
         ;;
     esac
-    
+
     # enable programmable completion features (you don't need to enable
     # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
     # sources /etc/bash.bashrc).
@@ -74,9 +74,18 @@ if [[ -n "$PS1" ]]; then
 
 fi # fim do if da linha 6 (se não for interativo)
 
-. ~/dotfiles/bash/aliases.sh
-. ~/dotfiles/bash/functions.sh
-. ~/dotfiles/bash/env.sh
+. ~/dotfiles/shell/aliases.sh
+. ~/dotfiles/shell/functions.sh
+. ~/dotfiles/shell/env.sh
+
+shopt -s huponexit
+shopt -s autocd
+shopt -s checkjobs
+shopt -s globstar
+set -o notify
+set -o ignoreeof
+
+export PS1="\[\e[0;34m\][\u]\[\e[1;34m\]\w\[\e[0m\] ☢ "
 
 # This loads RVM into a shell session:
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

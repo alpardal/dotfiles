@@ -13,14 +13,13 @@ fi
 
 PWD="`pwd`"
 
-ln -fs $PWD/irbrc          $HOME/.irbrc
-ln -fs $PWD/zshrc          $HOME/.zshrc
-ln -fs $PWD/gemrc          $HOME/.gemrc
-ln -fs $PWD/railsrc        $HOME/.railsrc
-ln -fs $PWD/tmux.conf      $HOME/.tmux.conf
-ln -fs $PWD/bash/bashrc.sh $HOME/.bashrc
-ln -fs $PWD/vim/vimrc.vim  $HOME/.vimrc
-ln -fs $PWD/ackrc          $HOME/.ackrc
-ln -fs $PWD/gitconfig      $HOME/.gitconfig
-
-ln -fs $PWD/dotvim         $HOME/.vim
+ln -fs $PWD/irbrc         $HOME/.irbrc
+ln -fs $PWD/bashrc        $HOME/.bashrc
+ln -fs $PWD/zshrc         $HOME/.zshrc
+ln -fs $PWD/gemrc         $HOME/.gemrc
+ln -fs $PWD/railsrc       $HOME/.railsrc
+ln -fs $PWD/tmux.conf     $HOME/.tmux.conf
+ln -fs $PWD/vim/vimrc.vim $HOME/.vimrc
+ln -fs $PWD/ackrc         $HOME/.ackrc
+ln -fs $PWD/gitconfig     $HOME/.gitconfig
+ln -fs $PWD/dotvim        $HOME/.vim

@@ -1,15 +1,4 @@
 
-if [ $SHELL = '/bin/bash' ]; then
-    shopt -s huponexit
-    shopt -s autocd
-    shopt -s checkjobs
-    shopt -s globstar
-    set -o notify
-    set -o ignoreeof
-
-    export PS1="\[\e[0;34m\][\u]\[\e[1;34m\]\w\[\e[0m\] ☢ "
-fi
-
 export EDITOR="vim"
 export TERM=xterm-256color
 # export TERM="screen-256color"

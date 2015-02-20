@@ -4,11 +4,11 @@ ZSH=$HOME/.oh-my-zsh
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-source ~/dotfiles/bash/aliases.sh
-source ~/dotfiles/bash/env.sh
+source ~/dotfiles/shell/aliases.sh
+source ~/dotfiles/shell/env.sh
 
 unalias md
-source ~/dotfiles/bash/functions.sh
+source ~/dotfiles/shell/functions.sh
 
 if [[ -r "$HOME/.zshrc.local" ]]; then
     source ~/.zshrc.local

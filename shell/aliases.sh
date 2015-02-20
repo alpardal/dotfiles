@@ -12,7 +12,6 @@ alias l1='ls -F -1 --group-directories-first'
 alias ack='ack-grep'
 alias a='ack-grep'
 alias -- -='cd -'
-alias re.='. ~/.bashrc'
 alias fg=' fg'
 
 alias vi=' vi'
