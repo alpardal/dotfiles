@@ -1,3 +1,13 @@
+function! SaveCurrentBuffer()
+    let file_changed = &mod
+    if file_changed
+        execute 'w'
+        return 1
+    else
+        return 0
+    endif
+endfunction
+
 function! MapUnlessAlreadyMapped(keys, action)
     if empty(maparg(a:keys))
         execute 'map ' . a:keys . ' ' . a:action
