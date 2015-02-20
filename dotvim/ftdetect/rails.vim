@@ -4,9 +4,9 @@ augroup test_for_rails
 augroup END
 
 function! s:RailsProject()
-    let g:ruby_run_spec_command='bin/rspec'
-
     if InRailsProject()
+        let g:ruby_run_spec_command='bin/rspec'
+        source ~/dotfiles/dotvim/ftplugin/ruby.vim
         call s:RailsMappings()
     endif
 endfunction
@@ -20,6 +20,10 @@ function! InRailsProject()
 endfunction
 
 function! s:RailsMappings()
+    nnoremap <leader>r :w\|call RunAsRubySpec()<cr>
+    nnoremap <leader>t :call SaveCurrentBuffer()\|call RunAllRubySpecs()<cr>
+    nnoremap <leader>l :w\|call RunLastRubySpec()<cr>
+
     nnoremap <leader>gr :e config/routes.rb<cr>
     nnoremap <leader>gc :CtrlP app/controllers/<cr>
 
