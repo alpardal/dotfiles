@@ -1,17 +1,32 @@
 #!/usr/bin/env bash
 
+PWD="`pwd`"
+
 for file in .irbrc .gemrc .tmux.conf .bashrc .vimrc .zshrc .railsrc .ackrc .gitconfig; do
     if [ -f $HOME/$file ]; then
         mv $HOME/$file $HOME/${file}_old
     fi
 done
 
-if [ -d $HOME/.vim ]; then
-    rm -f $HOME/.vim_old
-    mv $HOME/.vim $HOME/.vim_old
-fi
+function setup_dotvim_dir {
+    if [ -d $HOME/.vim ]; then
+        rm -f $HOME/.vim_old
+        mv $HOME/.vim $HOME/.vim_old
+    fi
 
-PWD="`pwd`"
+    ln -fs $PWD/dotvim        $HOME/.vim
+    (
+        cd $HOME/.vim
+        rm -rf bundle
+        mkdir bundle && cd bundle
+        echo -n 'Cloning Vundle... '
+        git clone https://github.com/gmarik/Vundle.vim.git
+        echo done.
+        echo 'Installing Vim plugins... '
+        vi -c 'PluginInstall'
+        echo done.
+    )
+}
 
 ln -fs $PWD/irbrc         $HOME/.irbrc
 ln -fs $PWD/bashrc        $HOME/.bashrc
@@ -22,4 +37,5 @@ ln -fs $PWD/tmux.conf     $HOME/.tmux.conf
 ln -fs $PWD/vim/vimrc.vim $HOME/.vimrc
 ln -fs $PWD/ackrc         $HOME/.ackrc
 ln -fs $PWD/gitconfig     $HOME/.gitconfig
-ln -fs $PWD/dotvim        $HOME/.vim
+
+setup_dotvim_dir
