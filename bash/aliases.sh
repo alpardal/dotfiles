@@ -26,11 +26,15 @@ alias gemset='rvm gemset'
 alias serve='ruby -run -e httpd . -p 3000'
 # rails
 alias r='bin/rails'
+alias rk='bin/rake'
+alias rp='bin/rspec'
+alias sp='bin/spring'
+
 alias rs='bin/rails s'
 alias rc='bin/rails c'
+alias rg='bin/rails g'
 alias rcs='bin/rails c --sandbox'
 alias rdc='bin/rails dbconsole'
-alias rk='bin/rake'
 
 # git
 alias gs='git status'
