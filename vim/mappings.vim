@@ -21,6 +21,7 @@ nnoremap <silent> <leader>o :CtrlP .<cr>
 nmap     <silent> <leader>i :CtrlP %%<cr>
 nnoremap <silent> <leader>p :CtrlPBuffer<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
+nnoremap <F1> :NERDTreeToggle<cr>
 
 nmap <leader>e :e %%
 
