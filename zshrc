@@ -1,17 +1,18 @@
-ZSH_THEME="gallois"
-ZSH=$HOME/.oh-my-zsh
+MY_ZSHRC=`readlink ~/.zshrc`
+DOTFILES_DIR=`dirname "$MY_ZSHRC"`
 
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="gallois"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-source ~/dotfiles/shell/aliases.sh
-source ~/dotfiles/shell/env.sh
-
+source $DOTFILES_DIR/shell/aliases.sh
+source $DOTFILES_DIR/shell/env.sh
 unalias md
-source ~/dotfiles/shell/functions.sh
+source $DOTFILES_DIR/shell/functions.sh
 
 if [[ -r "$HOME/.zshrc.local" ]]; then
-    source ~/.zshrc.local
+    source $HOME/.zshrc.local
 fi
 
 fancy-ctrl-z () {
