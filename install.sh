@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
 PWD="`pwd`"
+RCS_DIR=$PWD/rcs
 
-for file in .irbrc .gemrc .tmux.conf .bashrc .vimrc .zshrc .railsrc .ackrc .gitconfig; do
-    if [ -f $HOME/$file ]; then
-        mv $HOME/$file $HOME/${file}_old
-    fi
-done
+function link_dotfiles {
+    for file in `ls $RCS_DIR`; do
+        if [ -f $HOME/.$file ]; then
+            mv $HOME/.$file $HOME/.${file}_old
+        fi
+        ln -fs $RCS_DIR/$file $HOME/.$file
+    done
+    exit
+}
 
 function setup_dotvim_dir {
     if [ -d $HOME/.vim ]; then
@@ -28,14 +33,5 @@ function setup_dotvim_dir {
     )
 }
 
-ln -fs $PWD/irbrc         $HOME/.irbrc
-ln -fs $PWD/bashrc        $HOME/.bashrc
-ln -fs $PWD/zshrc         $HOME/.zshrc
-ln -fs $PWD/gemrc         $HOME/.gemrc
-ln -fs $PWD/railsrc       $HOME/.railsrc
-ln -fs $PWD/tmux.conf     $HOME/.tmux.conf
-ln -fs $PWD/vim/vimrc.vim $HOME/.vimrc
-ln -fs $PWD/ackrc         $HOME/.ackrc
-ln -fs $PWD/gitconfig     $HOME/.gitconfig
-
+link_dotfiles
 setup_dotvim_dir
