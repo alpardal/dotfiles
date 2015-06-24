@@ -1,3 +1,6 @@
+command! -nargs=1 -complete=file Edit :call EditFile("<args>")
+
+" auto commands:
 
 augroup commands
     autocmd!

@@ -1,6 +1,3 @@
-" files in same directory as $MYVIMRC link target to be loaded
-let s:vimfiles = ['settings', 'variables', 'commands',
-                 \'functions', 'mappings', 'plugins']
 
 let s:vimrc = resolve($MYVIMRC)
 let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
@@ -8,22 +5,20 @@ let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
 augroup reload_files
 autocmd!
 
-for s:file in s:vimfiles
-    " expand path and source s:file
-    let s:path = s:vimrc_dir . '/' . s:file . '.vim'
-    execute 'source ' . s:path
+for s:file in glob(s:vimrc_dir . '/*', 0, 1)
+    " source files in vimrc's dir, except for vimrc itself
+    if s:file != s:vimrc
+        execute 'source ' . s:file
+    endif
 
     " create commands to edit sourced files, e.g. :Settings to edit settings.vim
-    let s:capitalized_filename = substitute(s:file, '^\(.\)', '\u\1', '')
-    execute 'command! ' . s:capitalized_filename . ' e ' . s:path
+    let s:capitalized_filename = substitute(fnamemodify(s:file, ':t:r'),
+                                          \ '^\(\d\+_\)\?\(.\)', '\u\2', '')
+    execute 'command! ' . s:capitalized_filename . ' e ' . s:file
 
     " Reload config files when they are edited:
-    execute 'autocmd reload_files bufwritepost ' . s:path . ' source $MYVIMRC'
+    execute 'autocmd reload_files bufwritepost ' . s:file . ' source $MYVIMRC'
 endfor
-
-" same for $MYVIMRC
-execute 'command! Vimrc ' . ' e ' . s:vimrc
-execute 'autocmd reload_files bufwritepost ' .s:vimrc . ' source $MYVIMRC'
 
 augroup end
 

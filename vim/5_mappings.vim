@@ -6,6 +6,18 @@ nnoremap <leader>x :x<cr>
 nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 
+nnoremap <CR> G
+nnoremap <BS> gg
+
+nnoremap <silent> p p`]
+vnoremap <silent> p p`]
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+p
+vnoremap <leader>y "+y
+vnoremap <leader>Y "+p
+inoremap <C-v> <C-r>+
+noremap gV `[v`]
+
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap 0 ^
@@ -19,13 +31,12 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 nnoremap <silent> <leader>o :CtrlP .<cr>
 nmap     <silent> <leader>i :CtrlP %%<cr>
-nnoremap <silent> <leader>p :CtrlPBuffer<cr>
+nnoremap <silent> <leader>p :CtrlPMRU<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
-nnoremap <F1> :NERDTreeToggle<cr>
 
 nmap <leader>e :e %%
 
-nnoremap <silent> <cr> :nohlsearch<cr>
+nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
 nnoremap 0 g^
@@ -54,6 +65,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-p> <C-w>p
+
+nnoremap <leader>. :e.<cr>
+nnoremap <leader>d :bdelete<cr>
 " tabs
 nnoremap <leader>bn :tabnext<cr>
 nnoremap <leader>bp :tabprev<cr>
@@ -92,6 +106,9 @@ nnoremap <C-w><C-a> :vsp<cr> :A<cr>
 " tcomment:
 nmap <leader>c gcc
 vmap <leader>c gc
+" CtrlPFunky:
+nnoremap <leader>fu :CtrlPFunky<cr>
+nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
 
 " hard mode:
 " nnoremap j <nop>

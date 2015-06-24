@@ -3,13 +3,17 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'henrik/vim-indexed-search'
+
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
+
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'tpope/vim-vinegar'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -27,6 +31,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jsx/jsx.vim'
 
 Plugin 'guns/vim-clojure-static'
 Plugin 'derekwyatt/vim-scala'
@@ -34,6 +39,12 @@ Plugin 'derekwyatt/vim-scala'
 " Plugin 'Shirk/vim-gas'
 " Plugin 'ap/vim-css-color'
 " Plugin 'vim-scripts/VIM-Color-Picker'
+
+" testando:
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'osyo-manga/vim-monster'
+Plugin 'jplaut/vim-arduino-ino'
+Plugin 'vim-scripts/octave.vim--'
 
 call vundle#end()
 

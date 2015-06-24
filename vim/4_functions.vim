@@ -1,3 +1,14 @@
+function! EditFile(path)
+    let fullpath = fnamemodify(a:path, ':p')
+    if filereadable(fullpath)
+        execute 'e ' . fullpath
+    else
+        let dir = fnamemodify(fullpath, ':h')
+        let _ = system('mkdir -p ' . dir . ' && touch ' . fullpath)
+        execute 'e ' . fullpath
+    endif
+endfunction
+
 function! SaveCurrentBuffer()
     let file_changed = &mod
     if file_changed
