@@ -13,6 +13,8 @@ alias ack='ack-grep'
 alias a='ack-grep'
 alias -- -='cd -'
 alias fg=' fg'
+alias pd=pushd
+alias pod=popd
 
 alias vi=' vi'
 
