@@ -49,7 +49,7 @@ set completeopt=longest,menuone,preview
 set formatoptions=tcrn1
 set virtualedit+=block
 
-set history=1000
+set history=10000
 set undofile
 set undodir=~/.vim_undo
 
@@ -76,8 +76,8 @@ set colorcolumn=+1
 
 set backspace=indent,eol,start
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set autoindent
 set smartindent
 set smarttab
