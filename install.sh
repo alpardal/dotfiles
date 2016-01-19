@@ -9,6 +9,7 @@ function link_dotfiles {
             mv $HOME/.$file $HOME/.${file}_old
         fi
         ln -fs $RCS_DIR/$file $HOME/.$file
+        echo Created ~/.$file
     done
     exit
 }
