@@ -31,6 +31,7 @@ function! s:RailsMappings()
     nnoremap <leader>gm :CtrlP app/models/<cr>
     nnoremap <leader>gh :CtrlP app/helpers/<cr>
     nnoremap <leader>ga :CtrlP app/assets/<cr>
+    nnoremap <leader>gt :CtrlP db/migrate/<cr>
     nnoremap <leader>gas :CtrlP app/assets/stylesheets<cr>
     nnoremap <leader>gaj :CtrlP app/assets/javascripts<cr>
 
