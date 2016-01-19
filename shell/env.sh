@@ -13,18 +13,13 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1.25
 export RUBY_GC_HEAP_INIT_SLOTS=800000
 export RUBY_GC_HEAP_FREE_SLOTS=600000
 
-export JAVA_HOME="~/bin/jdks/current_java"
 export JAVA_OPTS="-client"
 
-export POSTGRES_PATH="/usr/local/pgsql/bin"
-export PGDATA="/usr/local/pgsql/data"
+export NODE_HOME=$USER_BIN/nodejs
 
-export SCALA_HOME=$USER_BIN/scala
-export GO_HOME=/usr/local/go
-export GOPATH=~/Programming/Go/packages
-export NODE_PATH=/usr/local/lib/node_modules
-export MONGODB_HOME=~/bin/mongodb
-export CABAL_PATH=~/.cabal/bin
+export ACTIVATOR_HOME=$USER_BIN/scala-activator
 
-export PATH=$POSTGRES_PATH:$SCALA_HOME/bin:$USER_BIN:$GO_HOME/bin:$PATH
-export PATH=$MONGODB_HOME/bin:$CABAL_PATH:$PATH
+# export POSTGRES_PATH="/usr/local/pgsql/bin"
+# export PGDATA="/usr/local/pgsql/data"
+
+export PATH=$ACTIVATOR_HOME:$NODE_HOME/bin:$USER_BIN:$PATH

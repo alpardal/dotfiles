@@ -3,8 +3,11 @@ if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
     alias ls='ls -xX --color=auto'
 fi
+
+alias j=' jobs'
 alias quit=' exit'
-alias tree=' tree --dirsfirst'
+alias o='gvfs-open'
+alias tree='tree --dirsfirst'
 alias sa='sudo apt-get'
 alias ll='ls -oh'
 alias la='ls -A'
@@ -15,8 +18,6 @@ alias -- -='cd -'
 alias fg=' fg'
 alias pd=pushd
 alias pod=popd
-
-alias vi=' vi'
 
 # go is `git checkout`
 alias golang='/usr/local/go/bin/go'
@@ -63,4 +64,4 @@ alias ts='tmux list-sessions'
 alias ta='tmux attach'
 # other
 alias ctags='ctags-exuberant --extra=+f -R'
-alias node='node --harmony'
+alias node='node --harmony --use-strict'

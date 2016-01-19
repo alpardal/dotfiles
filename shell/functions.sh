@@ -8,3 +8,6 @@ function md () {
 function fname {
     find . -iname "*$1*"
 }
+function show_path {
+    ruby -e "puts ENV['PATH'].split(':')"
+}
