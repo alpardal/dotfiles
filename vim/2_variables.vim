@@ -26,4 +26,7 @@ let g:ctrlp_funky_syntax_highlight=1
 
 let g:vim_arduino_map_keys=0
 
+let g:user_emmet_leader_key='<C-E>'
+let g:user_emmet_mode='i'
+
 " let g:slime_target = "tmux"
