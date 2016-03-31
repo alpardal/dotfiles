@@ -1,8 +1,3 @@
-set nocompatible
-
-set rtp+=~/.vim/bundle/Vundle.vim
-" Go stuff:
-set rtp+=/usr/local/go/misc/vim
 
 runtime ftplugin/man.vim
 
@@ -10,7 +5,6 @@ filetype plugin indent on
 syntax enable
 
 set list listchars=tab:»·,trail:· ",eol:↲
-set showbreak=↪
 " set list listchars=tab:»·,trail:·,eol:¬
 
 set nomodeline
@@ -68,10 +62,12 @@ set nowb
 set noswapfile
 
 set linebreak
-set nolist
+set showbreak=↪
 set breakat=\ |,.;
-set wrap
-set textwidth=80
+set breakindent
+set nowrap
+set nolist
+set textwidth=0
 set colorcolumn=+1
 
 set backspace=indent,eol,start

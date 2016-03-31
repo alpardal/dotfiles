@@ -15,11 +15,12 @@ let g:airline_powerline_fonts=1
 let g:airline_theme="bubblegum"
 let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l[%L]%#__restore__#:%3c"
 
+let g:UltiSnipsExpandTrigger='<C-p>'
+let g:UltiSnipsJumpForwardTrigger='<C-p>'
+let g:UltiSnipsJumpBckwardTrigger='<C-z>'
+
 let g:sparkupMappingInsertModeOnly=1
 let g:sparkupDoubleQuote=1
-
-" golang source code formatting
-let g:gofmt_command="gofmt -tabs=false -tabwidth=2"
 
 let g:ctrlp_funky_matchtype='path'
 let g:ctrlp_funky_syntax_highlight=1
@@ -28,5 +29,8 @@ let g:vim_arduino_map_keys=0
 
 let g:user_emmet_leader_key='<C-E>'
 let g:user_emmet_mode='i'
+
+let g:dbext_default_profile_psql='type=PGSQL:host=localhost:port=5433'
+let g:dbext_default_profile='psql'
 
 " let g:slime_target = "tmux"

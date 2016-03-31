@@ -38,6 +38,10 @@ alias rg='bin/rails g'
 alias rcs='bin/rails c --sandbox'
 alias rdc='bin/rails dbconsole'
 
+alias mig='bin/rails db:migrate'
+alias rbk='bin/rails db:rollback'
+alias seed='bin/rails db:seed'
+
 # git
 alias gs='git status'
 alias gss='git status --short'
@@ -45,7 +49,7 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
 alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -30"
-alias glf="git log --oneline --decorate --graph --branches='*'"
+alias gll="git log --oneline --decorate --graph --branches='*'"
 alias go='git checkout'
 alias gi='git commit'
 alias gd='git diff'

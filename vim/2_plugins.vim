@@ -1,4 +1,8 @@
 " plugins managed by Vundle:
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -11,10 +15,15 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'tpope/vim-vinegar'
+
+" Plugin 'vim-scripts/dbext.vim'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -32,22 +41,15 @@ Plugin 'jelera/vim-javascript-syntax'
 
 Plugin 'guns/vim-clojure-static'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'elixir-lang/vim-elixir'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'jplaut/vim-arduino-ino'
-
-call vundle#end()
 
 "vim-bufferlist
 "vim-fugitive
 "vim-slime
 "marijnh/tern_for_vim'
 
-augroup plugin_mappings
-    au!
-
-    au BufEnter plugins.vim execute 'map <buffer> <leader>pi :w\|PluginInstall<cr>'
-    au BufEnter plugins.vim execute 'map <buffer> <leader>pc :w\|PluginClean<cr>'
-    au BufEnter plugins.vim execute 'map <buffer> <leader>pu :w\|PluginUpdate<cr>'
-augroup END
+call vundle#end()

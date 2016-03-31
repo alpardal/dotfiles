@@ -7,7 +7,9 @@ nnoremap <leader>v <C-w>v
 nnoremap <leader>s <C-w>s
 
 nnoremap <CR> G
+vnoremap <CR> G
 nnoremap <BS> gg
+vnoremap <BS> gg
 
 nnoremap <silent> p p`]
 vnoremap <silent> p p`]
@@ -15,13 +17,18 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y "+p
 vnoremap <leader>y "+y
 vnoremap <leader>Y "+p
-inoremap <C-v> <C-r>+
-noremap gV `[v`]
+inoremap <C-p> <C-r>+
+"selects last inserted text:
+nnoremap gV `[v`]
+
+execute 'nnoremap <leader>f :Ag '
 
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 nnoremap 0 ^
 nnoremap ^ 0
+nnoremap B 0
+nnoremap E $
 nnoremap ' `
 nnoremap ` '
 nnoremap <leader>q :q<cr>
@@ -107,8 +114,8 @@ nnoremap <C-w><C-a> :vsp<cr> :A<cr>
 nmap <leader>c gcc
 vmap <leader>c gc
 " CtrlPFunky:
-nnoremap <leader>fu :CtrlPFunky<cr>
-nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
+" nnoremap <leader>fu :CtrlPFunky<cr>
+" nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
 
 " hard mode:
 " nnoremap j <nop>
