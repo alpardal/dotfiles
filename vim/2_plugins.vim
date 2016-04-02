@@ -18,7 +18,6 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/StringComplete'
 
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
