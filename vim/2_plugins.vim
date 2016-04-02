@@ -11,7 +11,8 @@ Plugin 'henrik/vim-indexed-search'
 Plugin 'rking/ag.vim'
 
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 

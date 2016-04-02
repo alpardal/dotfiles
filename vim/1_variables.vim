@@ -12,7 +12,7 @@ let g:netrw_list_hide='^\..*' . ',' . netrw_gitignore#Hide()
 let NERDTreeHijackNetwr=1
 
 let g:airline_powerline_fonts=1
-let g:airline_theme="bubblegum"
+let g:airline_theme='jellybeans'
 let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l[%L]%#__restore__#:%3c"
 
 let g:UltiSnipsExpandTrigger='<C-p>'
