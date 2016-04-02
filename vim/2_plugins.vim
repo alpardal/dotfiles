@@ -15,6 +15,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
+Plugin 'vim-scripts/StringComplete'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'

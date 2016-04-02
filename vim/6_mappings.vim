@@ -113,6 +113,9 @@ nnoremap <C-w><C-a> :vsp<cr> :A<cr>
 " tcomment:
 nmap <leader>c gcc
 vmap <leader>c gc
+" autocomplete quoted strings:
+inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
+
 " CtrlPFunky:
 " nnoremap <leader>fu :CtrlPFunky<cr>
 " nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
