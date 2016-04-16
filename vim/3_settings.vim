@@ -65,10 +65,11 @@ set linebreak
 set showbreak=↪
 set breakat=\ |,.;
 set breakindent
-set nowrap
+set wrap
 set nolist
+set formatoptions=rcqnl1j
 set textwidth=0
-set colorcolumn=+1
+set colorcolumn=81
 
 set backspace=indent,eol,start
 set expandtab
