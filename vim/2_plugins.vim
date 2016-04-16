@@ -21,7 +21,7 @@ Plugin 'SirVer/ultisnips'
 
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " Plugin 'tpope/vim-vinegar'
 
 " Plugin 'vim-scripts/dbext.vim'
