@@ -8,8 +8,6 @@ nnoremap <leader>s <C-w>s
 
 nnoremap <CR> G
 vnoremap <CR> G
-nnoremap <BS> gg
-vnoremap <BS> gg
 
 nnoremap <silent> p p`]
 vnoremap <silent> p p`]
@@ -17,7 +15,7 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y "+p
 vnoremap <leader>y "+y
 vnoremap <leader>Y "+p
-inoremap <C-p> <C-r>+
+" inoremap <C-p> <C-r>+
 "selects last inserted text:
 nnoremap gV `[v`]
 

@@ -1,2 +1,2 @@
 
-call MapUnlessAlreadyMapped('<leader>r', ':w\|!clear;echo;node %<cr>')
+call MapUnlessAlreadyMapped('<leader>r', ':w\|!clear;echo;babel-node %<cr>')
