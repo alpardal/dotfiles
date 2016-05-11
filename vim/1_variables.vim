@@ -17,7 +17,7 @@ let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l[%L
 
 let g:UltiSnipsExpandTrigger='<C-p>'
 let g:UltiSnipsJumpForwardTrigger='<C-p>'
-let g:UltiSnipsJumpBckwardTrigger='<C-z>'
+let g:UltiSnipsJumpBckwardTrigger='<C-n>'
 
 let g:sparkupMappingInsertModeOnly=1
 let g:sparkupDoubleQuote=1

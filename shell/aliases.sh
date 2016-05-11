@@ -48,7 +48,7 @@ alias gss='git status --short'
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
-alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -30"
+alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -20"
 alias gll="git log --oneline --decorate --graph --branches='*'"
 alias go='git checkout'
 alias gi='git commit'
