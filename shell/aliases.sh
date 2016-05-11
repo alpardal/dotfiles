@@ -19,9 +19,6 @@ alias fg=' fg'
 alias pd=pushd
 alias pod=popd
 
-# go is `git checkout`
-alias golang='/usr/local/go/bin/go'
-
 # ruby
 alias ri='ri -Tf ansi'
 alias gemset='rvm gemset'
