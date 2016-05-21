@@ -43,6 +43,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'guns/vim-clojure-static'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'
