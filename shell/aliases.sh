@@ -34,6 +34,8 @@ alias rc='bin/rails c'
 alias rg='bin/rails g'
 alias rcs='bin/rails c --sandbox'
 alias rdc='bin/rails dbconsole'
+alias hrc='heroku run rails console'
+alias hrcs='heroku run rails console --sandbox'
 
 alias mig='bin/rails db:migrate'
 alias rbk='bin/rails db:rollback'
