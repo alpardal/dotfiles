@@ -39,7 +39,7 @@ alias hrcs='heroku run rails console --sandbox'
 
 alias mig='bin/rails db:migrate'
 alias rbk='bin/rails db:rollback'
-alias seed='bin/rails db:seed'
+alias seed='bin/rails db:schema:load && rails db:seed'
 
 # git
 alias gs='git status'
