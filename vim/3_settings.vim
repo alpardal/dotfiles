@@ -91,4 +91,4 @@ set foldlevel=1
 hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 
 " test:
-set shell=bash\ -l
+set shell=zsh\ -l
