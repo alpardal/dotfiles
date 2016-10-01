@@ -22,7 +22,6 @@ alias pod=popd
 # ruby
 alias ri='ri -Tf ansi'
 alias gemset='rvm gemset'
-alias serve='ruby -run -e httpd . -p 3000'
 # rails
 alias r='bin/rails'
 alias rk='bin/rake'
