@@ -55,9 +55,10 @@ noremap <leader>] :cnext<cr>
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
-cnoremap <C-d> <Delete>
+" cnoremap <C-d> <Delete>
 
 inoremap <C-l> <delete>
+imap <C-f> <C-e>,
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 " upcase prev word

@@ -4,7 +4,7 @@ runtime ftplugin/man.vim
 filetype plugin indent on
 syntax enable
 
-set list listchars=tab:»·,trail:· ",eol:↲
+set list listchars=tab:»·,space:␣, ",trail:· ",eol:↲
 " set list listchars=tab:»·,trail:·,eol:¬
 
 set nomodeline

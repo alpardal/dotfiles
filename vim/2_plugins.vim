@@ -40,12 +40,17 @@ Plugin 'slim-template/vim-slim'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'metakirby5/codi.vim'
+Plugin 'maralla/validator.vim'
 
 Plugin 'guns/vim-clojure-static'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'lambdatoast/elm.vim'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'

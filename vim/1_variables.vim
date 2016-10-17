@@ -33,4 +33,6 @@ let g:user_emmet_mode='i'
 let g:dbext_default_profile_psql='type=PGSQL:host=localhost:port=5433'
 let g:dbext_default_profile='psql'
 
+let g:gitgutter_map_keys = 0
+
 " let g:slime_target = "tmux"
