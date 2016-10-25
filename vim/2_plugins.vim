@@ -50,7 +50,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
-Plugin 'lambdatoast/elm.vim'
+" Plugin 'lambdatoast/elm.vim'
+Plugin 'elmcast/elm-vim'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'
