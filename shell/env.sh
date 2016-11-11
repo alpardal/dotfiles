@@ -1,12 +1,12 @@
 
 export EDITOR="vim"
-# export TERM=xterm-256color
+export TERM=xterm-256color
 
 # if strange chars appear in command output after setting TERM,
 # edit ~/.oh-my-zsh/lib/termsupport.zsh and comment the following line:
 #   print -Pn "\ek$1:q\e\\" # set screen hardstatus
 # (line ~ 25)
-export TERM="screen-256color"
+# export TERM="screen-256color"
 
 export TMPDIR='/tmp'
 export HISTIGNORE="&:ls:[bf]g*:history:quit:exit:vi:g[sdl]:gaa"
