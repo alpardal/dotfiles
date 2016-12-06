@@ -1,6 +1,7 @@
 
 export EDITOR="vim"
-export TERM=xterm-256color
+# export TERM=xterm-256color
+export TERM=gnome-256color
 
 # if strange chars appear in command output after setting TERM,
 # edit ~/.oh-my-zsh/lib/termsupport.zsh and comment the following line:

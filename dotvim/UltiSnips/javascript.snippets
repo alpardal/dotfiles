@@ -4,13 +4,17 @@ function ${1:function_name}(${2:argument}) {
 }
 endsnippet
 
+snippet af "arrow function" i
+(${1:args}) => ${2:body}
+endsnippet
+
 snippet met "object method"
 ${1:methodName}(${2:args}) {
 	$0
 }
 endsnippet
 
-snippet iife "Immediately-Invoked Function Expression (iife)"
+snippet iife "Immediately-Invoked Function Expression"
 (function(${1:window}) {
 	${VISUAL}$0
 }(${2:$1}));
@@ -53,13 +57,13 @@ endsnippet
 ## Testing snippets:
 
 snippet desc "describe block"
-describe('${1:description}', () => {
+describe("${1:description}", () => {
 	$0
 });
 endsnippet
 
 snippet it "it block"
-it('${1:specification}', () => {
+it("${1:specification}", () => {
 	$0
 });
 endsnippet

@@ -17,6 +17,10 @@ Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/StringComplete'
 
+Plugin 'dikiaap/minimalist'
+Plugin 'crater2150/vim-theme-chroma'
+Plugin 'nanotech/jellybeans.vim'
+
 Plugin 'SirVer/ultisnips'
 
 " Plugin 'jiangmiao/auto-pairs'
@@ -26,6 +30,9 @@ Plugin 'airblade/vim-gitgutter'
 " Plugin 'tpope/vim-vinegar'
 
 " Plugin 'vim-scripts/dbext.vim'
+
+Plugin 'sheerun/vim-polyglot'
+" Plugin 'neomake/neomake'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -38,16 +45,15 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'slim-template/vim-slim'
 
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mxw/vim-jsx'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'mxw/vim-jsx'
 
 Plugin 'metakirby5/codi.vim'
 Plugin 'maralla/validator.vim'
 
-Plugin 'guns/vim-clojure-static'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'raichoo/purescript-vim'
+
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 " Plugin 'lambdatoast/elm.vim'

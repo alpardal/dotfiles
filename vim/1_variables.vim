@@ -35,4 +35,4 @@ let g:dbext_default_profile='psql'
 
 let g:gitgutter_map_keys = 0
 
-" let g:slime_target = "tmux"
+let g:jellybeans_use_term_italics = 1

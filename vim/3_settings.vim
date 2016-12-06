@@ -26,7 +26,9 @@ set cursorline
 set background=dark
 
 " colorscheme herald
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme minimalist
+" colorscheme chroma
 
 set laststatus=2
 set statusline=%f\ %y%m
