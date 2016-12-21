@@ -34,5 +34,10 @@ function setup_dotvim_dir {
     )
 }
 
+function install_tmux_plugin_manager {
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}
+
 link_dotfiles
 setup_dotvim_dir
+install_tmux_plugin_manager
