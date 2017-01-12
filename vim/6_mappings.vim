@@ -115,12 +115,19 @@ vmap <leader>c gc
 " autocomplete quoted strings:
 inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
 
+" Plugins:
+
+" haya14busa/incsearch.vim:
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
 " CtrlPFunky:
 " nnoremap <leader>fu :CtrlPFunky<cr>
 " nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
-
-" hard mode:
-" nnoremap j <nop>
-" nnoremap k <nop>
-" nnoremap l <nop>
-" nnoremap h <nop>

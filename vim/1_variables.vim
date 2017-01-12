@@ -36,3 +36,6 @@ let g:dbext_default_profile='psql'
 let g:gitgutter_map_keys = 0
 
 let g:jellybeans_use_term_italics = 1
+
+let g:incsearch#auto_nohlsearch = 1
+let g:indentLine_char = '┆'

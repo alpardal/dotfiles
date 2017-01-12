@@ -10,6 +10,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'rking/ag.vim'
 
+Plugin 'tpope/vim-fugitive'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'Yggdroot/indentLine'
+
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -64,7 +68,6 @@ Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'jplaut/vim-arduino-ino'
 
 "vim-bufferlist
-"vim-fugitive
 "vim-slime
 "marijnh/tern_for_vim'
 
