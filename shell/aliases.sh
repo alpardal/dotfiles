@@ -51,6 +51,7 @@ alias gll="git log --oneline --decorate --graph --branches='*'"
 alias go='git checkout'
 alias gi='git commit'
 alias gia='git commit --amend'
+alias gian='git commit --amend --no-edit'
 alias gd='git diff --compaction-heuristic'
 alias gdc='git diff --word-diff-regex=.' # char diff
 alias gdp='git diff --patience'
