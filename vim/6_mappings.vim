@@ -16,6 +16,7 @@ nnoremap <leader>Y "+p
 vnoremap <leader>y "+y
 vnoremap <leader>Y "+p
 " inoremap <C-p> <C-r>+
+
 "selects last inserted text:
 nnoremap gV `[v`]
 
@@ -23,6 +24,7 @@ execute 'nnoremap <leader>f :Ag '
 
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
+nnoremap p gp
 nnoremap 0 ^
 nnoremap ^ 0
 nnoremap B 0
@@ -53,12 +55,12 @@ noremap <leader>[ :cprev<cr>
 noremap <leader>] :cnext<cr>
 
 cnoremap <C-a> <Home>
-cnoremap <C-b> <Left>
-cnoremap <C-f> <Right>
+" cnoremap <C-b> <Left>
+" cnoremap <C-f> <Right>
 " cnoremap <C-d> <Delete>
 
 inoremap <C-l> <delete>
-imap <C-f> <C-e>,
+inoremap <C-r> <C-r><C-p>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 " upcase prev word
@@ -75,13 +77,10 @@ nnoremap <C-p> <C-w>p
 nnoremap <leader>. :e.<cr>
 nnoremap <leader>d :bdelete<cr>
 " tabs
-nnoremap <leader>bn :tabnext<cr>
-nnoremap <leader>bp :tabprev<cr>
 nnoremap <leader>bb :tabnew<cr>
-nnoremap <leader>bc :tabclose<cr>
 
-nnoremap <silent> <leader>j :call MoveCurrentLineDown()<cr>
-nnoremap <silent> <leader>k :call MoveCurrentLineUp()<cr>
+nnoremap <silent> gj :call MoveCurrentLineDown()<cr>
+nnoremap <silent> gk :call MoveCurrentLineUp()<cr>
 
 " split line
 nnoremap S i<cr><esc>k$
@@ -105,17 +104,19 @@ nnoremap <leader>n :call RenameFile()<cr>
 nnoremap <leader>gl :CtrlP lib/<cr>
 nnoremap <leader>gs :CtrlP spec/<cr>
 nnoremap <leader>gg :e Gemfile<cr>
+
 " from rails.vim:
 nnoremap <leader>a :A<cr>
 nnoremap <C-w>a :vsp<cr> :A<cr>
 nnoremap <C-w><C-a> :vsp<cr> :A<cr>
-" tcomment:
-nmap <leader>c gcc
-vmap <leader>c gc
+
 " autocomplete quoted strings:
 inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
 
 " Plugins:
+
+" vim-emmet:
+imap <C-f> <C-e>,
 
 " haya14busa/incsearch.vim:
 map / <Plug>(incsearch-forward)

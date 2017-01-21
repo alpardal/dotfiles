@@ -38,9 +38,11 @@ set statusline+=%l/%L\ [%v]
 set scrolloff=3
 set winheight=10
 set winminheight=10
+set ttymouse=xterm2
+set ttyfast
 
 set wildmenu
-set wildmode=longest:list
+set wildmode=full
 set completeopt=longest,menuone,preview
 set formatoptions=tcrn1
 set virtualedit+=block
