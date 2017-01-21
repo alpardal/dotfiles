@@ -25,28 +25,6 @@ function! MapUnlessAlreadyMapped(keys, action)
     endif
 endfunction
 
-function! MoveCurrentLineUp()
-    let current_line = line('.')
-
-    if current_line == 1
-        return
-    endif
-
-    if current_line != line('$')
-        normal ddkP
-    else
-        normal ddP
-    endif
-endfunction
-
-function! MoveCurrentLineDown()
-    if line('.') == line('$')
-        return
-    endif
-
-    normal ddp
-endfunction
-
 function! AbsolutePath(file)
     return fnamemodify(a:file, ':p')
 endfunction

@@ -2,6 +2,8 @@
 set nocompatible
 filetype off
 
+runtime macros/matchit.vim
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -29,7 +31,7 @@ Plugin 'SirVer/ultisnips'
 
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 " Plugin 'tpope/vim-vinegar'
 

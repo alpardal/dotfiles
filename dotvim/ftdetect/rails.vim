@@ -20,6 +20,8 @@ function! InRailsProject()
 endfunction
 
 function! s:RailsMappings()
+    nnoremap <leader>a :A<cr>
+
     nnoremap <leader>r :w\|call RunAsRubySpec()<cr>
     nnoremap <leader>t :call SaveCurrentBuffer()\|call RunAllRubySpecs()<cr>
     nnoremap <leader>l :w\|call RunLastRubySpec()<cr>
