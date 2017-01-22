@@ -33,6 +33,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'tomtom/tcomment_vim'
 " Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-dispatch'
 " Plugin 'tpope/vim-vinegar'
 
 " Plugin 'vim-scripts/dbext.vim'

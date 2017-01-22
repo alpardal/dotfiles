@@ -17,6 +17,7 @@ execute 'nnoremap <leader>f :Ag '
 nnoremap <C-e> 4<C-e>
 nnoremap <C-y> 4<C-y>
 nnoremap p gp
+nnoremap P gP
 " nnoremap p p`]
 vnoremap p p`]
 nnoremap 0 ^
@@ -28,23 +29,27 @@ nnoremap g$ $
 nnoremap ' `
 nnoremap ` '
 nnoremap <leader>q :q<cr>
-
-" current file directory:
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
+" go to last buffer:
+nnoremap <silent> <leader><leader> <c-^>
 
 nnoremap <silent> <leader>o :CtrlP .<cr>
 nmap     <silent> <leader>i :CtrlP %%<cr>
 nnoremap <silent> <leader>p :CtrlPMRU<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
-nnoremap <silent> <cr> :nohlsearch<cr>
+nnoremap <cr> G
+nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
 nnoremap Q :normal n.<cr>
 noremap <leader>[ :cprev<cr>
 noremap <leader>] :cnext<cr>
 
+" current file directory:
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
 cnoremap <C-a> <Home>
+
+inoremap <A-p> "
 
 inoremap <C-l> <delete>
 inoremap <C-r> <C-r><C-p>
@@ -52,8 +57,6 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 " upcase prev word
 inoremap <C-c> <esc>gUiwea
-" go to last buffer:
-nnoremap <silent> <leader><leader> <c-^>
 
 " window mappings
 nnoremap <C-h> <C-w>h
@@ -69,11 +72,10 @@ nnoremap <down> <C-w>+
 " tabs
 nnoremap <leader>bb :tabnew<cr>
 
-" moving lines (j = <A-j>, k = <A-k>)
-nnoremap <silent> k :m -2<cr>
-nnoremap <silent> j :m +1<cr>
-vnoremap <silent> j :m '>+1<cr>gv
-vnoremap <silent> k :m '<-2<cr>gv
+nnoremap <silent> <A-j> :m +1<cr>
+nnoremap <silent> <A-k> :m -2<cr>
+vnoremap <silent> <A-j> :m '>+1<cr>gv
+vnoremap <silent> <A-k> :m '<-2<cr>gv
 
 " split line
 nnoremap S i<cr><esc>k$

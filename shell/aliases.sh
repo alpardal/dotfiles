@@ -18,6 +18,7 @@ alias -- -='cd -'
 alias fg=' fg'
 alias pd=pushd
 alias pod=popd
+alias dirsize='du -sh'
 
 # ruby
 alias ri='ri -Tf ansi'

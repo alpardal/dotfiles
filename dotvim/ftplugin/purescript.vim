@@ -1,4 +1,7 @@
 
+set suffixesadd+=.purs
+set includeexpr=substitute(v:fname,'\\.','/','g')
+
 nnoremap <leader>r :w\|!clear;echo;pulp run<cr>
 nnoremap <leader>t :w\|!clear;echo;pulp test<cr>
 nnoremap <leader>l :w\|!clear;echo;pulp psci<cr>
