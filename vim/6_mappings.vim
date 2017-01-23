@@ -42,8 +42,9 @@ nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
 nnoremap Q :normal n.<cr>
-noremap <leader>[ :cprev<cr>
-noremap <leader>] :cnext<cr>
+nnoremap <leader>[ :cprev<cr>
+nnoremap <leader>] :cnext<cr>
+nmap <leader>e :e %%
 
 " current file directory:
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
