@@ -42,6 +42,7 @@ alias rbk='bin/rails db:rollback'
 alias seed='bin/rails db:schema:load && rails db:seed'
 
 # git
+alias g='git status'
 alias gs='git status'
 alias gss='git status --short'
 alias ga='git add'
