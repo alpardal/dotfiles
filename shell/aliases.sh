@@ -72,3 +72,5 @@ alias ta='tmux attach'
 # other
 alias ctags='ctags-exuberant --extra=+f -R'
 alias node='node --harmony --use-strict'
+
+alias ccat='highlight -O ansi'
