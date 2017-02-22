@@ -1,8 +1,11 @@
 # general
+
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
     alias ls='ls -xX --color=auto'
 fi
+
+alias reload!='source ~/.zshrc'
 
 alias j=' jobs'
 alias quit=' exit'
@@ -60,7 +63,7 @@ alias gdp='git diff --patience'
 alias gds='git diff --staged'
 alias gdw='git diff --ignore-all-space'
 alias gm='git merge'
-alias gf='git fetch --prune'
+alias gf='git fetch --prune --all'
 alias gt='git tag'
 alias stash='git stash -u'
 alias stashp='git stash pop'

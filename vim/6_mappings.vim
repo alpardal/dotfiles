@@ -42,8 +42,8 @@ nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
 nnoremap Q :normal n.<cr>
-nnoremap <leader>[ :cprev<cr>
-nnoremap <leader>] :cnext<cr>
+nnoremap <leader>[ :bn<cr>
+nnoremap <leader>] :bp<cr>
 nmap <leader>e :e %%
 
 " current file directory:

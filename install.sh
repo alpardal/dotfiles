@@ -20,7 +20,7 @@ function setup_dotvim_dir {
         mv $HOME/.vim $HOME/.vim_old
     fi
 
-    ln -fs $PWD/dotvim        $HOME/.vim
+    ln -fs $PWD/dotvim $HOME/.vim
     (
         cd $HOME/.vim
         rm -rf bundle

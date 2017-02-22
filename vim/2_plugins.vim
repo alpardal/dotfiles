@@ -29,17 +29,13 @@ Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'SirVer/ultisnips'
 
-" Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-dispatch'
-" Plugin 'tpope/vim-vinegar'
-
-" Plugin 'vim-scripts/dbext.vim'
+Plugin 'gregsexton/MatchTag'
 
 Plugin 'sheerun/vim-polyglot'
-" Plugin 'neomake/neomake'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -52,26 +48,16 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'slim-template/vim-slim'
 
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'jelera/vim-javascript-syntax'
-" Plugin 'mxw/vim-jsx'
-
-Plugin 'metakirby5/codi.vim'
-Plugin 'maralla/validator.vim'
-
 Plugin 'raichoo/purescript-vim'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
-" Plugin 'lambdatoast/elm.vim'
 Plugin 'elmcast/elm-vim'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'jplaut/vim-arduino-ino'
 
-"vim-bufferlist
-"vim-slime
 "marijnh/tern_for_vim'
 
 call vundle#end()
