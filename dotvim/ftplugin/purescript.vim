@@ -6,7 +6,7 @@ nnoremap <leader>r :w\|!clear;echo;pulp run<cr>
 nnoremap <leader>t :w\|!clear;echo;pulp test<cr>
 nnoremap <leader>l :w\|!clear;echo;pulp psci<cr>
 
-nnoremap <leader>m :w\|!clear;echo;pulp build -O --to dist/Main.js<cr>
+nnoremap <leader>m :w\|!clear;echo;pulp build -O --main Main --to dist/Main.js<cr>
 
 if !exists("g:loaded_purescript_functions")
   let g:loaded_purescript_functions = 1

@@ -1,5 +1,7 @@
 snippet mod "module with file name" b
-module ${1:`!v tr(fnamemodify(expand("%"), ":~:.:r:s?src/??"), "/", ".")`} where
+module ${1:`!v tr(fnamemodify(expand("%"), ":~:.:r:s?src/??"), "/", ".")`} (
+  $2
+) where
 $0
 endsnippet
 

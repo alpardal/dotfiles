@@ -1,6 +1,5 @@
 
-call MapUnlessAlreadyMapped('<leader>r', ':w\|call RunAsRubyFile()<cr>')
-call MapUnlessAlreadyMapped('<leader>T', ':w\|call RunAsRubySpec()<cr>')
+call MapUnlessAlreadyMapped('<leader>r', ':w\|call RunRubyFile()<cr>')
 call MapUnlessAlreadyMapped('<leader>t', ':w\|call RunAllRubySpecs()<cr>')
 call MapUnlessAlreadyMapped('<leader>l', ':w\|call RunLastRubySpec()<cr>')
 
@@ -41,21 +40,15 @@ if !exists('g:run_ruby_files_loaded')
         execute '!clear;echo;' . g:ruby_run_spec_command . ' ' . a:filename
     endfunction
 
-    function! RunAsRubyFile()
-        let current_file=expand('%:p')
-
-        if s:IsSpecFile(current_file)
-            call s:RunSpec(current_file)
-        else
-            execute '!clear;echo;ruby -w ' . current_file
-        endif
-    endfunction
-
-    function! RunAsRubySpec()
-        let test_file =  s:SpecFor(expand('%'))
-        let g:last_ruby_spec_ran = test_file
-        echo test_file
-        call s:RunSpec(test_file)
+    function! RunRubyFile()
+      let current_file = expand('%')
+      let spec =  s:SpecFor(current_file)
+      let g:last_ruby_spec_ran = spec
+      if filereadable(spec)
+        call s:RunSpec(spec)
+      else
+        execute '!clear;echo;ruby -w ' . current_file
+      endif
     endfunction
 
     function! RunLastRubySpec()
