@@ -6,6 +6,7 @@ if executable('ag')
 endif
 
 let g:ctrlp_mruf_relative=1
+let g:ctrlp_match_window = 'bottom,order:ttb'
 
 let g:netrw_liststyle=3
 let g:netrw_list_hide='^\..*' . ',' . netrw_gitignore#Hide()
