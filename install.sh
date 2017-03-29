@@ -38,6 +38,11 @@ function install_tmux_plugin_manager {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
+function gitconfig_notice {
+  echo 'Remember to set your user data in ~/.gitconfig!'
+}
+
 link_dotfiles
 setup_dotvim_dir
 install_tmux_plugin_manager
+gitconfig_notice

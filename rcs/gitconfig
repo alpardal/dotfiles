@@ -1,35 +1,53 @@
 [user]
-    name = André Luiz Pardal
-    email = alpardal@gmail.com
-[credential]
-    helper = cache --timeout=3600
-[push]
-    # default = simple
-    default = upstream
-[color]
-    ui = auto
-    diff = auto
+  name = André Luiz Pardal
+  email = alpardal@gmail.com
+	signingkey = B0089DF8B5635CAE
+
 [core]
-    editor = vim -f
-    autocrlf = input
+  editor = vim -f
+  autocrlf = input
+
+[credential]
+  helper = cache --timeout=3600
+
+[commit]
+  gpgSign = true
+
+[push]
+  default = simple
+  followTags = true
+
+[color]
+  ui = auto
+  diff = auto
+
+[merge]
+  ff = only
+  conflictstyle = diff3
+
+[pager]
+  diff = diff-highlight | less
+  log = diff-highlight | less
+  show = diff-highlight | less
+
+[interactive]
+  diffFilter = diff-highlight
+
+[status]
+  showUntrackedFiles = all
+
 [alias]
     # log with list of modified files in each commit:
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --oneline
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --oneline
     # file history, with diffs:
-    fl = log -u
+  fl = log -u
     # files modified in last commit:
-    dl = "!git ll -1"
+  dl = "!git ll -1"
     # find a file path in codebase:
-    f = "!git ls-files | grep -i"
+  f = "!git ls-files | grep -i"
     # search codebase for a string:
-    gr = grep -Ii
+  gr = grep -Ii
     # list all aliases:
-    aliases = "!git config -l | grep alias | cut -c 7-"
+  aliases = "!git config -l | grep alias | cut -c 7-"
     # update upstream branches and fast-forward
-    up = "!git remote update -p; git merge --ff-only @{u}"
-[pager]
-	diff = diff-highlight | less
-	log = diff-highlight | less
-	show = diff-highlight | less
-[interactive]
-	diffFilter = diff-highlight
+  up = "!git remote update -p; git merge --ff-only @{u}"
