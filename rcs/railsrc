@@ -1,3 +1,7 @@
 --skip-test
 --skip-bundle
 --skip-keeps
+--skip-listen
+--skip-coffee
+--database=postgresql
+--webpack
