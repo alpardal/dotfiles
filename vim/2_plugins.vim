@@ -53,6 +53,7 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'elmcast/elm-vim'
+Plugin 'idris-hackers/idris-vim'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'

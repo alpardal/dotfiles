@@ -22,11 +22,11 @@ export RUBY_GC_HEAP_FREE_SLOTS=600000
 
 export JAVA_OPTS="-client"
 
-export NODE_HOME=$USER_BIN/nodejs
+export CABAL_BIN=$HOME/.cabal/bin
 
 export ACTIVATOR_HOME=$USER_BIN/scala-activator
 
 # export POSTGRES_PATH="/usr/local/pgsql/bin"
 # export PGDATA="/usr/local/pgsql/data"
 
-export PATH=$ACTIVATOR_HOME:$NODE_HOME/bin:$USER_BIN:$PATH
+export PATH=$CABAL_BIN:$ACTIVATOR_HOME:$NODE_HOME/bin:$USER_BIN:$PATH

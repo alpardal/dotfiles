@@ -49,6 +49,7 @@ nmap <leader>e :e %%
 " current file directory:
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 cnoremap <C-a> <Home>
+cnoremap Q qall
 
 inoremap <A-p> "
 
