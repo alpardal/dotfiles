@@ -9,6 +9,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'rafi/awesome-vim-colorschemes'
+
 Plugin 'henrik/vim-indexed-search'
 Plugin 'rking/ag.vim'
 

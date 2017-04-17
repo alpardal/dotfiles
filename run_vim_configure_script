@@ -5,7 +5,7 @@ cd vim
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp=dynamic \
-            --enable-pythoninterp \
+            --enable-pythoninterp=yes \
             --enable-luainterp \
             --with-x=yes \
             --with-compiledby=alpardal@gmail.com
