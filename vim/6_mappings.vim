@@ -60,16 +60,21 @@ inoremap <s-tab> <c-p>
 " upcase prev word
 inoremap <C-c> <esc>gUiwea
 
+nnoremap <right> gt
+nnoremap <left> gT
+nnoremap <up> :bp<cr>
+nnoremap <down> :bn<cr>
+
 " window mappings
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-p> <C-w>p
-nnoremap <left> <C-w><
-nnoremap <right> <C-w>>
-nnoremap <up> <C-w>-
-nnoremap <down> <C-w>+
+" nnoremap <left> <C-w><
+" nnoremap <right> <C-w>>
+" nnoremap <up> <C-w>-
+" nnoremap <down> <C-w>+
 
 " tabs
 nnoremap <leader>bb :tabnew<cr>

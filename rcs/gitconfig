@@ -1,7 +1,7 @@
 [user]
   name = André Luiz Pardal
   email = alpardal@gmail.com
-	signingkey = B0089DF8B5635CAE
+	signingkey = C106FFF084029022
 
 [core]
   editor = vim -f
