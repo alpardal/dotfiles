@@ -53,6 +53,10 @@ cnoremap Q qall
 
 inoremap <A-p> "
 
+" sessions:
+nnoremap <leader>m :source Session.vim
+nnoremap <leader>M :mksession!\|qall
+
 inoremap <C-l> <delete>
 inoremap <C-r> <C-r><C-p>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
