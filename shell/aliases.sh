@@ -62,6 +62,7 @@ alias gdc='git diff --word-diff-regex=.' # char diff
 alias gdp='git diff --patience'
 alias gds='git diff --staged'
 alias gdw='git diff --ignore-all-space'
+alias gdo='git diff --word-diff'
 alias gm='git merge'
 alias gf='git fetch --prune --all'
 alias gt='git tag'

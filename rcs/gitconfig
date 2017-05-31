@@ -24,6 +24,10 @@
 [merge]
   ff = only
   conflictstyle = diff3
+	tool = vimdiff
+
+[mergetool]
+	prompt = false
 
 [pager]
   diff = diff-highlight | less
