@@ -61,6 +61,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+set wildignorecase
 
 set nobackup
 set nowb

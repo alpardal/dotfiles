@@ -3,6 +3,8 @@ let mapleader = " "
 
 nnoremap <leader>w :w<cr>
 nnoremap <leader>x :x<cr>
+" necessary due to Alt key handling in `3_settings`
+inoremap <Esc> <C-c>
 
 nnoremap <leader>y "+y
 nnoremap <leader>Y "+p
@@ -62,7 +64,7 @@ inoremap <C-r> <C-r><C-p>
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 " upcase prev word
-inoremap <C-c> <esc>gUiwea
+" inoremap <C-c> <esc>gUiwea
 
 nnoremap <right> gt
 nnoremap <left> gT
@@ -129,7 +131,3 @@ imap <C-f> <C-e>,
 " map #  <Plug>(incsearch-nohl-#)
 " map g* <Plug>(incsearch-nohl-g*)
 " map g# <Plug>(incsearch-nohl-g#)
-
-" CtrlPFunky:
-" nnoremap <leader>fu :CtrlPFunky<cr>
-" nnoremap <leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<cr>
