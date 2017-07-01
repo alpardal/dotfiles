@@ -23,6 +23,8 @@ alias pd=pushd
 alias pod=popd
 alias dirsize='du -sh'
 
+alias vis='vim -S Session.vim'
+
 # ruby
 alias ri='ri -Tf ansi'
 alias gemset='rvm gemset'

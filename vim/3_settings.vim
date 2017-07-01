@@ -51,6 +51,7 @@ set virtualedit+=block
 set history=10000
 set undofile
 set undodir=~/.vim_undo
+set viewdir=~/.vim_view
 
 set autoread
 set splitbelow

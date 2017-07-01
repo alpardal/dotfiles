@@ -41,3 +41,8 @@ let g:jellybeans_use_term_italics = 1
 
 let g:incsearch#auto_nohlsearch = 1
 let g:indentLine_char = '┆'
+
+let g:polyglot_disabled = ['elm']
+let g:elm_setup_keybindings = 0
+let g:elm_format_autosave = 1
+
