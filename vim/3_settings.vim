@@ -26,10 +26,10 @@ set cursorline
 set background=dark
 
 " colorscheme herald
-" colorscheme jellybeans
+colorscheme jellybeans
 " colorscheme chroma
 " colorscheme minimalist
-colorscheme OceanicNext
+" colorscheme OceanicNext
 
 set laststatus=2
 set statusline=%f\ %y%m

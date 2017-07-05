@@ -11,10 +11,10 @@ nnoremap <leader>Y "+p
 vnoremap <leader>y "+y
 vnoremap <leader>Y "+p
 
+" execute "nnoremap <leader>f :Ag "
+
 "selects last inserted text:
 nnoremap gV `[v`]
-
-execute 'nnoremap <leader>f :Ag '
 
 nnoremap <C-e> 4<C-e>
 nnoremap <C-y> 4<C-y>
@@ -36,7 +36,7 @@ nnoremap <silent> <leader><leader> <c-^>
 
 nnoremap <silent> <leader>o :CtrlP .<cr>
 nmap     <silent> <leader>i :CtrlP %%<cr>
-nnoremap <silent> <leader>p :CtrlPMRU<cr>
+" nnoremap <silent> <leader>p :CtrlPMRU<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
 nnoremap <cr> G
@@ -57,7 +57,7 @@ inoremap <A-p> "
 
 " sessions:
 nnoremap <leader>m :source Session.vim
-nnoremap <leader>M :mksession!\|qall
+nnoremap Q :mksession!\|qall
 
 inoremap <C-l> <delete>
 inoremap <C-r> <C-r><C-p>
@@ -84,6 +84,8 @@ nnoremap <C-p> <C-w>p
 
 " tabs
 nnoremap <leader>bb :tabnew<cr>
+nnoremap <silent> <A-h> :tabp<cr>
+nnoremap <silent> <A-l> :tabn<cr>
 
 nnoremap <silent> <A-j> :m +1<cr>
 nnoremap <silent> <A-k> :m -2<cr>

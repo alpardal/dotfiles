@@ -10,6 +10,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'dikiaap/minimalist'
+Plugin 'crater2150/vim-theme-chroma'
+Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'henrik/vim-indexed-search'
 Plugin 'rking/ag.vim'
@@ -18,17 +21,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'Yggdroot/indentLine'
 
-" Plugin 'kien/ctrlp.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/StringComplete'
-
-Plugin 'dikiaap/minimalist'
-Plugin 'crater2150/vim-theme-chroma'
-Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'SirVer/ultisnips'
 
