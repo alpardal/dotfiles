@@ -51,6 +51,7 @@ alias g='git status'
 alias gs='git status'
 alias gss='git status --short'
 alias ga='git add'
+alias gap='git add -p'
 alias gaa='git add --all'
 alias gb='git branch'
 alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -15"

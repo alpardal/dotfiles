@@ -41,6 +41,7 @@
   showUntrackedFiles = all
 
 [alias]
+  pushf = push --force-with-lease
     # log with list of modified files in each commit:
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --oneline
     # file history, with diffs:
