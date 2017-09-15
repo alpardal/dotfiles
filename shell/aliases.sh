@@ -22,6 +22,7 @@ alias fg=' fg'
 alias pd=pushd
 alias pod=popd
 alias dirsize='du -sh'
+alias gnome-open='xdg-open'
 
 alias vis='vim -S Session.vim'
 
