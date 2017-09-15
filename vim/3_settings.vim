@@ -12,6 +12,8 @@ set modelines=0
 set lazyredraw
 set secure
 
+set noeb vb t_vb=
+
 set notimeout
 set ttimeout
 set ttimeoutlen=10
@@ -41,6 +43,8 @@ set winheight=10
 set winminheight=10
 set ttymouse=xterm2
 set ttyfast
+
+set mouse=n
 
 set wildmenu
 set wildmode=full

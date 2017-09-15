@@ -6,10 +6,9 @@ nnoremap <leader>x :x<cr>
 " necessary due to Alt key handling in `3_settings`
 inoremap <Esc> <C-c>
 
-nnoremap <leader>y "+y
-nnoremap <leader>Y "+p
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
 vnoremap <leader>y "+y
-vnoremap <leader>Y "+p
 
 " execute "nnoremap <leader>f :Ag "
 
@@ -40,6 +39,7 @@ nmap     <silent> <leader>i :CtrlP %%<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
 nnoremap <cr> G
+vnoremap <cr> G
 nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk

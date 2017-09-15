@@ -17,6 +17,7 @@ augroup commands
     au BufLeave * if !&diff | let b:winview = winsaveview() | endif
     au BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | endif
     au VimResized * :wincmd =
+    au BufEnter * set noeb vb t_vb=
 augroup END
 
 augroup filetypes
