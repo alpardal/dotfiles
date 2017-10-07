@@ -29,6 +29,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/StringComplete'
 
 Plugin 'SirVer/ultisnips'
+Plugin 'w0rp/ale'
 
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'

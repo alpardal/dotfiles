@@ -123,6 +123,9 @@ inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
 " vim-emmet:
 imap <C-f> <C-e>,
 
+nnoremap <C-n> :ALENext<cr>
+nnoremap <C-p> :ALEPrevious<cr>
+
 " haya14busa/incsearch.vim:
 " map / <Plug>(incsearch-stay)
 " map ? <Plug>(incsearch-backward)
