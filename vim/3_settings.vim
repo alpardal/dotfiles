@@ -28,7 +28,14 @@ set cursorline
 set background=dark
 
 " colorscheme herald
-colorscheme jellybeans
+" colorscheme jellybeans
+" colorscheme gotham256
+colorscheme molokai
+" colorscheme codedark
+" colorscheme afterglow
+" colorscheme apprentice
+" colorscheme janah
+" autocmd ColorScheme janah highlight Normal ctermbg=235
 " colorscheme chroma
 " colorscheme minimalist
 " colorscheme OceanicNext
