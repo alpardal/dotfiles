@@ -1,6 +1,20 @@
 AllCops:
   TargetRubyVersion: 2.4
 
+Naming/PredicateName:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns: ["^\\s*#"]
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 15
+
+Metrics/AbcSize:
+  Max: 20
+
 Style/MultilineBlockChain:
   Enabled: false
 
@@ -16,9 +30,6 @@ Style/BlockDelimiters:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-Style/PredicateName:
-  Enabled: false
-
 Style/TrivialAccessors:
   AllowPredicates: true
   ExactNameMatch: true
@@ -29,17 +40,6 @@ Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     "%w": "()"
     "%i": "()"
-
-Metrics/LineLength:
-  Max: 80
-  IgnoredPatterns: ["^\\s*#"]
-
-Metrics/MethodLength:
-  CountComments: false
-  Max: 15
-
-Metrics/AbcSize:
-  Max: 20
 
 Style/NegatedWhile:
   Enabled: false
