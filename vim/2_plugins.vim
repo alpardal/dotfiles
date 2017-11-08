@@ -41,7 +41,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-dispatch'
 Plugin 'gregsexton/MatchTag'
 
-Plugin 'sheerun/vim-polyglot'
+" Plugin 'elmcast/elm-vim'
+Plugin 'mdxprograms/elm-vim' " fork to fix conflict with vim-rails
+
+Plugin 'sheerun/vim-polyglot' " must be loaded after elm-vim
+let g:polyglot_disabled = ['elm']
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -49,6 +53,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 
 Plugin 'othree/html5.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'ap/vim-css-color'
 
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -58,7 +63,6 @@ Plugin 'raichoo/purescript-vim'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
-Plugin 'elmcast/elm-vim'
 Plugin 'idris-hackers/idris-vim'
 
 " testando:
