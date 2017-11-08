@@ -125,6 +125,7 @@ imap <C-f> <C-e>,
 
 nnoremap <C-n> :ALENext<cr>
 nnoremap <C-p> :ALEPrevious<cr>
+nnoremap <silent> <leader>f :ALEFix<cr>
 
 " haya14busa/incsearch.vim:
 " map / <Plug>(incsearch-stay)

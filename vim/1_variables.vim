@@ -42,8 +42,12 @@ let g:jellybeans_use_term_italics = 1
 let g:incsearch#auto_nohlsearch = 1
 let g:indentLine_char = '┆'
 
-let g:polyglot_disabled = ['elm']
 let g:elm_setup_keybindings = 0
 let g:elm_format_autosave = 1
 
 let g:rustfmt_autosave = 1
+
+let g:ale_linters = {'rust': ['rls']} ", 'cargo', 'rustc']}
+let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier']}
+let g:ale_rust_cargo_use_check = 1
+" let g:ale_rust_rls_executable = 'rustup run nightly rls'
