@@ -21,6 +21,9 @@
   ui = auto
   diff = auto
 
+[diff]
+  algorithm = patience
+
 [merge]
   ff = only
   conflictstyle = diff3
