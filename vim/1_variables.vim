@@ -46,8 +46,10 @@ let g:elm_setup_keybindings = 0
 let g:elm_format_autosave = 1
 
 let g:rustfmt_autosave = 1
+let g:racer_experimental_completer = 1
 
-let g:ale_linters = {'rust': ['rls']} ", 'cargo', 'rustc']}
-let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier']}
+let g:ale_linters = {'ruby': ['rubocop'], 'rust': ['rls', 'cargo']} " , 'rustc']}
+let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint']}
 let g:ale_rust_cargo_use_check = 1
+let g:ale_set_loclist = 0
 " let g:ale_rust_rls_executable = 'rustup run nightly rls'

@@ -8,4 +8,5 @@ cd vim
             --enable-pythoninterp=yes \
             --enable-luainterp \
             --with-x=yes \
-            --with-compiledby=alpardal@gmail.com
+            --with-compiledby=alpardal@gmail.com \
+            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu

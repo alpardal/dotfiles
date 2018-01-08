@@ -4,6 +4,7 @@ runtime ftplugin/man.vim
 filetype plugin indent on
 syntax enable
 
+set cryptmethod=blowfish2
 set list listchars=tab:»·,space:␣, ",trail:· ",eol:↲
 " set list listchars=tab:»·,trail:·,eol:¬
 
@@ -24,6 +25,7 @@ set showcmd
 set number
 set guifont=Monaco\ 10
 set cursorline
+set cursorcolumn
 
 set background=dark
 

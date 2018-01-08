@@ -17,16 +17,19 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'mhinz/vim-janah'
 Plugin 'tomasiser/vim-code-dark'
 
+Plugin 'wincent/terminus'
+
 Plugin 'henrik/vim-indexed-search'
 Plugin 'rking/ag.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'jreybert/vimagit'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'Yggdroot/indentLine'
 
+Plugin 'skywind3000/asyncrun.vim'
+
 Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
@@ -63,12 +66,12 @@ Plugin 'raichoo/purescript-vim'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'racer-rust/vim-racer'
+
 Plugin 'idris-hackers/idris-vim'
 
 " testando:
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'jplaut/vim-arduino-ino'
-
-"marijnh/tern_for_vim'
 
 call vundle#end()
