@@ -24,9 +24,14 @@ export JAVA_OPTS="-client"
 
 export CABAL_BIN=$HOME/.cabal/bin
 
-export ACTIVATOR_HOME=$USER_BIN/scala-activator
-
 # export POSTGRES_PATH="/usr/local/pgsql/bin"
 # export PGDATA="/usr/local/pgsql/data"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export CARGO_BIN="$HOME/.cargo/bin"
 
-export PATH=$CABAL_BIN:$ACTIVATOR_HOME:$NODE_HOME/bin:$USER_BIN:$PATH
+export HEROKU_BIN="/usr/local/heroku/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH=$USER_BIN:$CARGO_BIN:$CABAL_BIN:$HEROKU_BIN:$PATH
