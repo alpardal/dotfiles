@@ -13,10 +13,6 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide='^\..*' . ',' . netrw_gitignore#Hide()
 let NERDTreeHijackNetwr=1
 
-let g:airline_powerline_fonts=1
-let g:airline_theme='jellybeans'
-let g:airline_section_z="%3p%% %{g:airline_symbols.linenr}%#__accent_bold#%4l[%L]%#__restore__#:%3c"
-
 let g:UltiSnipsExpandTrigger='<C-p>'
 let g:UltiSnipsJumpForwardTrigger='<C-p>'
 let g:UltiSnipsJumpBckwardTrigger='<C-n>'
@@ -48,8 +44,14 @@ let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
 
-let g:ale_linters = {'ruby': ['rubocop'], 'rust': ['rls', 'cargo']} " , 'rustc']}
-let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint']}
+let g:ale_linters = {'ruby': ['rubocop'], 'rust': ['rls', 'cargo', 'clippy']} " , 'rustc']}
+let g:ale_fixers = {
+ \ 'ruby': ['rubocop'],
+ \ 'javascript': ['prettier', 'eslint'],
+ \ 'css': ['prettier'],
+ \ 'scss': ['prettier']
+ \ }
 let g:ale_rust_cargo_use_check = 1
 let g:ale_set_loclist = 0
+" let g:ale_fix_on_save = 1
 " let g:ale_rust_rls_executable = 'rustup run nightly rls'

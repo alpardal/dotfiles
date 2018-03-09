@@ -1,4 +1,4 @@
 
 map <silent> <leader>f :Fmt<cr>
-map <leader>r :w\|!clear;echo;go run %<cr>
-map <leader>d :Godoc <cr>
+call MapUnlessAlreadyMapped('<leader>r', ':w\|!clear;echo;go run %<cr>')
+call MapUnlessAlreadyMapped('<leader>d', ':Godoc <cr>')

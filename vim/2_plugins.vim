@@ -63,6 +63,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'slim-template/vim-slim'
 
 Plugin 'raichoo/purescript-vim'
+Plugin 'bhurlow/vim-parinfer'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'

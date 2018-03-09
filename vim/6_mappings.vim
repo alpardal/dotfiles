@@ -10,9 +10,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>y "+y
 
-vnoremap < <gv
-vnoremap > >gv
-
 " execute "nnoremap <leader>f :Ag "
 
 "selects last inserted text:
