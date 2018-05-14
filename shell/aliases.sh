@@ -24,6 +24,8 @@ alias pod=popd
 alias dirsize='du -sh'
 alias gnome-open='xdg-open'
 
+alias t=task
+
 alias vis='vim -S Session.vim'
 
 # ruby
@@ -58,7 +60,7 @@ alias ga='git add'
 alias gap='git add -p'
 alias gaa='git add --all'
 alias gb='git branch'
-alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -30"
+alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -20"
 alias gll="git log --oneline --decorate --graph --branches='*'"
 alias go='git checkout'
 alias gi='git commit'
@@ -76,10 +78,12 @@ alias gt='git tag'
 alias stash='git stash -u'
 alias stashp='git stash pop'
 alias stashl='git stash list --oneline --decorate'
+
 #tmux
 alias tm='tmux'
 alias ts='tmux list-sessions'
 alias ta='tmux attach'
+
 # other
 alias ctags='ctags-exuberant --extra=+f -R'
 alias node='node --harmony --use-strict'
