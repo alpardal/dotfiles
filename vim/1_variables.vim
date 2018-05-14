@@ -44,13 +44,17 @@ let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
 
-let g:ale_linters = {'ruby': ['rubocop'], 'rust': ['rls', 'cargo', 'clippy']} " , 'rustc']}
+let g:ale_linters = {
+  \ 'ruby': ['rubocop'],
+  \ 'rust': ['rls', 'cargo', 'clippy'],
+  \ 'clojure': ['joker']
+  \ }
 let g:ale_fixers = {
- \ 'ruby': ['rubocop'],
- \ 'javascript': ['prettier', 'eslint'],
- \ 'css': ['prettier'],
- \ 'scss': ['prettier']
- \ }
+  \ 'ruby': ['rubocop'],
+  \ 'javascript': ['prettier', 'eslint'],
+  \ 'css': ['prettier'],
+  \ 'scss': ['prettier']
+  \ }
 let g:ale_rust_cargo_use_check = 1
 let g:ale_set_loclist = 0
 " let g:ale_fix_on_save = 1
