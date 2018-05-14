@@ -10,8 +10,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>y "+y
 
-" execute "nnoremap <leader>f :Ag "
-
 "selects last inserted text:
 nnoremap gV `[v`]
 
@@ -43,6 +41,8 @@ vnoremap <cr> G
 nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 nnoremap Q :normal n.<cr>
 nnoremap <leader>[ :bn<cr>
 nnoremap <leader>] :bp<cr>
@@ -126,6 +126,8 @@ imap <C-f> <C-e>,
 nnoremap <C-n> :ALENext<cr>
 nnoremap <C-p> :ALEPrevious<cr>
 nnoremap <silent> <leader>f :ALEFix<cr>
+
+" execute "nnoremap <leader>f :Ag "
 
 " haya14busa/incsearch.vim:
 " map / <Plug>(incsearch-stay)

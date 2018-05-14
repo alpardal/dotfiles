@@ -14,6 +14,7 @@ set lazyredraw
 set secure
 
 set noeb vb t_vb=
+set updatetime=100
 
 set notimeout
 set ttimeout
