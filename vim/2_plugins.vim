@@ -70,9 +70,11 @@ Plugin 'cespare/vim-toml'
 Plugin 'racer-rust/vim-racer'
 
 Plugin 'idris-hackers/idris-vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'venantius/vim-cljfmt'
 
 " testando:
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'jplaut/vim-arduino-ino'
+" Plugin 'tacahiroy/ctrlp-funky'
+" Plugin 'jplaut/vim-arduino-ino'
 
 call vundle#end()
