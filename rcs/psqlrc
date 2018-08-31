@@ -7,6 +7,13 @@
 -- Show how long each query takes to execute
 \timing
 
+-- how to display null values
+\pset null '(NULL)'
+
+-- table display
+\pset linestyle unicode
+\pset border 2
+
 -- Use best available output format
 \x auto
 \set VERBOSITY verbose
