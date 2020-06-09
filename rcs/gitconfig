@@ -6,9 +6,11 @@
 [core]
   editor = vim -f
   autocrlf = input
+  pager = delta --theme='Monokai Extended'
+  # pager = delta --theme=Dracula
 
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+  helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 
 [commit]
   gpgSign = true
@@ -31,14 +33,15 @@
 
 [mergetool]
 	prompt = false
-
-[pager]
-  diff = diff-highlight | less
-  log = diff-highlight | less
-  show = diff-highlight | less
+#
+# [pager]
+#   diff = diff-highlight | less
+#   log = diff-highlight | less
+#   show = diff-highlight | less
 
 [interactive]
-  diffFilter = diff-highlight
+  diffFilter = delta --color-only
+  # diffFilter = diff-highlight
 
 [status]
   showUntrackedFiles = all
