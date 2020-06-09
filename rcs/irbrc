@@ -2,7 +2,17 @@ require 'irb/completion'
 IRB.conf[:AUTO_INDENT] = true
 
 #require 'interactive_editor'
-require 'fancy_irb'
-require 'wirb'
-FancyIrb.start
-Wirb.start
+
+begin
+  require 'fancy_irb'
+  FancyIrb.start
+rescue LoadError
+  puts 'cannot load fancy_irb'
+end
+
+begin
+  require 'wirb'
+  Wirb.start
+rescue LoadError
+  puts 'cannot load wirb'
+end

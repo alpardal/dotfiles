@@ -1,3 +1,52 @@
+function! SaveSession()
+  let session_file = GetCurrentSessionFile()
+  execute 'mksession! ' . session_file
+  call writefile([session_file], '.last-vim-session')
+  execute 'qall'
+endfunction
+
+function! GetCurrentSessionFile()
+  if v:this_session != ''
+    return v:this_session
+  else
+    return 'Session.vim'
+  endif
+endfunction
+
+ function! VimuxSlime()
+  call VimuxRunCommand(@v)
+  " call VimuxSendKeys("Enter")
+ endfunction
+
+function! AltCommand(path, vim_command)
+  let l:alternate = system("alt " . a:path)
+  if empty(l:alternate)
+    echo "No alternate file for " . a:path
+  else
+    exec a:vim_command . " " . l:alternate
+  endif
+endfunction
+
+
+function! CreateDirForCurrentFile()
+  execute '!mkdir -p '. expand('%:h')
+  execute 'w'
+endfunction
+
+function! ExecCurrentLine()
+  let comment_char = '\(#\|--\|//\)'
+  let comment_regex = '^\s*' . comment_char . '\s*'
+  let current_line = getline('.')
+
+  if match(current_line, comment_regex) != -1
+    let cmd = substitute(current_line, comment_regex, '', '')
+    execute cmd
+    echo 'done.'
+  else
+    echo "doesn't match"
+  endif
+endfunction
+
 function! EditFile(path)
     let fullpath = fnamemodify(a:path, ':p')
     if filereadable(fullpath)
@@ -61,6 +110,13 @@ endfunction
 function! RenameFile()
     let old_name = expand('%')
     let new_name = input('New file name: ', expand('%'))
+
+    if filereadable(new_name)
+      redraw!
+      echo 'File "' . new_name . '" already exists, ignoring'
+      return
+    endif
+
     if new_name != '' && new_name != old_name
         exec ':saveas ' . new_name
         exec ':silent !rm ' . old_name

@@ -4,4 +4,3 @@
 --skip-listen
 --skip-coffee
 --database=postgresql
---webpack=react

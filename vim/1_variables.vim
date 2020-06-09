@@ -44,18 +44,33 @@ let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
 
+let g:ale_elixir_elixir_ls_release = '/home/andre/code/vendor/elixir-ls/rel'
+let g:ale_elixir_elixir_ls_config = {
+  \ 'elixirLS': {
+  \   'dialyzerEnabled': v:false
+  \   }
+  \ }
 let g:ale_linters = {
   \ 'ruby': ['rubocop'],
   \ 'rust': ['rls', 'cargo', 'clippy'],
-  \ 'clojure': ['joker']
+  \ 'clojure': ['joker'],
+  \ 'elixir': ['elixir-ls', 'dialyxir']
   \ }
 let g:ale_fixers = {
   \ 'ruby': ['rubocop'],
   \ 'javascript': ['prettier', 'eslint'],
   \ 'css': ['prettier'],
-  \ 'scss': ['prettier']
+  \ 'scss': ['prettier'],
+  \ 'elixir': ['mix_format'],
+  \ 'ocaml': ['ocamlformat']
   \ }
 let g:ale_rust_cargo_use_check = 1
 let g:ale_set_loclist = 0
+
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
 " let g:ale_fix_on_save = 1
 " let g:ale_rust_rls_executable = 'rustup run nightly rls'
+
+let g:TerminusMouse=0

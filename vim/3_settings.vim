@@ -5,8 +5,8 @@ filetype plugin indent on
 syntax enable
 
 set cryptmethod=blowfish2
-set list listchars=tab:»·,space:␣, ",trail:· ",eol:↲
-" set list listchars=tab:»·,trail:·,eol:¬
+set list
+set listchars=tab:»·,trail:· " ,nbsp:␣ ",eol:¬
 
 set nomodeline
 set modelines=0
@@ -42,6 +42,7 @@ colorscheme molokai
 " colorscheme chroma
 " colorscheme minimalist
 " colorscheme OceanicNext
+" colorscheme one
 
 set laststatus=2
 set statusline=%f\ %y%m
@@ -54,13 +55,14 @@ set winminheight=10
 set ttymouse=xterm2
 set ttyfast
 
-set mouse=n
+set mouse=
 
 set wildmenu
 set wildmode=full
 set completeopt=longest,menuone,preview
 set formatoptions=tcrn1
-set virtualedit+=block
+set virtualedit=all
+" set virtualedit+=block
 
 set history=10000
 set undofile
@@ -87,7 +89,6 @@ set showbreak=↪
 set breakat=\ |,.;
 set breakindent
 set wrap
-set nolist
 set formatoptions=rcqnl1j
 set textwidth=0
 set colorcolumn=81

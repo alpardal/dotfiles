@@ -1,5 +1,7 @@
 command! -nargs=1 -complete=file Edit :call EditFile("<args>")
 
+command! Mkdir :call CreateDirForCurrentFile()
+
 " auto commands:
 
 augroup commands
@@ -22,6 +24,6 @@ augroup END
 
 augroup filetypes
     au!
-    au Filetype css,scss setlocal foldmethod=marker foldmarker={,}
+    " au Filetype css,scss setlocal foldmethod=marker foldmarker={,}
     au Filetype css,scss setlocal iskeyword+=-
 augroup END

@@ -1,5 +1,6 @@
 
-export EDITOR="vim"
+export EDITOR=vim
+export ECTO_EDITOR=vim
 # export TERM=xterm-256color
 # export TERM=gnome-256color
 
@@ -20,13 +21,19 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1.25
 export RUBY_GC_HEAP_INIT_SLOTS=800000
 export RUBY_GC_HEAP_FREE_SLOTS=600000
 
+# export RUBOCOP_OPTS='--safe-autocorrect'
+
 export JAVA_OPTS="-client"
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+export FZF_DEFAULT_OPTS='--bind=up:preview-up,down:preview-down'
 
 export CABAL_BIN=$HOME/.cabal/bin
 
 # export POSTGRES_PATH="/usr/local/pgsql/bin"
 # export PGDATA="/usr/local/pgsql/data"
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+# export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export CARGO_BIN="$HOME/.cargo/bin"
 
 export HEROKU_BIN="/usr/local/heroku/bin"

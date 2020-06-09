@@ -57,7 +57,7 @@ inoremap <A-p> "
 
 " sessions:
 nnoremap <leader>m :source Session.vim
-nnoremap Q :mksession!\|qall
+nnoremap Q :call SaveSession()<cr>
 
 inoremap <C-l> <delete>
 inoremap <C-r> <C-r><C-p>
@@ -117,6 +117,8 @@ nnoremap <leader>gg :e Gemfile<cr>
 
 " autocomplete quoted strings:
 inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
+
+nnoremap <silent> <leader>c :call ExecCurrentLine()<cr>
 
 " Plugins:
 

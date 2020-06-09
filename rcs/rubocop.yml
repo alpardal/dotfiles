@@ -1,10 +1,10 @@
-AllCops:
-  TargetRubyVersion: 2.4
+# AllCops:
+#   TargetRubyVersion: 2.4
 
 Naming/PredicateName:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 80
   IgnoredPatterns: ["^\\s*#"]
 
@@ -21,7 +21,7 @@ Style/MultilineBlockChain:
 Style/LambdaCall:
   Enabled: false
 
-Documentation:
+Style/Documentation:
   Enabled: false
 
 Style/BlockDelimiters:
