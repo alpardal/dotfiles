@@ -1,6 +1,8 @@
 
 let mapleader = " "
 
+nnoremap <leader>8 :redraw!<cr>
+
 nnoremap <leader>w :w<cr>
 nnoremap <leader>x :x<cr>
 " necessary due to Alt key handling in `3_settings`

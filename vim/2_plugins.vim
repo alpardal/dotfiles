@@ -72,6 +72,7 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'idris-hackers/idris-vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'venantius/vim-cljfmt'
+Plugin 'frazrepo/vim-rainbow'
 
 " testando:
 " Plugin 'tacahiroy/ctrlp-funky'
