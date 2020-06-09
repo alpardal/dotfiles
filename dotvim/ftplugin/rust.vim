@@ -1,6 +1,6 @@
 
 call MapUnlessAlreadyMapped('<leader>r', ':w\|!clear;echo;cargo run<cr>')
-call MapUnlessAlreadyMapped('<leader>t', ':w\|!clear;echo;cargo test -- --nocapture<cr>')
+call MapUnlessAlreadyMapped('<leader>t', ':w\|!clear;echo;cargo test -- --nocapture --color always<cr>')
 call MapUnlessAlreadyMapped('<leader>b', ':w\|!clear;echo;cargo build<cr>')
 call MapUnlessAlreadyMapped('<leader>l', ':w\|!clear;echo;cargo +nightly clippy<cr>')
 call MapUnlessAlreadyMapped('gd', '<Plug>(rust-def)')
