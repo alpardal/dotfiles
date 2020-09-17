@@ -17,6 +17,9 @@ Plugin 'whatyouhide/vim-gotham'
 Plugin 'mhinz/vim-janah'
 Plugin 'tomasiser/vim-code-dark'
 
+Plugin 'neoclide/coc.nvim'
+Plugin 'tpope/vim-projectionist'
+
 Plugin 'wincent/terminus'
 
 Plugin 'henrik/vim-indexed-search'
@@ -32,10 +35,10 @@ Plugin 'skywind3000/asyncrun.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-endwise'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'Raimondi/delimitMate'
-Plugin 'vim-scripts/StringComplete'
 
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 Plugin 'w0rp/ale'
 
 Plugin 'tomtom/tcomment_vim'
@@ -44,7 +47,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-dispatch'
 Plugin 'gregsexton/MatchTag'
 
-" Plugin 'elmcast/elm-vim'
 Plugin 'mdxprograms/elm-vim' " fork to fix conflict with vim-rails
 
 Plugin 'sheerun/vim-polyglot' " must be loaded after elm-vim
@@ -63,19 +65,19 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'slim-template/vim-slim'
 
 Plugin 'raichoo/purescript-vim'
-Plugin 'bhurlow/vim-parinfer'
 
 Plugin 'rust-lang/rust.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'racer-rust/vim-racer'
 
-Plugin 'idris-hackers/idris-vim'
+Plugin 'bhurlow/vim-parinfer'
 Plugin 'tpope/vim-fireplace'
 Plugin 'venantius/vim-cljfmt'
 Plugin 'frazrepo/vim-rainbow'
 
 " testando:
-" Plugin 'tacahiroy/ctrlp-funky'
-" Plugin 'jplaut/vim-arduino-ino'
+Plugin 'elzr/vim-json'
+" Plugin 'wting/gitsessions.vim'
+" Plugin 'mcchrish/nnn.vim'
+Plugin 'benmills/vimux'
+Plugin 'terryma/vim-expand-region'
 
 call vundle#end()

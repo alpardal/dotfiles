@@ -32,7 +32,6 @@ set background=dark
 
 " colorscheme herald
 " colorscheme jellybeans
-" colorscheme gotham256
 colorscheme molokai
 " colorscheme codedark
 " colorscheme afterglow
@@ -42,7 +41,6 @@ colorscheme molokai
 " colorscheme chroma
 " colorscheme minimalist
 " colorscheme OceanicNext
-" colorscheme one
 
 set laststatus=2
 set statusline=%f\ %y%m
@@ -66,6 +64,7 @@ set virtualedit=all
 
 set history=10000
 set undofile
+set undolevels=10000
 set undodir=~/.vim_undo
 set viewdir=~/.vim_view
 

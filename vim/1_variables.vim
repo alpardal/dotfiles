@@ -20,11 +20,6 @@ let g:UltiSnipsJumpBckwardTrigger='<C-n>'
 let g:sparkupMappingInsertModeOnly=1
 let g:sparkupDoubleQuote=1
 
-let g:ctrlp_funky_matchtype='path'
-let g:ctrlp_funky_syntax_highlight=1
-
-let g:vim_arduino_map_keys=0
-
 let g:user_emmet_leader_key='<C-E>'
 let g:user_emmet_mode='i'
 
@@ -44,6 +39,7 @@ let g:elm_format_autosave = 1
 let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
 
+let g:ale_sign_column_always = 1
 let g:ale_elixir_elixir_ls_release = '/home/andre/code/vendor/elixir-ls/rel'
 let g:ale_elixir_elixir_ls_config = {
   \ 'elixirLS': {
@@ -59,10 +55,13 @@ let g:ale_linters = {
 let g:ale_fixers = {
   \ 'ruby': ['rubocop'],
   \ 'javascript': ['prettier', 'eslint'],
+  \ 'json': ['jq'],
   \ 'css': ['prettier'],
   \ 'scss': ['prettier'],
   \ 'elixir': ['mix_format'],
-  \ 'ocaml': ['ocamlformat']
+  \ 'ocaml': ['ocamlformat'],
+  \ 'rust': ['rustfmt'],
+  \ 'terraform': ['terraform'],
   \ }
 let g:ale_rust_cargo_use_check = 1
 let g:ale_set_loclist = 0
