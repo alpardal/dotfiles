@@ -1,3 +1,15 @@
+
+function t {
+  proj=''
+  proj_file='.task-project'
+
+  if [[ -r $proj_file ]]; then
+    proj="project:$(head -1 $proj_file)"
+  fi
+
+  task $proj
+}
+
 function fd {
   preview="git diff $@ --color=always -- {-1}"
   git diff $@ --name-only | fzf -m --ansi --preview $preview

@@ -30,7 +30,7 @@ alias agi='ag -i'
 
 alias v='vim .'
 
-alias t=task
+# alias t=task
 
 alias dcu='docker-compose up -d'
 
