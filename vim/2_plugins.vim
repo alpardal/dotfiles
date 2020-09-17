@@ -1,83 +1,83 @@
-" plugins managed by Vundle:
-set nocompatible
-filetype off
-
 runtime macros/matchit.vim
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" plugins managed by vim-plug: https://github.com/junegunn/vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'
 
-Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'dikiaap/minimalist'
-Plugin 'crater2150/vim-theme-chroma'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'mhinz/vim-janah'
-Plugin 'tomasiser/vim-code-dark'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'dikiaap/minimalist'
+Plug 'crater2150/vim-theme-chroma'
+Plug 'nanotech/jellybeans.vim'
+Plug 'whatyouhide/vim-gotham'
+Plug 'mhinz/vim-janah'
+Plug 'tomasiser/vim-code-dark'
 
-Plugin 'neoclide/coc.nvim'
-Plugin 'tpope/vim-projectionist'
+Plug 'neoclide/coc.nvim'
+Plug 'tpope/vim-projectionist'
 
-Plugin 'wincent/terminus'
+Plug 'wincent/terminus'
 
-Plugin 'henrik/vim-indexed-search'
-Plugin 'rking/ag.vim'
+Plug 'henrik/vim-indexed-search'
+Plug 'rking/ag.vim'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'jreybert/vimagit'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'Yggdroot/indentLine'
+Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit'
+Plug 'haya14busa/incsearch.vim'
+Plug 'Yggdroot/indentLine'
 
-Plugin 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'Raimondi/delimitMate'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-endwise'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate'
 
-" Plugin 'SirVer/ultisnips'
-Plugin 'w0rp/ale'
+" Plug 'SirVer/ultisnips'
+Plug 'w0rp/ale'
 
-Plugin 'tomtom/tcomment_vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-dispatch'
-Plugin 'gregsexton/MatchTag'
+Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-dispatch'
+Plug 'gregsexton/MatchTag'
 
-Plugin 'mdxprograms/elm-vim' " fork to fix conflict with vim-rails
+Plug 'mdxprograms/elm-vim' " fork to fix conflict with vim-rails
 
-Plugin 'sheerun/vim-polyglot' " must be loaded after elm-vim
+Plug 'sheerun/vim-polyglot' " must be loaded after elm-vim
 let g:polyglot_disabled = ['elm']
 
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 't9md/vim-ruby-xmpfilter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 't9md/vim-ruby-xmpfilter'
 
-Plugin 'othree/html5.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'ap/vim-css-color'
+Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
+Plug 'ap/vim-css-color'
 
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'slim-template/vim-slim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'slim-template/vim-slim'
 
-Plugin 'raichoo/purescript-vim'
+Plug 'raichoo/purescript-vim'
 
-Plugin 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 
-Plugin 'bhurlow/vim-parinfer'
-Plugin 'tpope/vim-fireplace'
-Plugin 'venantius/vim-cljfmt'
-Plugin 'frazrepo/vim-rainbow'
+Plug 'bhurlow/vim-parinfer'
+Plug 'tpope/vim-fireplace'
+Plug 'venantius/vim-cljfmt'
+Plug 'frazrepo/vim-rainbow'
 
 " testando:
-Plugin 'elzr/vim-json'
-" Plugin 'wting/gitsessions.vim'
-" Plugin 'mcchrish/nnn.vim'
-Plugin 'benmills/vimux'
-Plugin 'terryma/vim-expand-region'
+Plug 'elzr/vim-json'
+" Plug 'wting/gitsessions.vim'
+" Plug 'mcchrish/nnn.vim'
+Plug 'benmills/vimux'
+Plug 'terryma/vim-expand-region'
 
-call vundle#end()
+call plug#end()
