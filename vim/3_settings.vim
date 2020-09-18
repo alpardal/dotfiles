@@ -59,8 +59,7 @@ set wildmenu
 set wildmode=full
 set completeopt=longest,menuone,preview
 set formatoptions=tcrn1
-set virtualedit=all
-" set virtualedit+=block
+set virtualedit+=block
 
 set history=10000
 set undofile
