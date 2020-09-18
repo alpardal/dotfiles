@@ -37,11 +37,12 @@ let g:ale_elixir_elixir_ls_config = {
   \ }
 let g:ale_linters = {
   \ 'ruby': ['rubocop'],
-  \ 'rust': ['rls', 'cargo', 'clippy'],
+  \ 'rust': ['rls', 'cargo'],
   \ 'clojure': ['joker'],
   \ 'elixir': ['elixir-ls', 'dialyxir']
   \ }
 let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'ruby': ['rubocop'],
   \ 'javascript': ['prettier', 'eslint'],
   \ 'json': ['jq'],
@@ -53,7 +54,19 @@ let g:ale_fixers = {
   \ 'terraform': ['terraform'],
   \ }
 let g:ale_rust_cargo_use_check = 1
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_set_loclist = 0
+let g:ale_set_balloons = 1
+
+let g:lightline = {}
+
+let g:lightline.component_expand = {
+  \  'linter_checking': 'lightline#ale#checking',
+  \  'linter_infos': 'lightline#ale#infos',
+  \  'linter_warnings': 'lightline#ale#warnings',
+  \  'linter_errors': 'lightline#ale#errors',
+  \  'linter_ok': 'lightline#ale#ok',
+  \ }
 
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"

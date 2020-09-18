@@ -98,6 +98,10 @@ vnoremap <silent> <A-k> :m '<-2<cr>gv
 " split line
 nnoremap S i<cr><esc>k$
 
+nmap <silent> <leader>d <Plug>(ale_hover)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
