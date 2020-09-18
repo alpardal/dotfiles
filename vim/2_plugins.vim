@@ -23,7 +23,6 @@ Plug 'tpope/vim-projectionist'
 Plug 'wincent/terminus'
 
 Plug 'henrik/vim-indexed-search'
-Plug 'rking/ag.vim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
@@ -32,7 +31,9 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'skywind3000/asyncrun.vim'
 
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'

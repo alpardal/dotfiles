@@ -35,9 +35,8 @@ nnoremap <leader>q :q<cr>
 " go to last buffer:
 nnoremap <silent> <leader><leader> <c-^>
 
-nnoremap <silent> <leader>o :CtrlP .<cr>
-nmap     <silent> <leader>i :CtrlP %%<cr>
-" nnoremap <silent> <leader>p :CtrlPMRU<cr>
+nnoremap <silent> <leader>o :Files .<cr>
+nmap     <silent> <leader>i :Files %%<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
 nnoremap <cr> G
@@ -112,11 +111,11 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 nnoremap <leader>h :call SearchNotes()<cr>
-nnoremap <leader>H :CtrlP ~/Programming/notes<cr>
+nnoremap <leader>H :Files ~/Programming/notes/<cr>
 nnoremap <leader>n :call RenameFile()<cr>
 
-nnoremap <leader>gl :CtrlP lib/<cr>
-nnoremap <leader>gs :CtrlP spec/<cr>
+nnoremap <leader>gl :GFiles lib/<cr>
+nnoremap <leader>gs :GFiles spec/<cr>
 nnoremap <leader>gg :e Gemfile<cr>
 
 " autocomplete quoted strings:

@@ -99,7 +99,7 @@ endfunction
 function! SearchNotes()
     let notes_dir = AbsolutePath(NotesDirFor(&filetype))
     if isdirectory(notes_dir)
-        exec ':CtrlP ' . notes_dir
+        exec ':Files ' . notes_dir
     else
         echo 'No notes for ' . &filetype . ' files'
     endif

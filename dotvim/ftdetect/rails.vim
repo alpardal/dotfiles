@@ -62,19 +62,19 @@ function! s:RailsMappings()
     nnoremap <leader>v :call CellToViewViewToCell()<cr>
 
     nnoremap <leader>gr :e config/routes.rb<cr>
-    nnoremap <leader>gc :CtrlP app/controllers/<cr>
+    nnoremap <leader>gc :GFiles app/controllers/<cr>
 
-    nnoremap <leader>gv :CtrlP app/views/<cr>
-    nnoremap <leader>gm :CtrlP app/models/<cr>
-    nnoremap <leader>gh :CtrlP app/helpers/<cr>
-    nnoremap <leader>ga :CtrlP app/assets/<cr>
-    nnoremap <leader>gt :CtrlP db/migrate/<cr>
-    nnoremap <leader>gas :CtrlP app/assets/stylesheets<cr>
-    nnoremap <leader>gaj :CtrlP app/assets/javascripts<cr>
+    nnoremap <leader>gv :GFiles app/views/<cr>
+    nnoremap <leader>gm :GFiles app/models/<cr>
+    nnoremap <leader>gh :GFiles app/helpers/<cr>
+    nnoremap <leader>ga :GFiles app/assets/<cr>
+    nnoremap <leader>gt :GFiles db/migrate/<cr>
+    nnoremap <leader>gas :GFiles app/assets/stylesheets<cr>
+    nnoremap <leader>gaj :GFiles app/assets/javascripts<cr>
 
-    nnoremap <leader>gsp :CtrlP spec/<cr>
-    nnoremap <leader>gsc :CtrlP spec/controllers/<cr>
-    nnoremap <leader>gsv :CtrlP spec/views/<cr>
-    nnoremap <leader>gsm :CtrlP spec/models/<cr>
-    nnoremap <leader>gsh :CtrlP spec/helpers/<cr>
+    nnoremap <leader>gsp :GFiles spec/<cr>
+    nnoremap <leader>gsc :GFiles spec/controllers/<cr>
+    nnoremap <leader>gsv :GFiles spec/views/<cr>
+    nnoremap <leader>gsm :GFiles spec/models/<cr>
+    nnoremap <leader>gsh :GFiles spec/helpers/<cr>
 endfunction
