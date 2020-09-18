@@ -5,6 +5,14 @@ function! SaveSession()
   execute 'qall'
 endfunction
 
+function! SearchDir(dir)
+  if isdirectory(a:dir . '/.git')
+    execute 'GFiles ' . a:dir
+  else
+    execute 'Files ' . a:dir
+  endif
+endfunction
+
 function! GetCurrentSessionFile()
   if v:this_session != ''
     return v:this_session

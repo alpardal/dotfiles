@@ -35,8 +35,8 @@ nnoremap <leader>q :q<cr>
 " go to last buffer:
 nnoremap <silent> <leader><leader> <c-^>
 
-nnoremap <silent> <leader>o :Files .<cr>
-nmap     <silent> <leader>i :Files %%<cr>
+nnoremap <silent> <leader>o :call SearchDir('.')<cr>
+nmap     <silent> <leader>i :call SearchDir('%%')<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
 nnoremap <cr> G
@@ -115,7 +115,7 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 nnoremap <leader>h :call SearchNotes()<cr>
-nnoremap <leader>H :Files ~/Programming/notes/<cr>
+nnoremap <leader>H :GFiles ~/Programming/notes/<cr>
 nnoremap <leader>n :call RenameFile()<cr>
 
 nnoremap <leader>gl :GFiles lib/<cr>
