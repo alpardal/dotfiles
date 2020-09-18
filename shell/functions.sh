@@ -27,7 +27,7 @@ function vis {
     fi
   fi
 
-  vim -S $SESSION_FILE
+  nvim -S $SESSION_FILE
 }
 
 function formattedGitBranch {
