@@ -17,7 +17,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'mhinz/vim-janah'
 Plug 'tomasiser/vim-code-dark'
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-projectionist'
 
 Plug 'wincent/terminus'

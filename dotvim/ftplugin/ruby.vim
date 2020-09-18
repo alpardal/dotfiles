@@ -7,8 +7,7 @@ nmap <buffer> <F2> <Plug>(xmpfilter-mark)
 nmap <buffer> <F8> <Plug>(xmpfilter-run)
 
 " nnoremap <leader>a :call EditAlternate()<cr>
-" using projectionist:
-nnoremap <leader>a :A<cr>
+" ^ using projectionist instead, see mappings
 
 if !exists('g:run_ruby_files_loaded')
   let g:run_ruby_files_loaded=1

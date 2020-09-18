@@ -17,16 +17,15 @@ endfunction
   call VimuxRunCommand(@v)
   " call VimuxSendKeys("Enter")
  endfunction
-
-function! AltCommand(path, vim_command)
-  let l:alternate = system("alt " . a:path)
-  if empty(l:alternate)
-    echo "No alternate file for " . a:path
-  else
-    exec a:vim_command . " " . l:alternate
-  endif
-endfunction
-
+"
+" function! AltCommand(path, vim_command)
+"   let l:alternate = system("alt " . a:path)
+"   if empty(l:alternate)
+"     echo "No alternate file for " . a:path
+"   else
+"     exec a:vim_command . " " . l:alternate
+"   endif
+" endfunction
 
 function! CreateDirForCurrentFile()
   execute '!mkdir -p '. expand('%:h')

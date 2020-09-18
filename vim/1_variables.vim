@@ -36,7 +36,7 @@ let g:indentLine_char = '┆'
 let g:elm_setup_keybindings = 0
 let g:elm_format_autosave = 1
 
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
 
 let g:ale_sign_column_always = 1

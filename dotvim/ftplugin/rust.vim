@@ -7,3 +7,6 @@ call MapUnlessAlreadyMapped('gd', '<Plug>(rust-def)')
 call MapUnlessAlreadyMapped('go', '<Plug>(rust-doc)')
 
 inoremap  A;
+
+let b:ale_disable_lsp = 1
+let b:ale_fix_on_save = 1
