@@ -26,13 +26,7 @@ function setup_dotvim_dir {
     ln -fs $HOME/dotfiles/dotvim $HOME/.vim
     (
         cd $HOME/.vim
-        rm -rf bundle
-        mkdir bundle && cd bundle
-        echo -n 'Cloning Vundle... '
-        git clone https://github.com/gmarik/Vundle.vim.git
-        echo done.
-        echo 'Installing Vim plugins... '
-        vi -c 'PluginInstall'
+        vi -c 'PlugInstall'
         echo done.
     )
 }
