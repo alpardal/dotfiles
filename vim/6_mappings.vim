@@ -36,11 +36,12 @@ nnoremap <leader>q :q<cr>
 nnoremap <silent> <leader><leader> <c-^>
 
 nnoremap <silent> <leader>o :call SearchDir('.')<cr>
-nmap     <silent> <leader>i :call SearchDir('%%')<cr>
+nnoremap <silent> <leader>O :Files<cr>
+nmap     <silent> <leader>i :Files %%<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
-nnoremap <cr> G
-vnoremap <cr> G
+" nnoremap <cr> G
+" vnoremap <cr> G
 nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
@@ -99,8 +100,10 @@ vnoremap <silent> <A-k> :m '<-2<cr>gv
 nnoremap S i<cr><esc>k$
 
 nmap <silent> <leader>d <Plug>(ale_hover)
-" nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
 " nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>

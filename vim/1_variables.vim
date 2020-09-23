@@ -6,6 +6,24 @@ let g:UltiSnipsExpandTrigger='<C-p>'
 let g:UltiSnipsJumpForwardTrigger='<C-p>'
 let g:UltiSnipsJumpBckwardTrigger='<C-n>'
 
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
+let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = 'x'
+
+let g:coc_global_extensions = [
+  \ 'coc-rls',
+  \ 'coc-emmet',
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-snippets',
+  \ 'coc-eslint']
+
 let g:sparkupMappingInsertModeOnly=1
 let g:sparkupDoubleQuote=1
 

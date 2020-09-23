@@ -8,6 +8,8 @@ set cryptmethod=blowfish2
 set list
 set listchars=tab:»·,trail:· " ,nbsp:␣ ",eol:¬
 
+set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+
 set nomodeline
 set modelines=0
 set lazyredraw
