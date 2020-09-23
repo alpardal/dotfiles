@@ -1,7 +1,12 @@
 function! SaveSession()
   let session_file = GetCurrentSessionFile()
+  let sessions_dir = '.vim-sessions'
+
+  call mkdir(sessions_dir, "p")
+
   execute 'mksession! ' . session_file
-  call writefile([session_file], '.last-vim-session')
+  call writefile([session_file], sessions_dir . '/last-session')
+
   execute 'qall'
 endfunction
 
@@ -16,9 +21,19 @@ endfunction
 function! GetCurrentSessionFile()
   if v:this_session != ''
     return v:this_session
-  else
-    return 'Session.vim'
   endif
+
+  let current_branch = GetCurrentGitBranch()
+  if current_branch != ''
+    return '.vim-sessions/' . current_branch . '.vim'
+  else
+    return '.vim-sessions/default.vim'
+  endif
+endfunction
+
+function! GetCurrentGitBranch()
+  let branch = system('git branch 2>/dev/null | sed -e "/^\s/d" -e "s/^\*\s//"')
+  return substitute(branch, "\n", "", "")
 endfunction
 
  function! VimuxSlime()

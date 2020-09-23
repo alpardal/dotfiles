@@ -16,23 +16,35 @@ function fd {
 }
 
 function vis {
-  local CHECK_FILE=.last-vim-session
-  local SESSION_FILE=Session.vim
+  local sessions_dir=.vim-sessions
+  local session_file=$sessions_dir/default.vim
+  local check_file=$sessions_dir/last-session
+  local branch=`currentGitBranch`
 
-  if [[ -r "$1" ]]; then
-    local SESSION_FILE="$1"
-  else
-    if [[ -r $CHECK_FILE ]]; then
-      local SESSION_FILE=$(cat $CHECK_FILE | head -1)
-    fi
+  if [[ -r "$1" ]]; then                                         # always load given session, if present
+    local session_file="$1"
+  elif [ -n "$branch" ] && [ -r "$sessions_dir/$branch" ]; then  # try to load branch session otherwise
+    local session_file="$sessions_dir/$branch"
+  elif [[ -r $check_file ]]; then                                # read from check_file instead
+    local session_file=$(cat $check_file | head -1)
   fi
 
-  vim -S $SESSION_FILE
+  if [[ -r $session_file ]]; then
+    echo "loading session '$session_file'"
+    $VIMCMD -S $session_file
+  else
+    echo "no '$session_file' session, loading normally"
+    $VIMCMD
+  fi
 }
 
 function formattedGitBranch {
-    _branch="$(git branch 2>/dev/null | sed -e "/^\s/d" -e "s/^\*\s//")"
+    _branch=`currentGitBranch`
     test -n "$_branch" && echo -e "\[\e[0;32m\]($_branch)\[\e[0m\]"
+}
+
+function currentGitBranch {
+    echo "$(git branch 2>/dev/null | sed -e "/^\s/d" -e "s/^\*\s//" -e "s/\n//")"
 }
 
 function md () {
