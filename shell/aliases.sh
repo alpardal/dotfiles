@@ -7,7 +7,7 @@ fi
 
 alias reload!='source ~/.zshrc'
 
-alias j=' jobs'
+# alias j=' jobs'
 alias quit=' exit'
 alias o='gvfs-open'
 alias tree='tree --dirsfirst'
