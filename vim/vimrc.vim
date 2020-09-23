@@ -1,5 +1,5 @@
-
-let s:vimrc = resolve($MYVIMRC)
+" let s:vimrc = resolve($MYVIMRC)
+let s:vimrc = glob(resolve("~/dotfiles/vim/vimrc.vim"))
 let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
 
 augroup reload_files

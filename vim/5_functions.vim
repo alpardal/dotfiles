@@ -104,7 +104,8 @@ function! FindVimrcs()
     let currdir = getcwd()
     let files = findfile('.vimrc', escape(getcwd(), ' ') . ';~', -1)
     let absolute_paths = map(files, 'AbsolutePath(v:val)')
-    let new_vimrcs = filter(absolute_paths, 'v:val != $MYVIMRC')
+    let toplevel_vimrc = glob('~/.vimrc')
+    let new_vimrcs = filter(absolute_paths, 'v:val != "' . toplevel_vimrc . '"')
     return reverse(new_vimrcs)
 endfunction
 

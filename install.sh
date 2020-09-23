@@ -31,10 +31,15 @@ function setup_dotvim_dir {
     )
 }
 
+function setup_neovim {
+  ln -fs $HOME/dotfiles/nvim $HOME/.config/nvim
+}
+
 function install_tmux_plugin_manager {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
 link_dotfiles
 setup_dotvim_dir
+setup_neovim
 install_tmux_plugin_manager

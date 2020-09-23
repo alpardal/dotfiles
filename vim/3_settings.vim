@@ -4,7 +4,9 @@ runtime ftplugin/man.vim
 filetype plugin indent on
 syntax enable
 
-set cryptmethod=blowfish2
+if !has('nvim')
+    set cryptmethod=blowfish2
+endif
 set list
 set listchars=tab:»·,trail:· " ,nbsp:␣ ",eol:¬
 
@@ -52,7 +54,9 @@ set statusline+=%l/%L\ [%v]
 set scrolloff=3
 set winheight=10
 set winminheight=10
-set ttymouse=xterm2
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 set ttyfast
 
 set mouse=
@@ -117,12 +121,15 @@ set foldlevel=1
 " test:
 set shell=zsh\ -l
 
+" TODO: remove?
 " handle alt key:
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+if !has('nvim')
+    let c='a'
+    while c <= 'z'
+      exec "set <A-".c.">=\e".c
+      exec "imap \e".c." <A-".c.">"
+      let c = nr2char(1+char2nr(c))
+    endw
+endif
 
 set timeout ttimeoutlen=50
