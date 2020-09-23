@@ -9,8 +9,8 @@ ZSH_THEME="zeta"
 plugins=(git colored-man-pages autojump)
 source $ZSH/oh-my-zsh.sh
 
-source $DOTFILES_DIR/shell/aliases.sh
 source $DOTFILES_DIR/shell/env.sh
+source $DOTFILES_DIR/shell/aliases.sh
 unalias md
 source $DOTFILES_DIR/shell/functions.sh
 
