@@ -80,7 +80,6 @@ if !exists('g:run_ruby_files_loaded')
     if filereadable(spec)
       call s:RunSpec(spec)
     else
-      call s:Run
       execute '!clear;echo;ruby -w ' . current_file
     endif
   endfunction
