@@ -31,15 +31,15 @@ alias fproc='ps -e | ag'
 alias cat=bat
 alias agi='ag -i'
 
-alias v='vim .'
-
 # alias t=task
 
 alias dcu='docker-compose up -d'
 
-# alias vis='vim -S Session.vim'
-alias vix='vim -x'
-alias viu='vim -u NONE'
+alias v="$VIMCMD ."
+alias vi=$VIMCMD
+alias vim=$VIMCMD
+alias vix="$VIMCMD -x"
+alias viu="$VIMCMD -u NONE"
 
 alias sr='scripts/run.sh'
 

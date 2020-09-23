@@ -1,6 +1,8 @@
 
-export EDITOR=vim
-export ECTO_EDITOR=vim
+export VIMCMD=vim
+
+export EDITOR=$VIMCMD
+export ECTO_EDITOR=$VIMCMD
 # export TERM=xterm-256color
 # export TERM=gnome-256color
 
