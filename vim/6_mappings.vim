@@ -19,8 +19,8 @@ nnoremap gV `[v`]
 
 nnoremap <C-e> 4<C-e>
 nnoremap <C-y> 4<C-y>
-nnoremap p gp
-nnoremap P gP
+" nnoremap p gp
+" nnoremap P gP
 " nnoremap p p`]
 vnoremap p p`]
 nnoremap 0 ^
@@ -40,8 +40,8 @@ nnoremap <silent> <leader>O :Files<cr>
 nmap     <silent> <leader>i :Files %%<cr>
 nnoremap <leader>= :NERDTreeToggle<cr>
 
-" nnoremap <cr> G
-" vnoremap <cr> G
+nnoremap <cr> G
+vnoremap <cr> G
 nnoremap <silent> <leader><cr> :nohlsearch<cr>
 nnoremap j gj
 nnoremap k gk
@@ -118,7 +118,7 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 nnoremap <leader>h :call SearchNotes()<cr>
-nnoremap <leader>H :GFiles ~/Programming/notes/<cr>
+nnoremap <leader>H :Files ~/Programming/notes/<cr>
 nnoremap <leader>n :call RenameFile()<cr>
 
 nnoremap <leader>gl :GFiles lib/<cr>

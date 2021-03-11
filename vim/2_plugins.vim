@@ -7,8 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
-
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'dikiaap/minimalist'
 Plug 'crater2150/vim-theme-chroma'
@@ -76,10 +74,17 @@ Plug 'venantius/vim-cljfmt'
 Plug 'frazrepo/vim-rainbow'
 
 " testando:
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
+
+Plug 'zackhsi/sorbet.vim'
+
+Plug 'voldikss/vim-floaterm'
 Plug 'elzr/vim-json'
 " Plug 'wting/gitsessions.vim'
 " Plug 'mcchrish/nnn.vim'
-Plug 'benmills/vimux'
-Plug 'terryma/vim-expand-region'
+" Plug 'benmills/vimux'
+" Plug 'terryma/vim-expand-region'
 
 call plug#end()

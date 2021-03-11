@@ -19,12 +19,12 @@ function vis {
   local sessions_dir=.vim-sessions
   local session_file=$sessions_dir/default.vim
   local check_file=$sessions_dir/last-session
-  local branch=`currentGitBranch`
+  local branch_session=$sessions_dir/`currentGitBranch`.vim
 
   if [[ -r "$1" ]]; then                                         # always load given session, if present
     local session_file="$1"
-  elif [ -n "$branch" ] && [ -r "$sessions_dir/$branch" ]; then  # try to load branch session otherwise
-    local session_file="$sessions_dir/$branch"
+  elif [ -r "$branch_session" ]; then  # try to load branch session otherwise
+    local session_file="$branch_session"
   elif [[ -r $check_file ]]; then                                # read from check_file instead
     local session_file=$(cat $check_file | head -1)
   fi

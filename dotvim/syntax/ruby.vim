@@ -4,6 +4,9 @@ autocmd User ProjectionistDetect
 \    'app/*.rb': {
 \      'alternate': 'spec/{}_spec.rb'
 \    },
+\    'lib/*.rb': {
+\      'alternate': 'spec/{}_spec.rb'
+\    },
 \    'spec/*_spec.rb': {
 \      'alternate': 'app/{}.rb'
 \    },
