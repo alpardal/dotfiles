@@ -1,4 +1,6 @@
 {
   "diagnostic.displayByAle": true,
-  "rust.clippy_preference": "on"
+  "rust.clippy_preference": "on",
+  "rust.jobs": 2,
+  "rust.cfg_test": true
 }
