@@ -7,13 +7,18 @@
   editor = vim -f
   autocrlf = input
   pager = delta --theme='Monokai Extended'
+  attributesfile = /home/andre/.gitattributes
   # pager = delta --theme=Dracula
 
 [credential]
-  helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
 [commit]
   gpgSign = true
+  verbose = true
+
+[fetch]
+  prune = true
 
 [push]
   default = simple
@@ -29,10 +34,10 @@
 [merge]
   ff = only
   conflictstyle = diff3
-	tool = vimdiff
+  tool = vimdiff
 
 [mergetool]
-	prompt = false
+  prompt = false
 #
 # [pager]
 #   diff = diff-highlight | less
@@ -45,6 +50,9 @@
 
 [status]
   showUntrackedFiles = all
+
+[rebase]
+  autosquash = true
 
 [alias]
   pushf = push --force-with-lease
