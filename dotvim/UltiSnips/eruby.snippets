@@ -22,6 +22,12 @@ snippet ife "erb if" i
 <% end %>$0
 endsnippet
 
+snippet form "form_with block" i
+<%= form_with $1 do |f| %>
+  $0
+<% end %>
+endsnippet
+
 snippet %- "erb block" i
 <% $1 %>$0
 endsnippet

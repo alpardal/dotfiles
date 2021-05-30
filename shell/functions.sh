@@ -1,4 +1,15 @@
 
+function viz {
+  local file
+
+  file="$(find . | sed -e 's/^\.\///' | fzf -0 -1 | awk -F: '{print $1}')"
+
+  if [[ -n $file ]]
+  then
+    vim $file
+  fi
+}
+
 function t {
   proj=''
   proj_file='.task-project'

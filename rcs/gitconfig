@@ -1,7 +1,7 @@
 [user]
   name = André Luiz Pardal
   email = alpardal@gmail.com
-	signingkey = EA99A270F8080963
+  signingkey = EA99A270F8080963
 
 [core]
   editor = vim -f
@@ -23,6 +23,9 @@
 [push]
   default = simple
   followTags = true
+
+[pull]
+  ff = only
 
 [color]
   ui = auto

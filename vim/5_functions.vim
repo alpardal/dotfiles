@@ -56,7 +56,7 @@ function! CreateDirForCurrentFile()
 endfunction
 
 function! ExecCurrentLine()
-  let comment_char = '\(#\|--\|//\)'
+  let comment_char = '\(#\|--\|//\|;;\)'
   let comment_regex = '^\s*' . comment_char . '\s*'
   let current_line = getline('.')
 

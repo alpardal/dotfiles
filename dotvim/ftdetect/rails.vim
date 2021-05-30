@@ -62,19 +62,25 @@ function! s:RailsMappings()
     nnoremap <leader>v :call CellToViewViewToCell()<cr>
 
     nnoremap <leader>gr :e config/routes.rb<cr>
-    nnoremap <leader>gc :GFiles app/controllers/<cr>
+    nnoremap <leader>gc :Files app/controllers/<cr>
 
     nnoremap <leader>gv :Files app/views/<cr>
     nnoremap <leader>gm :Files app/models/<cr>
     nnoremap <leader>gh :Files app/helpers/<cr>
     nnoremap <leader>ga :Files app/assets/<cr>
     nnoremap <leader>gt :Files db/migrate/<cr>
+    nnoremap <leader>go :Files app/jobs/<cr>
     nnoremap <leader>gas :Files app/assets/stylesheets<cr>
     nnoremap <leader>gaj :Files app/assets/javascripts<cr>
+    nnoremap <leader>gap :Files app/javascript/packs<cr>
 
     nnoremap <leader>gsp :Files spec/<cr>
     nnoremap <leader>gsc :Files spec/controllers/<cr>
     nnoremap <leader>gsv :Files spec/views/<cr>
     nnoremap <leader>gsm :Files spec/models/<cr>
     nnoremap <leader>gsh :Files spec/helpers/<cr>
+    nnoremap <leader>gsy :Files spec/system/<cr>
+    nnoremap <leader>gsr :Files spec/requests/<cr>
+    nnoremap <leader>gsx :Files spec/factories/<cr>
+    nnoremap <leader>gso :Files spec/jobs/<cr>
 endfunction

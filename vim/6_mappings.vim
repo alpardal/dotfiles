@@ -65,10 +65,21 @@ nnoremap Q :call SaveSession()<cr>
 
 inoremap <C-l> <delete>
 inoremap <C-r> <C-r><C-p>
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-p>
+" inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+" inoremap <s-tab> <c-p>
 " upcase prev word
 " inoremap <C-c> <esc>gUiwea
+
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 nnoremap <right> gt
 nnoremap <left> gT
@@ -99,11 +110,12 @@ vnoremap <silent> <A-k> :m '<-2<cr>gv
 " split line
 nnoremap S i<cr><esc>k$
 
-nmap <silent> <leader>d <Plug>(ale_hover)
+" nmap <silent> <leader>d <Plug>(ale_hover)
+nmap <silent> <leader>d :call CocAction("doHover")<cr>
 nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -126,7 +138,7 @@ nnoremap <leader>gs :GFiles spec/<cr>
 nnoremap <leader>gg :e Gemfile<cr>
 
 " autocomplete quoted strings:
-inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
+" inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
 
 nnoremap <silent> <leader>c :call ExecCurrentLine()<cr>
 
@@ -136,7 +148,7 @@ nnoremap <silent> <leader>c :call ExecCurrentLine()<cr>
 imap <C-f> <C-e>,
 
 nnoremap <C-n> :ALENext<cr>
-nnoremap <C-p> :ALEPrevious<cr>
+" nnoremap <C-p> :ALEPrevious<cr>
 nnoremap <silent> <leader>f :ALEFix<cr>
 
 " execute "nnoremap <leader>f :Ag "

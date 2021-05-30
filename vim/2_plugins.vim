@@ -37,8 +37,7 @@ Plug 'maximbaz/lightline-ale'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Raimondi/delimitMate'
-
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'w0rp/ale'
 
 Plug 'tomtom/tcomment_vim'

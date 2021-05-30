@@ -2,9 +2,9 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide='^\..*' . ',' . netrw_gitignore#Hide()
 let NERDTreeHijackNetwr=1
 
-let g:UltiSnipsExpandTrigger='<C-p>'
-let g:UltiSnipsJumpForwardTrigger='<C-p>'
-let g:UltiSnipsJumpBckwardTrigger='<C-n>'
+let g:UltiSnipsExpandTrigger='<C-i>'
+let g:UltiSnipsJumpForwardTrigger='<C-i>'
+" let g:UltiSnipsJumpBckwardTrigger='<C-n>'
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -14,8 +14,9 @@ let g:fzf_action = {
 let g:ale_sign_warning = '⚠️'
 let g:ale_sign_error = 'x'
 
+  " \ 'coc-rls',
 let g:coc_global_extensions = [
-  \ 'coc-rls',
+  \ 'coc-rust-analyzer',
   \ 'coc-emmet',
   \ 'coc-css',
   \ 'coc-html',
@@ -57,7 +58,7 @@ let g:ale_elixir_elixir_ls_config = {
   \ }
 let g:ale_linters = {
   \ 'ruby': ['rubocop'],
-  \ 'rust': ['rls', 'cargo'],
+  \ 'rust': ['cargo'],
   \ 'clojure': ['joker'],
   \ 'elixir': ['elixir-ls', 'dialyxir']
   \ }

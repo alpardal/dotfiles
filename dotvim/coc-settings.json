@@ -2,5 +2,6 @@
   "diagnostic.displayByAle": true,
   "rust.clippy_preference": "on",
   "rust.jobs": 2,
-  "rust.cfg_test": true
+  "rust.cfg_test": true,
+  "rust-analyzer.server.path": "/home/andre/.cargo/bin/rls"
 }

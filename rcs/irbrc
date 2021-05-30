@@ -3,16 +3,16 @@ IRB.conf[:AUTO_INDENT] = true
 
 #require 'interactive_editor'
 
-begin
-  require 'fancy_irb'
-  FancyIrb.start
-rescue LoadError
-  puts 'cannot load fancy_irb'
-end
-
-begin
-  require 'wirb'
-  Wirb.start
-rescue LoadError
-  puts 'cannot load wirb'
-end
+# begin
+#   require 'fancy_irb'
+#   FancyIrb.start
+# rescue LoadError
+#   puts 'cannot load fancy_irb'
+# end
+#
+# begin
+#   require 'wirb'
+#   Wirb.start
+# rescue LoadError
+#   puts 'cannot load wirb'
+# end

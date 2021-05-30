@@ -105,6 +105,8 @@ set timeoutlen=500
 set magic
 set showmatch
 
+set isfname-=:
+
 set foldmethod=manual
 set foldnestmax=10
 set nofoldenable
