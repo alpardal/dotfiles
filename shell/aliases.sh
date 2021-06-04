@@ -31,6 +31,8 @@ alias fproc='ps -e | ag'
 alias cat=bat
 alias agi='ag -i'
 
+alias myip='dig @ns1.google.com TXT o-o.myaddr.l.google.com +short'
+
 # alias t=task
 
 alias dcu='docker-compose up -d'
@@ -40,6 +42,7 @@ alias vi=$VIMCMD
 alias vim=$VIMCMD
 alias vix="$VIMCMD -x"
 alias viu="$VIMCMD -u NONE"
+alias nv=nvim
 
 alias sr='scripts/run.sh'
 
