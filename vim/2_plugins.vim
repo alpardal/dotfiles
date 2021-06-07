@@ -29,8 +29,15 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'skywind3000/asyncrun.vim'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" file search
+if has('nvim')
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+else
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+endif
 
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
@@ -42,7 +49,14 @@ Plug 'dense-analysis/ale'
 
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-gitgutter'
+
+" git status info:
+if has('nvim')
+  Plug 'lewis6991/gitsigns.nvim'
+else
+  Plug 'airblade/vim-gitgutter'
+endif
+
 Plug 'tpope/vim-dispatch'
 Plug 'gregsexton/MatchTag'
 
