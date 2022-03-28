@@ -36,6 +36,7 @@ alias myip='dig @ns1.google.com TXT o-o.myaddr.l.google.com +short'
 # alias t=task
 
 alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
 
 alias v="$VIMCMD ."
 alias vi=$VIMCMD

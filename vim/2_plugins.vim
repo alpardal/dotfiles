@@ -37,8 +37,8 @@ Plug 'maximbaz/lightline-ale'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
-Plug 'w0rp/ale'
+" Plug 'SirVer/ultisnips'
+Plug 'dense-analysis/ale'
 
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree'
@@ -50,6 +50,8 @@ Plug 'mdxprograms/elm-vim' " fork to fix conflict with vim-rails
 
 Plug 'sheerun/vim-polyglot' " must be loaded after elm-vim
 let g:polyglot_disabled = ['elm']
+
+Plug 'elixir-editors/vim-elixir'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
