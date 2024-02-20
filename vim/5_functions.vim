@@ -1,3 +1,12 @@
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
 function! SaveSession()
   let session_file = GetCurrentSessionFile()
   let sessions_dir = '.vim-sessions'
@@ -32,7 +41,7 @@ function! GetCurrentSessionFile()
 endfunction
 
 function! GetCurrentGitBranch()
-  let branch = system('git branch 2>/dev/null | sed -e "/^\s/d" -e "s/^\*\s//"')
+  let branch = system('git branch 2>/dev/null | grep -e "^\*" | sed -e "s/\*\s//"')
   return substitute(branch, "\n", "", "")
 endfunction
 
@@ -53,6 +62,30 @@ endfunction
 function! CreateDirForCurrentFile()
   execute '!mkdir -p '. expand('%:h')
   execute 'w'
+endfunction
+
+function! RunWith()
+  let comment_regex = '^.*\<run_with\s\+'
+  let current_line = getline('.')
+
+  if match(current_line, comment_regex) != -1
+    let input = substitute(current_line, comment_regex, '', '')
+    let parts = split(input)
+
+    let mapping = parts[0]
+
+    if parts[0] == '<buffer>'
+      let mapping = parts[0] . ' ' . parts[1]
+    endif
+
+    let cmd = substitute(input, mapping . '\s\+', '', '')
+
+    echo "mapping '" . mapping . "' to `" . cmd . '`'
+    let result = 'nnoremap ' . mapping . ' :w\|!clear;echo;' . cmd . '<cr>'
+    execute result
+  else
+    echo "doesn't match"
+  endif
 endfunction
 
 function! ExecCurrentLine()

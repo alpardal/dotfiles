@@ -21,7 +21,7 @@ function t {
   task $proj
 }
 
-function fd {
+function file_diff {
   preview="git diff $@ --color=always -- {-1}"
   git diff $@ --name-only | fzf -m --ansi --preview $preview
 }

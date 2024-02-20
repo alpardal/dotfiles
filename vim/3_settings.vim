@@ -10,6 +10,17 @@ set listchars=tab:»·,trail:· " ,nbsp:␣ ",eol:¬
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
 
+if !has('gui_running')
+  set t_Co=256
+endif
+
+if (match($TERM, "-256color") != -1) && (match($TERM, "screen-256color") == -1)
+  " screen does not (yet) support truecolor
+  set termguicolors
+endif
+
+hi Normal ctermbg=NONE
+
 set nomodeline
 set modelines=0
 set lazyredraw
@@ -49,7 +60,7 @@ set statusline=%f\ %y%m
 set statusline+=%=
 set statusline+=%l/%L\ [%v]
 
-set scrolloff=3
+set scrolloff=10
 set winheight=10
 set winminheight=10
 set ttymouse=xterm2
@@ -118,11 +129,11 @@ set foldlevel=1
 set shell=zsh\ -l
 
 " handle alt key:
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+" let c='a'
+" while c <= 'z'
+"   exec "set <A-".c.">=\e".c
+"   exec "imap \e".c." <A-".c.">"
+"   let c = nr2char(1+char2nr(c))
+" endw
 
 set timeout ttimeoutlen=50

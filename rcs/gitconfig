@@ -6,9 +6,8 @@
 [core]
   editor = vim -f
   autocrlf = input
-  pager = delta --theme='Monokai Extended'
+  pager = delta --syntax-theme='Monokai Extended'
   attributesfile = /home/andre/.gitattributes
-  # pager = delta --theme=Dracula
 
 [credential]
   helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret

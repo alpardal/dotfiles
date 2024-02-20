@@ -1,6 +1,7 @@
 
 let mapleader = " "
 
+
 nnoremap <leader>8 :redraw!<cr>
 
 nnoremap <leader>a :A<cr>
@@ -111,11 +112,33 @@ vnoremap <silent> <A-k> :m '<-2<cr>gv
 nnoremap S i<cr><esc>k$
 
 " nmap <silent> <leader>d <Plug>(ale_hover)
+
+"""  Coc stuff:
+
 nmap <silent> <leader>d :call CocAction("doHover")<cr>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+imap <C-l> <Plug>(coc-snippets-expand)
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ca  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>cf  <Plug>(coc-fix-current)
+" imap <C-l> <Plug>(coc-snippets-expand-jump)
+
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+
+"""  /Coc stuff
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -140,16 +163,19 @@ nnoremap <leader>gg :e Gemfile<cr>
 " autocomplete quoted strings:
 " inoremap <c-j> <c-o>:set completefunc=StringComplete#GetList<cr><c-x><c-u>
 
-nnoremap <silent> <leader>c :call ExecCurrentLine()<cr>
+nnoremap <silent> <leader>c :call RunWith()<cr>
 
 " Plugins:
-
-" vim-emmet:
-imap <C-f> <C-e>,
 
 nnoremap <C-n> :ALENext<cr>
 " nnoremap <C-p> :ALEPrevious<cr>
 nnoremap <silent> <leader>f :ALEFix<cr>
+
+nmap ghp <Plug>(GitGutterPreviewHunk)
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap [c <Plug>(GitGutterPrevHunk)
+nmap ]c <Plug>(GitGutterNextHunk)
 
 " execute "nnoremap <leader>f :Ag "
 

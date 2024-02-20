@@ -1,7 +1,18 @@
 {
-  "diagnostic.displayByAle": true,
-  "rust.clippy_preference": "on",
-  "rust.jobs": 2,
-  "rust.cfg_test": true,
-  "rust-analyzer.server.path": "/home/andre/.cargo/bin/rls"
+  "rust-analyzer.server.path": "/home/andre/.bin/rust-analyzer-x86_64-unknown-linux-gnu",
+  "rust-analyzer.completion.autoimport.enable": true,
+  "rust-analyzer.highlightRelated.references.enable": true,
+  "elixir.pathToElixirLS": "/home/andre/.elixir-ls/release/language_server.sh",
+  "elixirLS.dialyzerEnabled": false,
+  "tailwindCSS.includeLanguages": {
+    "html.heex": "html",
+    "heex": "html"
+  },
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ],
+  "zig.zls.enabled": true,
+  "zig.zls.path": "/home/andre/.config/coc/extensions/coc-zls-data/zls_install/zls"
 }

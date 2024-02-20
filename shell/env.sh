@@ -2,7 +2,7 @@
 export VIMCMD=vim
 
 export EDITOR=$VIMCMD
-export ECTO_EDITOR=$VIMCMD
+# export ECTO_EDITOR=$VIMCMD
 
 export DOCKER_BUILDKIT=1
 # export TERM=xterm-256color

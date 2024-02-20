@@ -7,6 +7,8 @@ fi
 
 alias reload!='source ~/.zshrc'
 
+alias fd=fdfind
+
 # alias j=' jobs'
 alias quit=' exit'
 alias o='gvfs-open'
@@ -54,18 +56,18 @@ alias bi='bundle install --jobs=4'
 alias rubocop='rubocop -P'
 
 # rails
-alias r='bin/rails'
-alias rk='bin/rake'
-alias rp='bin/rspec'
-alias sp='bin/spring'
-alias rs='bin/rails s'
-alias rc='bin/rails c'
-alias rcs='bin/rails c --sandbox'
-# alias hrc='heroku run rails console'
-# alias hrcs='heroku run rails console --sandbox'
-alias mig='bin/rails db:migrate'
-alias rbk='bin/rails db:rollback'
-alias seed='bin/rails db:schema:load && rails db:seed'
+# alias r='bin/rails'
+# alias rk='bin/rake'
+# alias rp='bin/rspec'
+# alias sp='bin/spring'
+# alias rs='bin/rails s'
+# alias rc='bin/rails c'
+# alias rcs='bin/rails c --sandbox'
+# # alias hrc='heroku run rails console'
+# # alias hrcs='heroku run rails console --sandbox'
+# alias mig='bin/rails db:migrate'
+# alias rbk='bin/rails db:rollback'
+# alias seed='bin/rails db:schema:load && rails db:seed'
 
 # elixir
 alias imix='iex -S mix'
@@ -85,6 +87,7 @@ alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -20"
 alias gll="git log --oneline --decorate --graph --branches='*'"
 alias go='git checkout'
 alias gom='git checkout master'
+alias gmp='git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@") && git pull'
 alias gi='git commit'
 alias gia='git commit --amend'
 alias gian='git commit --amend --no-edit'
@@ -99,6 +102,7 @@ alias gm='git merge'
 alias gf='git fetch --prune --all'
 alias gt='git tag'
 alias grs='git restore --staged'
+alias gri='git rebase -i'
 alias stash='git stash -u'
 alias stashp='git stash pop'
 alias stashl='git stash list --oneline --decorate'

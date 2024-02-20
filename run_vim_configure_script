@@ -1,14 +1,20 @@
 #!/bin/bash
 
 cd vim
+# export LDFLAGS=rdynamic
+            # --enable-luainterp \
 
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp=dynamic \
-            --enable-luainterp \
+            --enable-fail-if-missing \
+            --enable-largefile \
             --with-x=yes \
             --with-compiledby=alpardal@gmail.com \
             --enable-pythoninterp=yes \
             --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
             --enable-python3interp=yes \
-            --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu
+            --with-python3-command=/usr/bin/python3 \
+            --with-python3-config-dir=/usr/lib/python3.11/config-3.11-x86_64-linux-gnu
+            # --with-python3-command=/usr/bin/python3.10 \
+            # --with-python3-config-dir=/usr/lib/python3.10/config-3.10-x86_64-linux-gnu/

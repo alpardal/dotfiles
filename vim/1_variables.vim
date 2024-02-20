@@ -4,7 +4,10 @@ let NERDTreeHijackNetwr=1
 
 let g:UltiSnipsExpandTrigger='<C-i>'
 let g:UltiSnipsJumpForwardTrigger='<C-i>'
-" let g:UltiSnipsJumpBckwardTrigger='<C-n>'
+let g:UltiSnipsJumpBckwardTrigger='<C-k>'
+
+" it looks like semicolons cause issues in janet files
+let g:vim_parinfer_filetypes=['janet', 'clojure']
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -12,12 +15,12 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit'
   \}
 let g:ale_sign_warning = '⚠️'
-let g:ale_sign_error = 'x'
+let g:ale_sign_error = '✗'
 
   " \ 'coc-rls',
 let g:coc_global_extensions = [
   \ 'coc-rust-analyzer',
-  \ 'coc-emmet',
+  \ 'coc-elixir',
   \ 'coc-css',
   \ 'coc-html',
   \ 'coc-json',
@@ -25,10 +28,14 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-eslint']
 
+" coc config for rls:
+" rust-analyzer.server.path": "/home/andre/.cargo/bin/rls",
+" diagnostic.displayByAle": true,
+
 let g:sparkupMappingInsertModeOnly=1
 let g:sparkupDoubleQuote=1
 
-let g:user_emmet_leader_key='<C-E>'
+let g:user_emmet_leader_key='<C-l>'
 let g:user_emmet_mode='i'
 
 let g:dbext_default_profile_psql='type=PGSQL:host=localhost:port=5433'
@@ -50,18 +57,18 @@ let g:elm_format_autosave = 1
 let g:racer_experimental_completer = 1
 
 let g:ale_sign_column_always = 1
-let g:ale_elixir_elixir_ls_release = '/home/andre/code/vendor/elixir-ls/rel'
-let g:ale_elixir_elixir_ls_config = {
-  \ 'elixirLS': {
-  \   'dialyzerEnabled': v:false
-  \   }
-  \ }
+" let g:ale_elixir_elixir_ls_release = '/home/andre/code/vendor/elixir-ls/rel'
+" let g:ale_elixir_elixir_ls_config = {
+"   \ 'elixirLS': {
+"   \   'dialyzerEnabled': v:false
+"   \   }
+"   \ }
 let g:ale_linters = {
   \ 'ruby': ['rubocop'],
-  \ 'rust': ['cargo'],
   \ 'clojure': ['joker'],
-  \ 'elixir': ['elixir-ls', 'dialyxir']
+  \ 'elixir': ['elixir-ls', 'dialyxir', 'credo']
   \ }
+" \ 'rust': ['cargo'],
 let g:ale_fixers = {
   \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'ruby': ['rubocop'],
@@ -70,6 +77,7 @@ let g:ale_fixers = {
   \ 'css': ['prettier'],
   \ 'scss': ['prettier'],
   \ 'elixir': ['mix_format'],
+  \ 'eelixir': ['mix_format'],
   \ 'ocaml': ['ocamlformat'],
   \ 'rust': ['rustfmt'],
   \ 'terraform': ['terraform'],
@@ -78,6 +86,8 @@ let g:ale_rust_cargo_use_check = 1
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_set_loclist = 0
 let g:ale_set_balloons = 1
+
+let g:vim_parinfer_filetypes = ['lisp', 'racket']
 
 let g:lightline = {}
 

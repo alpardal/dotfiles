@@ -9,16 +9,17 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'dikiaap/minimalist'
-Plug 'crater2150/vim-theme-chroma'
+" Plug 'crater2150/vim-theme-chroma'
 Plug 'nanotech/jellybeans.vim'
-Plug 'whatyouhide/vim-gotham'
+" Plug 'whatyouhide/vim-gotham'
 Plug 'mhinz/vim-janah'
 Plug 'tomasiser/vim-code-dark'
+" Plug 'sainnhe/everforest'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-projectionist'
 
-Plug 'wincent/terminus'
+" Plug 'wincent/terminus'
 
 Plug 'henrik/vim-indexed-search'
 
@@ -33,11 +34,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'itchyny/lightline.vim'
-Plug 'maximbaz/lightline-ale'
+" Plug 'maximbaz/lightline-ale'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Raimondi/delimitMate'
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'dense-analysis/ale'
 
 Plug 'tomtom/tcomment_vim'
@@ -74,14 +75,16 @@ Plug 'tpope/vim-fireplace'
 Plug 'venantius/vim-cljfmt'
 Plug 'frazrepo/vim-rainbow'
 
+Plug 'bakpakin/janet.vim'
+
 " testando:
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Plug 'camspiers/animate.vim'
+" Plug 'camspiers/lens.vim'
 
-Plug 'zackhsi/sorbet.vim'
+" Plug 'zackhsi/sorbet.vim'
 
-Plug 'voldikss/vim-floaterm'
+" Plug 'voldikss/vim-floaterm'
 Plug 'elzr/vim-json'
 " Plug 'wting/gitsessions.vim'
 " Plug 'mcchrish/nnn.vim'
