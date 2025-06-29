@@ -1,0 +1,5 @@
+.vimrc.local
+.vimrc.local.lua
+
+.vim-sessions/*
+.lexical

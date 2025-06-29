@@ -114,28 +114,4 @@ return require("packer").startup(function(use)
     run = "make install_jsregexp",
   })
   use({ "saadparwaiz1/cmp_luasnip" })
-
-  use({ "github/copilot.vim" })
-
-  use({
-    "olimorris/codecompanion.nvim",
-    config = function()
-      require("codecompanion").setup()
-    end,
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    dependencies = {
-      "ravitemer/mcphub.nvim",
-    },
-  })
-
-  use({
-    "ravitemer/mcphub.nvim",
-    build = "npm install -g mcp-hub@latest",
-    config = function()
-      require("mcphub").setup()
-    end,
-  })
 end)
