@@ -3,6 +3,12 @@ export VIMCMD=vim
 
 export EDITOR=$VIMCMD
 # export ECTO_EDITOR=$VIMCMD
+# export PLUG_EDITOR="vim +__LINE__ __FILE__"
+export PLUG_EDITOR="nv __FILE__ -c __LINE__"
+
+KERL_BUILD_DOCS=yes
+
+export FZF_DEFAULT_OPTS="--bind=ctrl-a:select-all"
 
 export DOCKER_BUILDKIT=1
 # export TERM=xterm-256color
@@ -33,16 +39,18 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export FZF_DEFAULT_OPTS='--bind=up:preview-up,down:preview-down'
 
-export CABAL_BIN=$HOME/.cabal/bin
+# export CABAL_BIN=$HOME/.cabal/bin
 
 # export POSTGRES_PATH="/usr/local/pgsql/bin"
 # export PGDATA="/usr/local/pgsql/data"
 # export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export CARGO_BIN="$HOME/.cargo/bin"
 
-export HEROKU_BIN="/usr/local/heroku/bin"
+# export HEROKU_BIN="/usr/local/heroku/bin"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH=$USER_BIN:$CARGO_BIN:$CABAL_BIN:$HEROKU_BIN:$PATH
+# export PATH=$USER_BIN:$CARGO_BIN:$CABAL_BIN:$HEROKU_BIN:$PATH:/home/andre/.asdf/shims
+export PATH=/home/andre/.asdf/shims:$USER_BIN:$CARGO_BIN:$PATH
+export MANPATH=/home/andre/.local/share/man:$MANPATH

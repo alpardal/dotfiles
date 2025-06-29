@@ -46,18 +46,6 @@ set cursorcolumn
 
 set background=dark
 
-" colorscheme herald
-" colorscheme jellybeans
-colorscheme molokai
-" colorscheme codedark
-" colorscheme afterglow
-" colorscheme apprentice
-" colorscheme janah
-" autocmd ColorScheme janah highlight Normal ctermbg=235
-" colorscheme chroma
-" colorscheme minimalist
-" colorscheme OceanicNext
-
 set laststatus=2
 set statusline=%f\ %y%m
 set statusline+=%=
@@ -82,8 +70,8 @@ set virtualedit+=block
 set history=10000
 set undofile
 set undolevels=10000
-set undodir=~/.vim_undo
-set viewdir=~/.vim_view
+set undodir=~/.nvim_undo
+set viewdir=~/.nvim_view
 
 set autoread
 set splitbelow

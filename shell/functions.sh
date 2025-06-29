@@ -1,4 +1,14 @@
 
+function db {
+  local db_script
+
+  db_script='scripts/dbconsole.sh'
+
+  if [[ -r $db_script ]]; then
+    $db_script
+  fi
+}
+
 function viz {
   local file
 
@@ -46,6 +56,29 @@ function vis {
   else
     echo "no '$session_file' session, loading normally"
     $VIMCMD
+  fi
+}
+
+function nvs {
+  local sessions_dir=.vim-sessions
+  local session_file=$sessions_dir/default.vim
+  local check_file=$sessions_dir/last-session
+  local branch_session=$sessions_dir/`currentGitBranch`.vim
+
+  if [[ -r "$1" ]]; then                                         # always load given session, if present
+    local session_file="$1"
+  elif [ -r "$branch_session" ]; then  # try to load branch session otherwise
+    local session_file="$branch_session"
+  elif [[ -r $check_file ]]; then                                # read from check_file instead
+    local session_file=$(cat $check_file | head -1)
+  fi
+
+  if [[ -r $session_file ]]; then
+    echo "loading session '$session_file'"
+    nv -S $session_file
+  else
+    echo "no '$session_file' session, loading normally"
+    nv
   fi
 }
 

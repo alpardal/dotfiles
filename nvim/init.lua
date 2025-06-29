@@ -1,0 +1,6 @@
+require("variables")
+require("plugins")
+require("settings")
+require("functions")
+require("mappings")
+require("commands")

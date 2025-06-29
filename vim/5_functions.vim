@@ -1,3 +1,12 @@
+func! DeleteHiddenBuffers()
+  let l:buffers = filter(getbufinfo(), {_, v -> v.hidden})
+  if !empty(l:buffers)
+      echo l:buffers
+      execute 'bdelete' join(map(l:buffers, {_, v -> v.bufnr}))
+  else
+    echo "empty"
+  endif
+endfunc
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
@@ -28,15 +37,15 @@ function! SearchDir(dir)
 endfunction
 
 function! GetCurrentSessionFile()
-  if v:this_session != ''
-    return v:this_session
-  endif
-
   let current_branch = GetCurrentGitBranch()
   if current_branch != ''
     return '.vim-sessions/' . current_branch . '.vim'
   else
-    return '.vim-sessions/default.vim'
+    if v:this_session != ''
+      return v:this_session
+    else
+      return '.vim-sessions/default.vim'
+    endif
   endif
 endfunction
 

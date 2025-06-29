@@ -1,9 +1,10 @@
 runtime macros/matchit.vim
 
 " plugins managed by vim-plug: https://github.com/junegunn/vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo ' . data_dir . '/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
 
@@ -47,10 +48,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-dispatch'
 Plug 'gregsexton/MatchTag'
 
-Plug 'mdxprograms/elm-vim' " fork to fix conflict with vim-rails
-
 Plug 'sheerun/vim-polyglot' " must be loaded after elm-vim
-let g:polyglot_disabled = ['elm']
 
 Plug 'elixir-editors/vim-elixir'
 

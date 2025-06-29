@@ -9,10 +9,18 @@ let g:UltiSnipsJumpBckwardTrigger='<C-k>'
 " it looks like semicolons cause issues in janet files
 let g:vim_parinfer_filetypes=['janet', 'clojure']
 
+function! s:build_quickfix_list(lines)
+  echo a:lines
+  call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
+  copen
+  cc
+endfunction
+
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
+  \ 'ctrl-v': 'vsplit',
+  \ 'ctrl-q': function('s:build_quickfix_list'),
   \}
 let g:ale_sign_warning = '⚠️'
 let g:ale_sign_error = '✗'
@@ -66,8 +74,10 @@ let g:ale_sign_column_always = 1
 let g:ale_linters = {
   \ 'ruby': ['rubocop'],
   \ 'clojure': ['joker'],
-  \ 'elixir': ['elixir-ls', 'dialyxir', 'credo']
+  \ 'elixir': ['elixir-ls', 'dialyxir', 'credo'],
+  \ 'c': ['cc']
   \ }
+
 " \ 'rust': ['cargo'],
 let g:ale_fixers = {
   \ '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -81,11 +91,14 @@ let g:ale_fixers = {
   \ 'ocaml': ['ocamlformat'],
   \ 'rust': ['rustfmt'],
   \ 'terraform': ['terraform'],
+  \ 'c': ['clang-format']
   \ }
 let g:ale_rust_cargo_use_check = 1
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_set_loclist = 0
 let g:ale_set_balloons = 1
+let g:ale_c_cc_options = '-std=c2x -Wall'
+let g:ale_c_clangd_options = '-std=c2x -Wall'
 
 let g:vim_parinfer_filetypes = ['lisp', 'racket']
 
@@ -100,9 +113,9 @@ let g:lightline.component_expand = {
   \ }
 
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
-" let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 " let g:ale_rust_rls_executable = 'rustup run nightly rls'
 
 let g:TerminusMouse=0

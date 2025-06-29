@@ -9,6 +9,8 @@ ZSH_THEME="zeta"
 plugins=(git colored-man-pages autojump)
 source $ZSH/oh-my-zsh.sh
 
+eval "$(zoxide init zsh)"
+
 source $DOTFILES_DIR/shell/env.sh
 source $DOTFILES_DIR/shell/aliases.sh
 unalias md
@@ -40,3 +42,5 @@ export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # RVM shell completion:
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

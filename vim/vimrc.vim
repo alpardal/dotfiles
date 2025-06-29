@@ -1,13 +1,16 @@
 
 let s:vimrc = resolve($MYVIMRC)
+
+let s:nvim_init = '/home/andre/dotfiles/nvim/init.vim'
+
 let s:vimrc_dir = fnamemodify(s:vimrc, ':h')
 
 augroup reload_files
 autocmd!
 
-for s:file in glob(s:vimrc_dir . '/*', 0, 1)
+for s:file in glob(s:vimrc_dir . '/*.vim', 0, 1)
     " source files in vimrc's dir, except for vimrc itself
-    if s:file != s:vimrc
+    if s:file != s:vimrc && (match(s:file, 'nvim') < 0 )
         execute 'source ' . s:file
     endif
 
@@ -17,7 +20,7 @@ for s:file in glob(s:vimrc_dir . '/*', 0, 1)
     execute 'command! ' . s:capitalized_filename . ' e ' . s:file
 
     " Reload config files when they are edited:
-    execute 'autocmd reload_files bufwritepost ' . s:file . ' source $MYVIMRC'
+    execute 'autocmd reload_files bufwritepost ' . s:file . ' source ' . s:file
 endfor
 
 augroup end

@@ -8,6 +8,13 @@
   autocrlf = input
   pager = delta --syntax-theme='Monokai Extended'
   attributesfile = /home/andre/.gitattributes
+  excludesFile = ~/dotfiles/global-gitignore
+
+# [log]
+#   date = iso
+
+[includeIf "gitdir:~/code/allovue/"]
+  path = ~/code/allovue/.gitconfig
 
 [credential]
   helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
@@ -16,26 +23,55 @@
   gpgSign = true
   verbose = true
 
+[init]
+  defaultBranch = main
+
+[branch]
+  sort = -committerdate
+
 [fetch]
   prune = true
+  pruneTags = true
+  fsckobjects = true
+
+[transfer]
+  fsckobjects = true
+
+[receive]
+  fsckobjects = true
+
+[help]
+  autocorrect = prompt
 
 [push]
-  default = simple
+  default = simple # only push if branch is already tracking a remote branch
+  autoSetupRemote = true # create the remote branch, add tracking, and push
   followTags = true
 
 [pull]
   ff = only
+
+[column]
+  ui = auto
 
 [color]
   ui = auto
   diff = auto
 
 [diff]
-  algorithm = patience
+  # algorithm = patience
+  algorithm = histogram
+  # colorMoved = default
+  colorMoved = plain
+  colorMovedWS = allow-indentation-change
+  renames = copies
+  mnemonicPrefix = true
+  interHunkContext = 10
+
 
 [merge]
   ff = only
-  conflictstyle = diff3
+  conflictstyle = zdiff3
   tool = vimdiff
 
 [mergetool]
@@ -48,13 +84,22 @@
 
 [interactive]
   diffFilter = delta --color-only
-  # diffFilter = diff-highlight
+  singlekey = true
 
 [status]
+  showStash = true
   showUntrackedFiles = all
 
 [rebase]
-  autosquash = true
+  autoSquash = true
+  updateRefs = true
+  missingCommitsCheck = warn
+
+[rerere]
+  enabled = true
+
+[tag]
+  sort = version:refname
 
 [alias]
   pushf = push --force-with-lease
