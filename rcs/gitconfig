@@ -1,7 +1,9 @@
 [user]
   name = André Luiz Pardal
   email = alpardal@gmail.com
-  signingkey =
+
+[include]
+  path = ~/.gitconfig.local
 
 [core]
   editor = vim -f
