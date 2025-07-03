@@ -3,3 +3,6 @@
 
 .vim-sessions/*
 .lexical
+
+.zig-cache/
+zig-out/

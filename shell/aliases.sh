@@ -34,7 +34,7 @@ alias dirsize='du -sh'
 alias gnome-open='xdg-open'
 alias fproc='ps -e | ag'
 # alias ccat='highlight -O ansi'
-alias cat=bat
+alias cat=batcat
 alias agi='ag -i'
 
 alias myip='dig @ns1.google.com TXT o-o.myaddr.l.google.com +short'
