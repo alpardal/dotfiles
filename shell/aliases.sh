@@ -5,6 +5,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls -xX --color=auto'
 fi
 
+alias tasks='nv ~/Documents/tasks.md'
+
 alias reload!='source ~/.zshrc'
 
 alias fd=fdfind

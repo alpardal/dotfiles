@@ -1,0 +1,6 @@
+vim.keymap.set("n", "<leader>r", function()
+  vim.terminal_run("cargo run")
+end)
+vim.keymap.set("n", "<leader>t", function()
+  vim.terminal_run("cargo test")
+end)

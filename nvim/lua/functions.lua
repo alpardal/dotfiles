@@ -1,5 +1,14 @@
 local telescope = require("telescope.builtin")
 
+-- TODO: add mode
+function vim.map_if_not_mapped(keys, action, opts)
+  local already_mapped = vim.fn.empty(vim.fn.maparg(keys)) == 0
+
+  if not already_mapped then
+    vim.keymap.set("n", keys, action, opts or {})
+  end
+end
+
 function vim.git_or_find_files()
   local function is_git_repo()
     vim.fn.system("git rev-parse --is-inside-work-tree")

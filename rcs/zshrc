@@ -9,8 +9,6 @@ ZSH_THEME="zeta"
 plugins=(git colored-man-pages autojump)
 source $ZSH/oh-my-zsh.sh
 
-eval "$(zoxide init zsh)"
-
 source $DOTFILES_DIR/shell/env.sh
 source $DOTFILES_DIR/shell/aliases.sh
 unalias md
@@ -45,3 +43,5 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init zsh)"
