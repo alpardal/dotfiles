@@ -203,3 +203,15 @@ require("conform").setup({
     -- lsp_format = "fallback",
   },
 })
+
+vim.g.projectionist_heuristics = {
+
+  ["*"] = {
+    ["lib/*.ex"] = {
+      alternate = "test/{}_test.exs",
+    },
+    ["test/*_test.exs"] = {
+      alternate = "lib/{}.ex",
+    },
+  },
+}
