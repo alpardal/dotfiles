@@ -12,6 +12,7 @@ alias reload!='source ~/.zshrc'
 alias fd=fdfind
 
 # alias j=' jobs'
+alias j=z
 alias quit=' exit'
 alias o='gvfs-open'
 alias sa='sudo apt' #-get'
