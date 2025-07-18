@@ -29,6 +29,10 @@ vim.keymap.set("n", "<leader>c", vim.run_with, { silent = true })
 vim.keymap.set("n", "Q", vim.save_session)
 vim.keymap.set("n", "<leader>n", vim.rename_file)
 
+vim.keymap.set("n", "[j", function() vim.cmd("cnext") end, {})
+vim.keymap.set("n", "[k", function() vim.cmd("cprev") end, {})
+vim.keymap.set("n", "[q", function() vim.cmd("cclose") end, {})
+
 local ls = require("luasnip")
 
 vim.keymap.set({ "i" }, "<C-l>", function()
