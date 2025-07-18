@@ -4,10 +4,11 @@ vim.cmd([[
 ]])
 -- set rnu
 
--- vim.cmd("colorscheme nightfox")
-vim.cmd("colorscheme molokai");
--- vim.cmd("colorscheme terafox")
--- vim.cmd("colorscheme duskfox")
+-- vim.cmd("colorscheme nightfox");
+vim.cmd("colorscheme bamboo");
+-- vim.cmd("colorscheme molokai");
+-- vim.cmd("colorscheme terafox");
+-- vim.cmd("colorscheme duskfox");
 
 (function(_border)
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {

@@ -130,6 +130,16 @@ lspconfig.postgres_lsp.setup({
   cmd = { "postgrestools", "lsp-proxy" },
 })
 
+require("bamboo").setup({
+  italics = {
+    comments = true,
+    -- keywords = true,
+    -- functions = true,
+    -- strings = true,
+    -- variables = false,
+  },
+})
+
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls", "rust_analyzer", "lexical", "zls" },

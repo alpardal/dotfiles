@@ -70,6 +70,24 @@ return require("packer").startup(function(use)
   -- use 'rafi/awesome-vim-colorschemes'
   use("EdenEast/nightfox.nvim")
   -- use 'folke/tokyonight.nvim'
+  use({
+    'ribru17/bamboo.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("bamboo").setup({
+        italics = {
+          comments = true,
+          -- keywords = true,
+          -- functions = true,
+          -- strings = true,
+          -- variables = false,
+        },
+      })
+      -- require("bamboo").load()
+    end,
+  })
+
   use("airblade/vim-gitgutter")
 
   use("henrik/vim-indexed-search")
