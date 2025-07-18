@@ -1,11 +1,11 @@
 vim.cmd([[
   set undodir=~/.nvim_undo
   set nohidden
-]])
+]]);
 -- set rnu
 
 -- vim.cmd("colorscheme nightfox");
-vim.cmd("colorscheme bamboo");
+-- vim.cmd("colorscheme bamboo");
 -- vim.cmd("colorscheme molokai");
 -- vim.cmd("colorscheme terafox");
 -- vim.cmd("colorscheme duskfox");
