@@ -103,7 +103,7 @@ local configs = require("lspconfig.configs")
 
 local lexical_config = {
   filetypes = { "elixir", "eelixir", "heex" },
-  cmd = { "~/code/vendor/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+  cmd = { "~/code/vendor/elixir/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
   -- root_dir = function(fname)
   --   return util.root_pattern("mix.exs", ".git")(fname) or vim.loop.cwd()
   -- end,
