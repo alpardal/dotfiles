@@ -1,0 +1,60 @@
+commit 276b4b01360e84e1993540d5e9a6794b167b5ab5
+Author: André Luiz Pardal <alpardal@gmail.com>
+Date:   Sun Jun 29 09:17:10 2025 -0300
+
+    wip: ai stuff
+
+diff --git a/nvim/lua/plugins/config.lua b/nvim/lua/plugins/config.lua
+index b84684b..32bfe5a 100644
+--- a/nvim/lua/plugins/config.lua
++++ b/nvim/lua/plugins/config.lua
+@@ -225,3 +225,16 @@ vim.g.projectionist_heuristics = {
+     },
+   },
+ }
++
++require("codecompanion").setup({
++  extensions = {
++    mcphub = {
++      callback = "mcphub.extensions.codecompanion",
++      opts = {
++        make_vars = true,
++        make_slash_commands = true,
++        show_result_in_chat = true,
++      },
++    },
++  },
++})
+diff --git a/nvim/lua/plugins/install.lua b/nvim/lua/plugins/install.lua
+index 9f20926..479ef1d 100644
+--- a/nvim/lua/plugins/install.lua
++++ b/nvim/lua/plugins/install.lua
+@@ -132,4 +132,28 @@ return require("packer").startup(function(use)
+     run = "make install_jsregexp",
+   })
+   use({ "saadparwaiz1/cmp_luasnip" })
++
++  use({ "github/copilot.vim" })
++
++  use({
++    "olimorris/codecompanion.nvim",
++    config = function()
++      require("codecompanion").setup()
++    end,
++    requires = {
++      "nvim-lua/plenary.nvim",
++      "nvim-treesitter/nvim-treesitter",
++    },
++    dependencies = {
++      "ravitemer/mcphub.nvim",
++    },
++  })
++
++  use({
++    "ravitemer/mcphub.nvim",
++    build = "npm install -g mcp-hub@latest",
++    config = function()
++      require("mcphub").setup()
++    end,
++  })
+ end)
