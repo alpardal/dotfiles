@@ -25,6 +25,9 @@
   gpgSign = true
   verbose = true
 
+[gpg]
+  format = ssh
+
 [init]
   defaultBranch = main
 
