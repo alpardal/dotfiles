@@ -35,6 +35,8 @@ function install_tmux_plugin_manager {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
+# TODO: add nvim ftplugin dir to runtimepath
+
 link_dotfiles
 setup_dotvim_dir
 install_tmux_plugin_manager
