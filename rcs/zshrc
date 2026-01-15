@@ -44,4 +44,11 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(zoxide init zsh)"
+#
+# # opencode
+# export PATH=/home/andre/.opencode/bin:$PATH
+
+# opencode
+export PATH=/home/andre/.opencode/bin:$PATH
+
+# export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(nproc | sed 's/$/\/2/' | bc)

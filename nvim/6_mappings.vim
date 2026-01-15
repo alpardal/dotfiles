@@ -32,14 +32,15 @@ nnoremap $ g$
 nnoremap g$ $
 nnoremap ' `
 nnoremap ` '
-nnoremap <leader>q :q<cr>
+" nnoremap <leader>q :bd<cr>
+" nnoremap <leader>q :q<cr>
 " go to last buffer:
 nnoremap <silent> <leader><leader> <c-^>
 
 "nnoremap <silent> <leader>o :call SearchDir('.')<cr>
 "nnoremap <silent> <leader>O :Files<cr>
 "nmap     <silent> <leader>i :Files %%<cr>
-nnoremap <leader>= :NERDTreeToggle<cr>
+" nnoremap <leader>= :NERDTreeToggle<cr>
 
 nnoremap <cr> G
 vnoremap <cr> G
@@ -64,7 +65,7 @@ inoremap <A-p> "
 nnoremap <leader>m :source Session.vim
 "nnoremap Q :call SaveSession()<cr>
 
-inoremap <C-l> <delete>
+" inoremap <C-l> <delete>
 inoremap <C-r> <C-r><C-p>
 " inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " inoremap <s-tab> <c-p>
@@ -174,9 +175,9 @@ vnoremap <silent> # :<C-U>
 
 " Plugins:
 
-nnoremap <C-n> :ALENext<cr>
-" nnoremap <C-p> :ALEPrevious<cr>
-nnoremap <silent> <leader>f :ALEFix<cr>
+" nnoremap <C-n> :ALENext<cr>
+" " nnoremap <C-p> :ALEPrevious<cr>
+" nnoremap <silent> <leader>f :ALEFix<cr>
 
 nmap ghp <Plug>(GitGutterPreviewHunk)
 nmap ghs <Plug>(GitGutterStageHunk)

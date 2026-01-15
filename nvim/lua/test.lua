@@ -1,6 +1,8 @@
+print("loading /home/andre/dotfiles/nvim/lua/test.lua")
+
 require("functions")
 
-local function check(f) 
+local function check(f)
   local res = f()
 
   if res == nil then

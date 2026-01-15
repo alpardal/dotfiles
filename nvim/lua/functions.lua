@@ -1,5 +1,3 @@
-local telescope = require("telescope.builtin")
-
 -- TODO: add mode
 function vim.map_if_not_mapped(keys, action, opts)
   local already_mapped = vim.fn.empty(vim.fn.maparg(keys)) == 0
@@ -9,7 +7,19 @@ function vim.map_if_not_mapped(keys, action, opts)
   end
 end
 
+function vim.quit()
+  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
+
+  -- if #buffers < 2 then
+  vim.cmd("q")
+  -- else
+  --   vim.cmd("bd")
+  -- end
+end
+
 function vim.git_or_find_files()
+  local telescope = require("telescope.builtin")
+
   local function is_git_repo()
     vim.fn.system("git rev-parse --is-inside-work-tree")
     return vim.v.shell_error == 0
@@ -27,7 +37,9 @@ function vim.terminal_run(cmd)
   -- vim.cmd.split("term://" .. cmd)
   vim.cmd.tabe("term://" .. cmd)
   vim.cmd.normal("G")
-  vim.keymap.set("n", "<cr>", "quit", { buffer = true })
+  -- vim.keymap.set("n", "<cr>", "quit", { buffer = true })
+  vim.keymap.set("n", "<cr>", ":bd<cr>", { buffer = true })
+  vim.keymap.set("n", "<leader>q", ":bd<cr>", { buffer = true })
 end
 
 function vim.run_with()
@@ -106,7 +118,7 @@ function vim.browse_file_notes()
   local notes_dir = absolute_path("~/Programming/notes/" .. filetype)
 
   if filetype ~= "" and vim.fn.isdirectory(notes_dir) > 0 then
-    telescope.find_files({ cwd = notes_dir })
+    require("telescope.builtin").find_files({ cwd = notes_dir, follow = true })
   else
     print("No notes for '" .. filetype .. "' files")
   end

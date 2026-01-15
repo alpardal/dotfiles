@@ -51,6 +51,8 @@ set statusline=%f\ %y%m
 set statusline+=%=
 set statusline+=%l/%L\ [%v]
 
+set scrollback=100000
+
 set scrolloff=10
 set winheight=10
 set winminheight=10
