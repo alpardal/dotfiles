@@ -88,8 +88,13 @@ alias ga='git add'
 alias gap='git add -p'
 alias gaa='git add --all'
 alias gb='git branch'
-alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -60"
 alias gll="git log --oneline --decorate --graph --branches='*'"
+# alias gl="git --no-pager log --oneline --decorate --graph --branches='*' -60"
+
+function gl() {
+    local lines=$((LINES - 8))
+    git --no-pager log --oneline --decorate --graph --branches='*' -$lines
+}
 alias go='git checkout'
 alias gom='git checkout master'
 alias gmp='git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@") && git pull'
