@@ -18,7 +18,8 @@ export DOCKER_BUILDKIT=1
 # edit ~/.oh-my-zsh/lib/termsupport.zsh and comment the following line:
 #   print -Pn "\ek$1:q\e\\" # set screen hardstatus
 # (line ~ 25)
-export TERM="screen-256color"
+# export TERM="screen-256color"
+export TERM="xterm-kitty"
 
 export TMPDIR='/tmp'
 export HISTIGNORE="&:ls:[bf]g*:history:quit:exit:vi:g[sdl]:gaa"

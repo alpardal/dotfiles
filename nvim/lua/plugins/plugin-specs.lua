@@ -71,29 +71,6 @@ return {
       -- end)
     end,
   },
-  -- {
-  --   "folke/flash.nvim",
-  --   event = "VeryLazy",
-  --   ---@type Flash.Config
-  --   opts = {},
-  --   modes = {
-  --     char = {
-  --       highlight = { backdrop = false },
-  --     },
-  --   },
-  --   highlight = {
-  --     -- show a backdrop with hl FlashBackdrop
-  --     backdrop = false,
-  --   },
-  --   -- stylua: ignore
-  --   keys = {
-  --     { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-  --     { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-  --     { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-  --     { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-  --     { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-  --   },
-  -- },
   -- { "RRethy/nvim-treesitter-endwise", lazy = false },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -183,53 +160,8 @@ return {
     "mason-org/mason-lspconfig.nvim",
     lazy = false,
     opts = {
-      -- ensure_installed = { "lua_ls", "rust_analyzer", "lexical", "zls" },
       ensure_installed = { "lua_ls", "rust_analyzer", "expert", "zls" },
-      handlers = {
-        function(server_name)
-          require("lspconfig")[server_name].setup({})
-        end,
-        -- lexical = function()
-        --   print("lexical setup 1")
-        --   require("lspconfig").lexical.setup({})
-        -- end,
-        -- lua_ls = function()
-        --   return {
-        --     settings = {
-        --       Lua = {
-        --         -- root_dir = vim.fn.getcwd(),
-        --         diagnostics = {
-        --           globals = { "vim" },
-        --         },
-        --       },
-        --     },
-        --   }
-        -- end,
-        -- biome = function()
-        --   -- TODO: not working?
-        --   print("biome setup")
-        --   -- print("root dir: " + vim.fn.getcwd() + "/assets")
-        --
-        --   vim.lsp.enable("biome")
-        --
-        --   vim.lsp.config("biome", {
-        --     -- root_dir = vim.fn.getcwd() + "/assets",
-        --     root_dir = "assets",
-        --     filetypes = { "javascript" },
-        --   })
-        -- end,
-        -- expert = function()
-        --   vim.lsp.enable("expert")
-        --
-        --   print("ENABLING (Mason) EXPERT")
-        --
-        --   vim.lsp.config("expert", {
-        --     cmd = { "/home/andre/.bin/expert --stdio" },
-        --     root_markers = { "mix.exs", ".git" },
-        --     filetypes = { "elixir", "eelixir", "heex" },
-        --   })
-        -- end,
-      },
+      automatic_enable = true,
     },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
@@ -240,27 +172,30 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       vim.lsp.enable("expert")
+      vim.lsp.enable("zls")
+      vim.lsp.enable("lua_ls")
 
       vim.lsp.config("expert", {
         cmd = { "/home/andre/.bin/expert", "--stdio" },
         root_markers = { "mix.exs", ".git" },
         filetypes = { "elixir", "eelixir", "heex" },
       })
-      --
-      -- -- if not configs.lexical then
-      -- -- configs.lexical = {
-      -- --   default_config = {
-      -- --     filetypes = { "elixir", "eelixir", "heex" },
-      -- --     -- cmd = { "~/code/vendor/elixir/lexical/_build/prod/package/lexical/bin/start_lexical.sh" },
-      -- --     cmd = { "~/.bin/expert" },
-      -- --     root_dir = function(fname)
-      -- --       return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.cwd()
-      -- --     end,
-      -- --     -- optional settings
-      -- --     settings = {},
-      -- --   },
-      -- -- }
-      -- -- end
+
+      vim.lsp.config("zls", {
+        filetypes = { "zig" },
+        root_markers = { "build.zig", ".git" },
+        settings = {},
+      })
+
+      vim.lsp.config("lua_ls", {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+        },
+      })
     end,
   },
   { "airblade/vim-gitgutter" },

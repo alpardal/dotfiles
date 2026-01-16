@@ -44,10 +44,6 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#
-# # opencode
-# export PATH=/home/andre/.opencode/bin:$PATH
-
 # opencode
 export PATH=/home/andre/.opencode/bin:$PATH
 
