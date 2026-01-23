@@ -174,6 +174,7 @@ return {
       vim.lsp.enable("expert")
       vim.lsp.enable("zls")
       vim.lsp.enable("lua_ls")
+      vim.lsp.enable("postgres-language-server")
 
       vim.lsp.config("expert", {
         cmd = { "/home/andre/.bin/expert", "--stdio" },
@@ -195,6 +196,11 @@ return {
             },
           },
         },
+      })
+
+      vim.lsp.config("postgres-language-server", {
+        filetypes = { "sql" },
+        root_markers = { "postgres-language-server.jsonc" },
       })
     end,
   },
@@ -317,6 +323,7 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         json = { "jq" },
+        jsonc = { "jq" },
         elixir = { "mix", lsp_format = "prefer", stop_after_first = true },
         zig = { "zigfmt" },
         -- -- Conform will run multiple formatters sequentially
@@ -325,7 +332,7 @@ return {
         rust = { "rustfmt", lsp_format = "fallback" },
         -- -- Conform will run the first available formatter
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
-        javascript = { "biome" },
+        javascript = { "prettier", "biome" },
       },
       -- Set default options
       default_format_opts = {
