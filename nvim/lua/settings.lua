@@ -23,6 +23,11 @@ vim.cmd([[
   })
 end)("single")
 
+-- vim.lsp.inlay_hints.enable(true)
+vim.keymap.set("n", "<leader>z", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "Toggle LSP Inlay Hints" })
+
 vim.diagnostic.config({
   -- default config
   virtual_lines = false,

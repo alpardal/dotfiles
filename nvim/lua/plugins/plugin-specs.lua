@@ -175,6 +175,12 @@ return {
       vim.lsp.enable("zls")
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("postgres-language-server")
+      vim.lsp.enable("prettier")
+
+      vim.lsp.config("prettier", {
+        root_markers = { "package.json", ".git" },
+        filetypes = { "javascript" },
+      })
 
       vim.lsp.config("expert", {
         cmd = { "/home/andre/.bin/expert", "--stdio" },
