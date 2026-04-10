@@ -15,9 +15,6 @@
 # [log]
 #   date = iso
 
-[includeIf "gitdir:~/code/allovue/"]
-  path = ~/code/allovue/.gitconfig
-
 [credential]
   helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
