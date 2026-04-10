@@ -5,6 +5,7 @@ return {
     priority = 1000,
     config = function()
       require("bamboo").setup({
+        style = "multiplex",
         italics = {
           comments = true,
           -- keywords = true,
@@ -186,6 +187,11 @@ return {
         cmd = { "/home/andre/.bin/expert", "--stdio" },
         root_markers = { "mix.exs", ".git" },
         filetypes = { "elixir", "eelixir", "heex" },
+        settings = {
+          workspaceSymbols = {
+            minQueryLength = 0,
+          },
+        },
       })
 
       vim.lsp.config("zls", {
