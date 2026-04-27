@@ -35,17 +35,17 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_SPACE
 
-export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# RVM shell completion:
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# opencode
-export PATH=/home/andre/.opencode/bin:$PATH
 
+# disable since it's causing issues when running tests
 # export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(nproc | sed 's/$/\/2/' | bc)
+export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=1
+
+fpath=(${ASDF_DIR}/completions $fpath)
+
+autoload -Uz compinit && compinit
+
+eval "$(zoxide init zsh)"

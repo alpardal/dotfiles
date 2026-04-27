@@ -55,3 +55,8 @@ export CARGO_BIN="$HOME/.cargo/bin"
 # export PATH=$USER_BIN:$CARGO_BIN:$CABAL_BIN:$HEROKU_BIN:$PATH:/home/andre/.asdf/shims
 export PATH=/home/andre/.asdf/shims:$USER_BIN:$CARGO_BIN:$PATH
 export MANPATH=/home/andre/.local/share/man:$MANPATH
+
+export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
+export KERL_BUILD_DOCS=yes
+export KERL_INSTALL_HTMLDOCS=no
+export KERL_INSTALL_MANPAGES=no
