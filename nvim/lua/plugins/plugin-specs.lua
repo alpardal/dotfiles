@@ -199,6 +199,7 @@ return {
 
       vim.lsp.config("zls", {
         filetypes = { "zig" },
+        cmd = { "/home/andre/.asdf/shims/zls" },
         root_markers = { "build.zig", ".git" },
         settings = {},
       })

@@ -11,3 +11,8 @@ end)
 vim.map_if_not_mapped("<leader>l", function()
   vim.terminal_run("zig build run")
 end)
+
+vim.cmd([[
+  set tabstop=4
+  set shiftwidth=4
+]])
