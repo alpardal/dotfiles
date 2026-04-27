@@ -82,6 +82,7 @@ return {
       ensure_installed = {
         "c",
         "csv",
+        "clojure",
         "lua",
         "vim",
         "vimdoc",
@@ -177,6 +178,7 @@ return {
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("postgres-language-server")
       vim.lsp.enable("prettier")
+      vim.lsp.enable("clojure-lsp")
 
       vim.lsp.config("prettier", {
         root_markers = { "package.json", ".git" },
@@ -214,12 +216,24 @@ return {
         filetypes = { "sql" },
         root_markers = { "postgres-language-server.jsonc" },
       })
+
+      vim.lsp.config("clojure-lsp", {
+        cmd = { "/home/andre/.bin/clojure-lsp" },
+        root_markers = { ".lsp/config.edn", ".git" },
+        filetypes = { "clojure" },
+      })
     end,
   },
   { "airblade/vim-gitgutter" },
   -- { "lewis6991/gitsigns.nvim" },
   { "henrik/vim-indexed-search", lazy = false },
-  { "Yggdroot/indentLine", lazy = false },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+  },
   { "tpope/vim-endwise", lazy = false },
   {
     "windwp/nvim-autopairs",
@@ -421,4 +435,5 @@ return {
     ---@type render.md.UserConfig
     opts = {},
   },
+  { "gpanders/nvim-parinfer" },
 }
