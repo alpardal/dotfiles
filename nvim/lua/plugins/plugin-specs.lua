@@ -179,6 +179,7 @@ return {
       vim.lsp.enable("postgres-language-server")
       vim.lsp.enable("prettier")
       vim.lsp.enable("clojure-lsp")
+      vim.lsp.enable("ruby_lsp")
 
       vim.lsp.config("prettier", {
         root_markers = { "package.json", ".git" },
@@ -221,6 +222,14 @@ return {
         cmd = { "/home/andre/.bin/clojure-lsp" },
         root_markers = { ".lsp/config.edn", ".git" },
         filetypes = { "clojure" },
+      })
+
+      vim.lsp.config("ruby_lsp", {
+        filetypes = { "ruby" },
+        -- cmd = { "mise x -- ruby-lsp" },
+        cmd = { "ruby-lsp" },
+        root_markers = { "gem.rb" },
+        settings = {},
       })
     end,
   },
