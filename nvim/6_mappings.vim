@@ -179,12 +179,6 @@ vnoremap <silent> # :<C-U>
 " " nnoremap <C-p> :ALEPrevious<cr>
 " nnoremap <silent> <leader>f :ALEFix<cr>
 
-nmap ghp <Plug>(GitGutterPreviewHunk)
-nmap ghs <Plug>(GitGutterStageHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)
-nmap [c <Plug>(GitGutterPrevHunk)
-nmap ]c <Plug>(GitGutterNextHunk)
-
 " execute "nnoremap <leader>f :Ag "
 
 " haya14busa/incsearch.vim:

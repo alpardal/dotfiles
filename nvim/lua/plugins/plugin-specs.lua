@@ -224,8 +224,30 @@ return {
       })
     end,
   },
-  { "airblade/vim-gitgutter" },
-  -- { "lewis6991/gitsigns.nvim" },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      local gitsigns = require("gitsigns")
+
+      gitsigns.setup({
+        attach_to_untracked = true,
+        -- word_diff = true,
+      })
+
+      vim.keymap.set("n", "ghp", gitsigns.preview_hunk)
+      vim.keymap.set("n", "ghi", gitsigns.preview_hunk_inline)
+      vim.keymap.set("n", "ghs", gitsigns.stage_hunk)
+      vim.keymap.set("n", "ghu", gitsigns.reset_hunk)
+
+      vim.keymap.set("n", "[c", function()
+        gitsigns.nav_hunk("prev")
+      end)
+
+      vim.keymap.set("n", "]c", function()
+        gitsigns.nav_hunk("next")
+      end)
+    end,
+  },
   { "henrik/vim-indexed-search", lazy = false },
   {
     "lukas-reineke/indent-blankline.nvim",
