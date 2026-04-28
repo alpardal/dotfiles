@@ -1,3 +1,17 @@
+function vmrss {
+  local pid=$1
+
+  if test -n "$1"; then
+    pid=$1
+  elif test ! -t 0; then
+    pid=$(cat $in)
+  else
+    echo "No standard input."
+    exit 1
+  fi
+
+  sudo cat /proc/$pid/status | ag vmrss | sed 's/VmRSS:\s\+//'
+}
 
 function db {
   local db_script
