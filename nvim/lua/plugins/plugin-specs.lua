@@ -31,46 +31,6 @@ return {
         },
       },
     },
-    config = function()
-      local telescope = require("telescope.builtin")
-
-      vim.keymap.set("n", "<leader>gd", function()
-        telescope.find_files({ cwd = "~/dotfiles/nvim" })
-      end, {})
-      vim.keymap.set("n", "<leader>gD", function()
-        telescope.find_files({ cwd = "~/dotfiles/" })
-      end, {})
-
-      vim.keymap.set("n", "<leader>o", vim.git_or_find_files, {})
-      vim.keymap.set("n", "<leader>O", telescope.find_files, {})
-      vim.keymap.set("n", "<leader>i", function()
-        telescope.find_files({ cwd = vim.fn.expand("%:p:h"), no_ignore = true })
-      end)
-      vim.keymap.set("n", "<leader>gb", telescope.buffers, {})
-      vim.keymap.set("n", "<leader>gf", telescope.live_grep, {})
-      vim.keymap.set("v", "<leader>gf", telescope.grep_string, {})
-      vim.keymap.set("n", "<leader>gk", telescope.marks, {})
-      vim.keymap.set("n", "<leader>gg", telescope.registers, {})
-      -- vim.keymap.set("n", "<leader>ge", telescope.lsp_references, {})
-
-      vim.keymap.set("n", "<leader>gh", telescope.help_tags, {})
-      vim.keymap.set("n", "<leader>gq", telescope.quickfix, {})
-      vim.keymap.set("n", "<leader>gm", telescope.man_pages, {})
-      vim.keymap.set("n", "<leader>gu", telescope.resume, {})
-      -- vim.keymap.set("n", "<leader>gl", telescope.treesitter, {})
-
-      vim.keymap.set("n", "<leader>gs", telescope.git_status, {})
-      vim.keymap.set("n", "<leader>gr", telescope.git_branches, {})
-      vim.keymap.set("n", "<leader>gt", telescope.git_stash, {})
-
-      vim.keymap.set("n", "<leader>h", vim.browse_file_notes)
-      vim.keymap.set("n", "<leader>H", function()
-        telescope.find_files({ cwd = "~/Programming/notes", follow = true })
-      end)
-      -- vim.keymap.set('n', '<leader>fg', function()
-      --   telescope.grep_string({ search = vim.fn.input("Grep > ") })
-      -- end)
-    end,
   },
   -- { "RRethy/nvim-treesitter-endwise", lazy = false },
   {
@@ -243,19 +203,6 @@ return {
         attach_to_untracked = true,
         -- word_diff = true,
       })
-
-      vim.keymap.set("n", "ghp", gitsigns.preview_hunk)
-      vim.keymap.set("n", "ghi", gitsigns.preview_hunk_inline)
-      vim.keymap.set("n", "ghs", gitsigns.stage_hunk)
-      vim.keymap.set("n", "ghu", gitsigns.reset_hunk)
-
-      vim.keymap.set("n", "[c", function()
-        gitsigns.nav_hunk("prev")
-      end)
-
-      vim.keymap.set("n", "]c", function()
-        gitsigns.nav_hunk("next")
-      end)
     end,
   },
   { "henrik/vim-indexed-search", lazy = false },
@@ -343,19 +290,6 @@ return {
       -- install jsregexp (optional!:).
       run = "make install_jsregexp",
     },
-    config = function()
-      local ls = require("luasnip")
-
-      -- vim.keymap.set({ "i" }, "<C-l>", function()
-      --   ls.jump(1)
-      -- end, { silent = true })
-      -- vim.keymap.set({ "i" }, "<C-j>", function()
-      --   ls.jump(-1)
-      -- end, { silent = true })
-      vim.keymap.set({ "i" }, "<C-k>", function()
-        ls.expand()
-      end, { silent = true })
-    end,
   },
   { "saadparwaiz1/cmp_luasnip", lazy = false },
   {
