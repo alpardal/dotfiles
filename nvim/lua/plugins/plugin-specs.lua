@@ -18,7 +18,6 @@ return {
     end,
   },
   { "nvim-lua/plenary.nvim" },
-  -- { "kiyoon/telescope-insert-path.nvim" },
   {
     "nvim-telescope/telescope.nvim",
     lazy = false,
@@ -32,7 +31,6 @@ return {
       },
     },
   },
-  -- { "RRethy/nvim-treesitter-endwise", lazy = false },
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "master",
@@ -102,7 +100,6 @@ return {
       indent = { enable = true },
       autopairs = { enable = true },
       autotag = { enable = true, disable = { "markdown" } },
-      -- endwise = { enable = true },
     },
   },
   {
@@ -346,41 +343,6 @@ return {
     --   vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
     -- end,
   },
-  -- { "github/copilot.vim" },
-  -- {
-  --   "olimorris/codecompanion.nvim",
-  --   config = function()
-  --     require("codecompanion").setup({
-  --       extensions = {
-  --         mcphub = {
-  --           callback = "mcphub.extensions.codecompanion",
-  --           opts = {
-  --             make_vars = true,
-  --             make_slash_commands = true,
-  --             show_result_in_chat = true,
-  --           },
-  --         },
-  --       },
-  --     })
-  --   end,
-  --   requires = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-treesitter/nvim-treesitter",
-  --   },
-  --   dependencies = {
-  --     "ravitemer/mcphub.nvim",
-  --   },
-  -- },
-  -- {
-  --   "ravitemer/mcphub.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --   },
-  --   build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
-  --   config = function()
-  --     require("mcphub").setup()
-  --   end,
-  -- },
   {
     "stevearc/oil.nvim",
     ---@module 'oil'
