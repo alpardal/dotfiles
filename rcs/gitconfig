@@ -33,7 +33,7 @@
 
 [fetch]
   prune = true
-  pruneTags = true
+  # pruneTags = true
   fsckobjects = true
 
 [transfer]
