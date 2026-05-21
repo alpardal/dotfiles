@@ -38,7 +38,15 @@ export JAVA_OPTS="-client"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-export FZF_DEFAULT_OPTS='--bind=up:preview-up,down:preview-down'
+export FZF_DEFAULT_OPTS="
+  --bind=up:preview-up,down:preview-down
+  --border
+"
+# --layout=reverse
+# --preview 'batcat --style=numbers --color=always {}'
+
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANROFFOPT="-c"
 
 # export CABAL_BIN=$HOME/.cabal/bin
 
